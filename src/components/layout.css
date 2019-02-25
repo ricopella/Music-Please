@@ -1,9 +1,17 @@
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
 body {
     background: #000000;
     height: 100vh;
     width: 100vw;
     font-family: 'Raleway', sans-serif;
     color: #ffffff;
+    margin: 0px 0px;
+    padding: 0px 0px;
 }
 
 .container {
@@ -11,11 +19,24 @@ body {
     grid-template-columns: 1fr;
     grid-template-rows: max-content max-content;
     grid-row-gap: 0px;
+    height: 100vh;
+    position: relative;
 }
 
-.logo {
+.wrapper {
+    position: absolute;
+    display: grid;
+    top: 50%;
+    transform: translateY(-50%);
+    align-self: center;
+    width: 100%;
+}
+
+.logoContainer {
+    display: grid;
     align-self: center;
     justify-self: center;
+    width: 700px;
 }
 
 .social_icons_container {
@@ -26,6 +47,10 @@ body {
     justify-content: center;
 }
 
+.social_icon {
+    width: 200px;
+}
+
 @media only screen and (max-width: 768px) {
     .container {
         height: 100vh;
@@ -34,7 +59,7 @@ body {
     .social_icon {
         width: 80px;
     }
-    .logo {
+    .logoContainer {
         width: 80%;
     }
 }
