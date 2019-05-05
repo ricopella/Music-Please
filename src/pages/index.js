@@ -3,6 +3,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Image from "../components/image"
 import Socials from "../components/socials"
+import { Link } from "gatsby"
 
 const IndexPage = () => (
   <Layout>
@@ -27,6 +28,7 @@ const IndexPage = () => (
         </a>
       </div>
       <Socials />
+      <Link to="/playlists/">PLAYLISTS</Link>
     </div>
   </Layout>
 )

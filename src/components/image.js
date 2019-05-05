@@ -35,6 +35,7 @@ const Image = props => (
           alt={props.alt}
           sizes={imageSizes ? imageSizes : 0}
           style={props.style}
+          className={props.className}
         />
       )
     }}
