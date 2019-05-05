@@ -23,7 +23,11 @@ const IndexPage = () => (
     />
     <div className="wrapper">
       <div className="logoContainer">
-        <a href="mailto:musicpleaseradio@gmail.com">
+        <a
+          href="mailto:musicpleaseradio@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Image filename="PLEASE.png" alt="Music Please Main Logo" />
         </a>
       </div>
