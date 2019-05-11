@@ -7,8 +7,8 @@
 .cardContainer {
     display: grid;
     grid-template-columns: max-content;
-    grid-template-rows: repeat(2, -webkit-max-content);
-    grid-template-rows: repeat(2, max-content);
+    grid-template-rows: repeat(3, -webkit-max-content);
+    grid-template-rows: repeat(3, max-content);
     grid-row-gap: 25px;
     background-color: #b6b6b6;
     border-radius: 6px;
@@ -26,14 +26,21 @@
     box-shadow: 5px 20px 30px rgba(0, 0, 0, 0.2);
 }
 
-.cardCover {
+.cardContainer h2 {
     grid-row: 1;
+    grid-column: 1/-1;
+    text-align: center;
+}
+
+.cardCover {
+    grid-row: 2;
     width: 200px;
     height: 200px;
+    margin: 0 auto;
 }
 
 .cardActionsWrapper {
-    grid-row: 2;
+    grid-row: 3;
     grid-column: 1 / -1;
     align-content: center;
     justify-self: center;
@@ -46,10 +53,54 @@
     width: 40px;
     height: 40px;
     cursor: pointer;
+    display: grid;
+    align-self: center;
 }
 
 .cardActionsWrapper img.disabled {
     cursor: not-allowed;
     opacity: .5;
     pointer-events: none;
+}
+
+.return {
+    color: white;
+    font-size: 1rem;
+    margin-top: 20px;
+}
+
+.return:visited {
+    color: white;
+}
+
+@media only screen and (max-width: 1024px) {
+    .container {
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+    }
+    .playlistsContainer {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, max-content);
+    }
+    .return {
+        color: white;
+        font-size: 1rem;
+        margin-bottom: 50px;
+        grid-row: 3;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        height: inherit;
+    }
+    .playlistsContainer {
+        grid-template-columns: 1fr;
+    }
+    .return {
+        color: white;
+        font-size: 1rem;
+        margin-bottom: 50px;
+    }
 }

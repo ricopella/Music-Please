@@ -32,7 +32,6 @@ const IndexPage = () => (
         </a>
       </div>
       <Socials />
-      <Link to="/playlists/">PLAYLISTS</Link>
     </div>
   </Layout>
 )

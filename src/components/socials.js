@@ -1,5 +1,6 @@
 import React from "react"
 import SocialImg from "./image"
+import { Link } from "gatsby"
 
 const Socials = () => (
   <div className="social_icons_container">
@@ -27,6 +28,15 @@ const Socials = () => (
       alt="Facebook - @themusicplease"
       link="https://facebook.com/themusicplease"
     />
+    <Link to="/playlists/">
+      <div className="social_icon playlist">
+        <SocialImg
+          filename={"play.png"}
+          title={"Playlists"}
+          alt={"Checkout the latest Music Please curated Playlists"}
+        />
+      </div>
+    </Link>
   </div>
 )
 

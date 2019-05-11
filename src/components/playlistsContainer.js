@@ -16,6 +16,7 @@ const PlaylistContainer = () => (
       appleUrl={null}
       tidalUrl={null}
       spotifyUrl={"https://open.spotify.com/playlist/4WjwWtUtJzvLSpbqBZnr7q"}
+      title={`In My Fuckin' Feelinz`}
     />
     <PlaylistCard
       filename="romance_de_rosas.jpg"
@@ -23,6 +24,7 @@ const PlaylistContainer = () => (
       appleUrl={null}
       tidalUrl={null}
       spotifyUrl={"https://open.spotify.com/playlist/41RkclkOwj16bmsQUfK1ua"}
+      title={`Romance De Rosas`}
     />
     <PlaylistCard
       filename="sweet_tea.jpg"
@@ -30,13 +32,24 @@ const PlaylistContainer = () => (
       appleUrl={null}
       tidal={null}
       spotifyUrl={"https://open.spotify.com/playlist/3BX6aS8VtYgxcddFK9nokp"}
+      title={`Sweet Tea`}
     />
-    <Link to="/">Go back to the homepage</Link>
+    <Link to="/" className="return">
+      Return to home page
+    </Link>
   </div>
 )
 
-const PlaylistCard = ({ filename, alt, appleUrl, tidalUrl, spotifyUrl }) => (
+const PlaylistCard = ({
+  filename,
+  alt,
+  appleUrl,
+  tidalUrl,
+  spotifyUrl,
+  title,
+}) => (
   <div className="cardContainer">
+    <h2>{title}</h2>
     <Image filename={filename} alt={alt} className="cardCover" />
     <div className="cardActionsWrapper">
       <Svg
