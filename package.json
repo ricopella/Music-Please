@@ -2,7 +2,7 @@
     "name": "music-please",
     "private": true,
     "description": "MusicPlease.com",
-    "version": "0.1.0",
+    "version": "1.0.0",
     "author": "Narin Sundarabhaya <nrs710@gmail.com>",
     "dependencies": {
         "gatsby": "^2.1.17",
