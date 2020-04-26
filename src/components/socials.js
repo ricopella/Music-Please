@@ -27,12 +27,18 @@ const Socials = () => (
       alt="Facebook - @themusicplease"
       link="https://facebook.com/themusicplease"
     />
+    <SocialLink
+      filename="twitch2.png"
+      title="Twitch"
+      alt="Twitch - @themusicplease"
+      link="https://www.twitch.tv/themusicplease"
+    />
   </div>
 )
 
 const SocialLink = ({ filename, title, alt, link }) => (
   <a href={link} target="_blank" rel="noopener noreferrer">
-    <div className="social_icon">
+    <div className={`social_icon ${title === "Twitch" ? "twitch" : ""}`}>
       <SocialImg filename={filename} title={title} alt={alt} />
     </div>
   </a>
