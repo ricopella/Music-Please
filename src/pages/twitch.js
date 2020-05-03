@@ -1,5 +1,4 @@
 import React from "react"
-import ReactTwitchEmbedVideo from "react-twitch-embed-video"
 import useTwitchVideos from "../hooks/useTwitchVideos"
 import setTwitchImageSize from "../utils/setTwitchImageSize"
 import Styled from "../styles/twitch.styles.js"
@@ -10,12 +9,12 @@ const Twitch = () => {
 
   return (
     <Styled.TwitchContainer>
-      <ReactTwitchEmbedVideo
-        autoplay
-        muted={false}
-        theme={"dark"}
-        layout="video"
-        channel="themusicplease"
+      <iframe
+        src="https://player.twitch.tv/?channel=themusicplease&parent=https://themusicplease.com"
+        height={600}
+        width={800}
+        frameborder={0}
+        allowFullScreen={true}
       />
       <Styled.TwitchVideosWrapper>
         {(videos || []).map(video => (

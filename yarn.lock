@@ -10823,13 +10823,6 @@ react-side-effect@^1.1.0:
   dependencies:
     shallowequal "^1.0.1"
 
-react-twitch-embed-video@^2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/react-twitch-embed-video/-/react-twitch-embed-video-2.0.2.tgz#c87149d9c26f343df48c13ea09760810a5a23560"
-  integrity sha512-gFILWtsMWJPty3whi4P9Uk3XMOzVxuPVj6NxdOFZDl/5F2REVIQKKGjcB4Xb8P55jejRgmKFaOqcJzV+2Yg7uQ==
-  dependencies:
-    window-or-global "^1.0.1"
-
 react@^16.8.0, react@^16.8.3:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react/-/react-16.13.1.tgz#2e818822f1a9743122c063d6410d85c1e3afe48e"
@@ -13434,11 +13427,6 @@ widest-line@^3.1.0:
   integrity sha512-NsmoXalsWVDMGupxZ5R08ka9flZjjiLvHVAWYOKtiKM8ujtZWr9cRffak+uSE48+Ob8ObalXpwyeUiyDD6QFgg==
   dependencies:
     string-width "^4.0.0"
-
-window-or-global@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/window-or-global/-/window-or-global-1.0.1.tgz#dbe45ba2a291aabc56d62cf66c45b7fa322946de"
-  integrity sha1-2+RboqKRqrxW1iz2bEW3+jIpRt4=
 
 with-open-file@^0.1.6:
   version "0.1.7"
