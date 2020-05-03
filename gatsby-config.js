@@ -33,7 +33,7 @@ module.exports = {
                 background_color: `#000000`,
             },
         }
-        'gatsby-plugin-offline',
+        // 'gatsby-plugin-offline',
         `gatsby-plugin-emotion`
     ],
 }
