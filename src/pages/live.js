@@ -3,6 +3,7 @@ import Styled from "../styles/twitch.styles.js"
 import IframeResizer from "iframe-resizer-react"
 import Image from "../components/image"
 import Layout from "../components/layout"
+import ExternalLink from "../components/link"
 
 import Venmo from "../images/svg/venmo-icon.svg"
 import CashApp from "../images/svg/cash-app.svg"
@@ -31,23 +32,15 @@ const Twitch = () => {
           <Styled.ContactWrapper>
             <Styled.ContactHeading>Show some support</Styled.ContactHeading>
             <Styled.LinksWrapper>
-              <Styled.ContactLink
-                href="https://venmo.com/Bryant-"
-                target="_blank"
-                rel="noopener"
-              >
+              <ExternalLink href="https://venmo.com/Bryant-">
                 <Venmo style={{ height: 24, width: 24 }} alt="Venmo" />
-              </Styled.ContactLink>
-              <Styled.ContactLink
-                href="https://cash.app/$musicplease"
-                target="_blank"
-                rel="noopener"
-              >
+              </ExternalLink>
+              <ExternalLink href="https://cash.app/$musicplease">
                 <CashApp
                   alt="CashApp"
                   style={{ height: 32, width: 32, marginTop: -4 }}
                 />
-              </Styled.ContactLink>
+              </ExternalLink>
             </Styled.LinksWrapper>
           </Styled.ContactWrapper>
         </Styled.TwitchPageContainer>

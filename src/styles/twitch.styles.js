@@ -68,14 +68,6 @@ const ContactHeading = styled.h4 `
 margin: 0 0;
 `
 
-const ContactLink = styled.a `
-
-&:hover {
-  cursor: pointer;
-  transform: scale(1.2); 
-}
-`
-
 export default {
     ContactHeading,
     ContactWrapper,
@@ -84,5 +76,4 @@ export default {
     TwitchContainer,
     TwitchPageContainer,
     TwitchVideosWrapper,
-    ContactLink,
 }
