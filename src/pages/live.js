@@ -1,11 +1,11 @@
 import React from "react"
-import useTwitchVideos from "../hooks/useTwitchVideos"
 import Styled from "../styles/twitch.styles.js"
 import IframeResizer from "iframe-resizer-react"
 import Image from "../components/image"
-import Venmo from "../assets/venmo-icon.svg"
-import CashApp from "../assets/cash-app.svg"
 import Layout from "../components/layout"
+
+import Venmo from "../images/svg/venmo-icon.svg"
+import CashApp from "../images/svg/cash-app.svg"
 
 const Twitch = () => {
   return (
@@ -28,14 +28,28 @@ const Twitch = () => {
               }}
             />
           </Styled.TwitchVideosWrapper>
-          <Styled.LinksWrapper>
-            <img src={Venmo} alt="Venmo" style={{ height: 24, width: 24 }} />
-            <img
-              src={CashApp}
-              alt="CashApp"
-              style={{ height: 24, width: 24 }}
-            />
-          </Styled.LinksWrapper>
+          <Styled.ContactWrapper>
+            <Styled.ContactHeading>Show some support</Styled.ContactHeading>
+            <Styled.LinksWrapper>
+              <Styled.ContactLink
+                href="https://venmo.com/Bryant-"
+                target="_blank"
+                rel="noopener"
+              >
+                <Venmo style={{ height: 24, width: 24 }} alt="Venmo" />
+              </Styled.ContactLink>
+              <Styled.ContactLink
+                href="https://cash.app/$musicplease"
+                target="_blank"
+                rel="noopener"
+              >
+                <CashApp
+                  alt="CashApp"
+                  style={{ height: 32, width: 32, marginTop: -4 }}
+                />
+              </Styled.ContactLink>
+            </Styled.LinksWrapper>
+          </Styled.ContactWrapper>
         </Styled.TwitchPageContainer>
       </Styled.TwitchContainer>
     </Layout>

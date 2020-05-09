@@ -47,18 +47,42 @@ const TwitchVideosWrapper = styled.div `
   }
 `
 
+const ContactWrapper = styled.div `
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, max-content);
+  grid-row-gap: .5rem;
+`
+
 const LinksWrapper = styled.div `
   display: grid;
   grid-row: 3;
   height: 3.125rem;
   grid-template-columns: max-content max-content;
   grid-template-rows: 1fr;
+  justify-content: center;
+  grid-column-gap: 1rem;
+`
+
+const ContactHeading = styled.h4 `
+margin: 0 0;
+`
+
+const ContactLink = styled.a `
+
+&:hover {
+  cursor: pointer;
+  transform: scale(1.2); 
+}
 `
 
 export default {
-    TwitchContainer,
-    TwitchVideosWrapper,
-    TwitchPageContainer,
+    ContactHeading,
+    ContactWrapper,
     LinksWrapper,
-    LogoWrapper
+    LogoWrapper,
+    TwitchContainer,
+    TwitchPageContainer,
+    TwitchVideosWrapper,
+    ContactLink,
 }
