@@ -6,6 +6,8 @@ const TwitchContainer = styled.div `
 display: grid;
 height: 100vh;
 width: 100vw;
+max-height: 100vh;
+max-width: 100vw;
 `
 
 const TwitchPageContainer = styled.section `
@@ -45,7 +47,6 @@ const TwitchVideosWrapper = styled.div `
   width: 100%;
 
   @media (max-width: ${mediaBreakpoints.tablet}) {
-    max-height: calc(100% - 4rem);
     max-width: calc(100% - 2rem);
   }
 `
