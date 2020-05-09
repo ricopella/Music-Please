@@ -18,7 +18,7 @@ const TwitchPageContainer = styled.section `
   max-height: 100vh;
   max-width: 100vw;
   width: 100%;
-  grid-row-gap: 2rem;
+  grid-row-gap: 1rem;
   justify-items: center;
 
   @media (max-width: ${mediaBreakpoints.phone}) {
@@ -35,8 +35,8 @@ const LogoWrapper = styled.div `
   width: 18.75rem;
 
   @media (max-width: ${mediaBreakpoints.phone}) {
-    height: 8.5rem;
-    width: 14.75rem;
+    height: 8rem;
+    width: 12.75rem;
   }
 `
 
