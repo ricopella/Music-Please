@@ -20,6 +20,7 @@ module.exports = {
             options: {
                 name: `images`,
                 path: `${__dirname}/src/images`,
+                exclude: `${__dirname}/src/images/svg`
             },
         },
         `gatsby-transformer-sharp`,
@@ -38,7 +39,7 @@ module.exports = {
             resolve: "gatsby-plugin-react-svg",
             options: {
                 rule: {
-                    include: /assets/
+                    include: `${__dirname}/src/images/svg`
                 }
             }
         }

@@ -1,4 +1,5 @@
 import styled from "@emotion/styled"
+import { mediaBreakpoints } from '../constants/breakpoints'
 
 const TwitchContainer = styled.div `
 display: grid;
@@ -23,6 +24,11 @@ const LogoWrapper = styled.div `
   grid-template-rows: 1fr;
   height: 12.5rem;
   width: 18.75rem;
+
+  @media (max-width: ${mediaBreakpoints.phone}) {
+    height: 8.5rem;
+    width: 14.75rem;
+  }
 `
 
 const TwitchVideosWrapper = styled.div `
@@ -34,6 +40,18 @@ const TwitchVideosWrapper = styled.div `
   max-height: 100%;
   max-width: calc(100% - 12rem);
   width: 100%;
+
+  @media (max-width: ${mediaBreakpoints.tablet}) {
+    max-height: calc(100% - 4rem);
+    max-width: calc(100% - 2rem);
+  }
+`
+
+const ContactWrapper = styled.div `
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, max-content);
+  grid-row-gap: .5rem;
 `
 
 const LinksWrapper = styled.div `
@@ -42,12 +60,20 @@ const LinksWrapper = styled.div `
   height: 3.125rem;
   grid-template-columns: max-content max-content;
   grid-template-rows: 1fr;
+  justify-content: center;
+  grid-column-gap: 1rem;
+`
+
+const ContactHeading = styled.h4 `
+margin: 0 0;
 `
 
 export default {
-    TwitchContainer,
-    TwitchVideosWrapper,
-    TwitchPageContainer,
+    ContactHeading,
+    ContactWrapper,
     LinksWrapper,
-    LogoWrapper
+    LogoWrapper,
+    TwitchContainer,
+    TwitchPageContainer,
+    TwitchVideosWrapper,
 }
