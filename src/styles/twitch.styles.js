@@ -20,6 +20,10 @@ const TwitchPageContainer = styled.section `
   width: 100%;
   grid-row-gap: 2rem;
   justify-items: center;
+
+  @media (max-width: ${mediaBreakpoints.phone}) {
+    grid-template-rows: max-content 25rem max-content;
+  }
 `
 
 const LogoWrapper = styled.div `
@@ -47,6 +51,10 @@ const TwitchVideosWrapper = styled.div `
   width: 100%;
 
   @media (max-width: ${mediaBreakpoints.tablet}) {
+    max-width: calc(100% - 2rem);
+  }
+
+  @media (max-width: ${mediaBreakpoints.phone}) {
     max-width: calc(100% - 2rem);
     max-height: 24rem;
   }
