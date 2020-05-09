@@ -1,5 +1,6 @@
-import styled from "@emotion/styled"
-import { mediaBreakpoints } from '../constants/breakpoints'
+import styled from '@emotion/styled';
+
+import { mediaBreakpoints } from '../constants/breakpoints';
 
 const TwitchContainer = styled.div `
 display: grid;
@@ -12,6 +13,8 @@ const TwitchPageContainer = styled.section `
   grid-template-columns: 1fr;
   grid-template-rows: max-content 1fr max-content;
   height: 100%;
+  max-height: 100vh;
+  max-width: 100vw;
   width: 100%;
   grid-row-gap: 2rem;
   justify-items: center;
