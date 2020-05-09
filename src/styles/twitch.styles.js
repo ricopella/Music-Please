@@ -48,6 +48,7 @@ const TwitchVideosWrapper = styled.div `
 
   @media (max-width: ${mediaBreakpoints.tablet}) {
     max-width: calc(100% - 2rem);
+    max-height: 29rem;
   }
 `
 
