@@ -30,7 +30,7 @@ const Twitch = () => {
             />
           </Styled.TwitchVideosWrapper>
           <Styled.ContactWrapper>
-            <Styled.ContactHeading>Show some support</Styled.ContactHeading>
+            <Styled.ContactHeading>Donate:</Styled.ContactHeading>
             <Styled.LinksWrapper>
               <ExternalLink href="https://venmo.com/Bryant-">
                 <Venmo style={{ height: 24, width: 24 }} alt="Venmo" />
