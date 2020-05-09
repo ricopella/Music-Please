@@ -1,4 +1,5 @@
 import styled from "@emotion/styled"
+import { mediaBreakpoints } from '../constants/breakpoints'
 
 const TwitchContainer = styled.div `
 display: grid;
@@ -23,6 +24,11 @@ const LogoWrapper = styled.div `
   grid-template-rows: 1fr;
   height: 12.5rem;
   width: 18.75rem;
+
+  @media (max-width: ${mediaBreakpoints.phone}) {
+    height: 8.5rem;
+    width: 14.75rem;
+  }
 `
 
 const TwitchVideosWrapper = styled.div `
@@ -34,6 +40,11 @@ const TwitchVideosWrapper = styled.div `
   max-height: 100%;
   max-width: calc(100% - 12rem);
   width: 100%;
+
+  @media (max-width: ${mediaBreakpoints.tablet}) {
+    max-height: calc(100% - 4rem);
+    max-width: calc(100% - 2rem);
+  }
 `
 
 const LinksWrapper = styled.div `
