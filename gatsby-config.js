@@ -20,6 +20,7 @@ module.exports = {
             options: {
                 name: `images`,
                 path: `${__dirname}/src/images`,
+                exclude: `${__dirname}/src/images/svg`
             },
         },
         `gatsby-transformer-sharp`,
