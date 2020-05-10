@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { mediaBreakpoints } from '../constants/breakpoints';
+import Bouncy from '../images/gif/BOUNCY.gif'
 
 const TwitchContainer = styled.div `
   display: grid;
@@ -7,13 +8,18 @@ const TwitchContainer = styled.div `
   max-height: 100vh;
   max-width: 100vw;
   width: 100%;
+  background-image: url(${Bouncy}); 
+  background-size: cover;
+  opacity: .75;
+  background-color: black;
 `
+
 
 const TwitchPageContainer = styled.section `
   display: grid;
   grid-row-gap: .5rem;
   grid-template-columns: 1fr;
-  grid-template-rows: max-content max-content 1fr max-content;
+  grid-template-rows: max-content 1fr max-content;
   height: 100%;
   justify-items: center;
   max-height: 100vh;
@@ -21,7 +27,7 @@ const TwitchPageContainer = styled.section `
   width: 100%;
 
   @media (max-width: ${mediaBreakpoints.phone}) {
-    grid-template-rows: max-content max-content 25rem max-content;
+    grid-template-rows: max-content 25rem max-content;
   }
 `
 
@@ -80,6 +86,7 @@ const ContactHeading = styled.h4 `
 const LiveNow = styled.img `
   width: 6rem;
   height: auto;
+  padding-top: 2rem;
 `
 
 export default {

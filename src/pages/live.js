@@ -10,14 +10,12 @@ import "../components/layout.css"
 import Venmo from "../images/svg/venmo-icon.svg"
 import CashApp from "../images/svg/cash-app.svg"
 import Live from "../images/gif/live.gif"
+import Bouncy from "../images/gif/BOUNCY.gif"
 
 const Twitch = () => {
   return (
     <Styled.TwitchContainer>
       <Styled.TwitchPageContainer>
-        <Styled.LogoWrapper>
-          <Image filename="PLEASE.png" alt="Music Please Main Logo" />
-        </Styled.LogoWrapper>
         <Styled.LiveNow src={Live} />
         <Styled.TwitchVideosWrapper>
           <IframeResizer
@@ -33,7 +31,6 @@ const Twitch = () => {
           />
         </Styled.TwitchVideosWrapper>
         <Styled.ContactWrapper>
-          <Styled.ContactHeading>Donate:</Styled.ContactHeading>
           <Styled.LinksWrapper>
             <ExternalLink href="https://venmo.com/Bryant-">
               <Venmo style={{ height: 24, width: 24 }} alt="Venmo" />
