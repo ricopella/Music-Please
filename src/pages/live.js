@@ -2,33 +2,20 @@ import React from "react"
 import Styled from "../styles/twitch.styles.js"
 import IframeResizer from "iframe-resizer-react"
 import Image from "../components/image"
+import Layout from "../components/layout"
 import ExternalLink from "../components/link"
 import "../components/layout.css"
-import useTwitchLiveStreams from "../hooks/useTwitchLiveStream"
-import BackButton from "../components/returnButton.js"
 
-// ASSETS
 import Venmo from "../images/svg/venmo-icon.svg"
 import CashApp from "../images/svg/cash-app.svg"
-import Live from "../images/gif/live.gif"
 
 const Twitch = () => {
-  const [streams] = useTwitchLiveStreams()
-
   return (
     <Styled.TwitchContainer>
-      <BackButton />
       <Styled.TwitchPageContainer>
-        {(streams || []).length ? (
-          <Styled.LiveNow src={Live} />
-        ) : (
-          <Styled.LogoWrapper to={"/"}>
-            <Image
-              filename="no_BG_MUSICPLEASE.png"
-              alt="Music Please Main Logo"
-            />
-          </Styled.LogoWrapper>
-        )}
+        <Styled.LogoWrapper>
+          <Image filename="PLEASE.png" alt="Music Please Main Logo" />
+        </Styled.LogoWrapper>
         <Styled.TwitchVideosWrapper>
           <IframeResizer
             log
@@ -43,6 +30,7 @@ const Twitch = () => {
           />
         </Styled.TwitchVideosWrapper>
         <Styled.ContactWrapper>
+          <Styled.ContactHeading>Donate:</Styled.ContactHeading>
           <Styled.LinksWrapper>
             <ExternalLink href="https://venmo.com/Bryant-">
               <Venmo style={{ height: 24, width: 24 }} alt="Venmo" />
