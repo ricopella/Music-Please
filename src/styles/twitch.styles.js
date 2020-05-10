@@ -1,10 +1,13 @@
-import styled from "@emotion/styled"
-import { mediaBreakpoints } from '../constants/breakpoints'
+import styled from '@emotion/styled';
+
+import { mediaBreakpoints } from '../constants/breakpoints';
 
 const TwitchContainer = styled.div `
 display: grid;
 height: 100vh;
-width: 100vw;
+width: 100%;
+max-height: 100vh;
+max-width: 100vw;
 `
 
 const TwitchPageContainer = styled.section `
@@ -12,9 +15,15 @@ const TwitchPageContainer = styled.section `
   grid-template-columns: 1fr;
   grid-template-rows: max-content 1fr max-content;
   height: 100%;
+  max-height: 100vh;
+  max-width: 100vw;
   width: 100%;
-  grid-row-gap: 2rem;
+  grid-row-gap: 1rem;
   justify-items: center;
+
+  @media (max-width: ${mediaBreakpoints.phone}) {
+    grid-template-rows: max-content 25rem max-content;
+  }
 `
 
 const LogoWrapper = styled.div `
@@ -26,8 +35,8 @@ const LogoWrapper = styled.div `
   width: 18.75rem;
 
   @media (max-width: ${mediaBreakpoints.phone}) {
-    height: 8.5rem;
-    width: 14.75rem;
+    height: 8rem;
+    width: 12.75rem;
   }
 `
 
@@ -42,8 +51,12 @@ const TwitchVideosWrapper = styled.div `
   width: 100%;
 
   @media (max-width: ${mediaBreakpoints.tablet}) {
-    max-height: calc(100% - 4rem);
     max-width: calc(100% - 2rem);
+  }
+
+  @media (max-width: ${mediaBreakpoints.phone}) {
+    max-width: calc(100% - 2rem);
+    max-height: 24rem;
   }
 `
 
