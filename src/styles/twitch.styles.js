@@ -4,7 +4,7 @@ import { mediaBreakpoints } from '../constants/breakpoints';
 
 const TwitchContainer = styled.div `
 display: grid;
-height: 100%;
+height: 100vh;
 width: 100%;
 max-height: 100vh;
 max-width: 100vw;
