@@ -5,7 +5,7 @@ import Image from "../components/image"
 import ExternalLink from "../components/link"
 import "../components/layout.css"
 import useTwitchLiveStreams from "../hooks/useTwitchLiveStream"
-import BackButton from "../components/returnButton.js"
+import BackButton from "../components/returnbutton.js"
 
 // ASSETS
 import Venmo from "../images/svg/venmo-icon.svg"
