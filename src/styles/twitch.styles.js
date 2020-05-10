@@ -1,38 +1,36 @@
 import styled from '@emotion/styled';
-
 import { mediaBreakpoints } from '../constants/breakpoints';
 
 const TwitchContainer = styled.div `
-display: grid;
-height: 100vh;
-width: 100%;
-max-height: 100vh;
-max-width: 100vw;
+  display: grid;
+  height: 100vh;
+  max-height: 100vh;
+  max-width: 100vw;
+  width: 100%;
 `
 
 const TwitchPageContainer = styled.section `
   display: grid;
+  grid-row-gap: .5rem;
   grid-template-columns: 1fr;
-  grid-template-rows: max-content 1fr max-content;
+  grid-template-rows: max-content max-content 1fr max-content;
   height: 100%;
+  justify-items: center;
   max-height: 100vh;
   max-width: 100vw;
   width: 100%;
-  grid-row-gap: 1rem;
-  justify-items: center;
 
   @media (max-width: ${mediaBreakpoints.phone}) {
-    grid-template-rows: max-content 25rem max-content;
+    grid-template-rows: max-content max-content 25rem max-content;
   }
 `
 
 const LogoWrapper = styled.div `
   display: grid;
-  grid-row: 1;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
-  height: 12.5rem;
-  width: 18.75rem;
+  height: 7rem;
+  width: 11.75rem;
 
   @media (max-width: ${mediaBreakpoints.phone}) {
     height: 8rem;
@@ -43,7 +41,6 @@ const LogoWrapper = styled.div `
 const TwitchVideosWrapper = styled.div `
   align-content: center;
   display: grid;
-  grid-row: 2;
   grid-template-columns: 1fr;
   justify-items: center;
   max-height: 100%;
@@ -56,7 +53,7 @@ const TwitchVideosWrapper = styled.div `
 
   @media (max-width: ${mediaBreakpoints.phone}) {
     max-width: calc(100% - 2rem);
-    max-height: 24rem;
+    max-height: 26rem;
   }
 `
 
@@ -69,7 +66,6 @@ const ContactWrapper = styled.div `
 
 const LinksWrapper = styled.div `
   display: grid;
-  grid-row: 3;
   height: 3.125rem;
   grid-template-columns: max-content max-content;
   grid-template-rows: 1fr;
@@ -78,13 +74,19 @@ const LinksWrapper = styled.div `
 `
 
 const ContactHeading = styled.h4 `
-margin: 0 0;
+  margin: 0 0;
+`
+
+const LiveNow = styled.img `
+  width: 6rem;
+  height: auto;
 `
 
 export default {
     ContactHeading,
     ContactWrapper,
     LinksWrapper,
+    LiveNow,
     LogoWrapper,
     TwitchContainer,
     TwitchPageContainer,

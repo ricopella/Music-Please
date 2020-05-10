@@ -6,8 +6,10 @@ import Layout from "../components/layout"
 import ExternalLink from "../components/link"
 import "../components/layout.css"
 
+// ASSETS
 import Venmo from "../images/svg/venmo-icon.svg"
 import CashApp from "../images/svg/cash-app.svg"
+import Live from "../images/gif/live.gif"
 
 const Twitch = () => {
   return (
@@ -16,6 +18,7 @@ const Twitch = () => {
         <Styled.LogoWrapper>
           <Image filename="PLEASE.png" alt="Music Please Main Logo" />
         </Styled.LogoWrapper>
+        <Styled.LiveNow src={Live} />
         <Styled.TwitchVideosWrapper>
           <IframeResizer
             log
