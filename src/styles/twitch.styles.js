@@ -1,19 +1,19 @@
 import styled from '@emotion/styled';
 import { mediaBreakpoints } from '../constants/breakpoints';
 import Bouncy from '../images/gif/BOUNCY.gif'
+import { Link } from "gatsby"
 
 const TwitchContainer = styled.div `
   display: grid;
+  background-color: black;
+  background-image: url(${Bouncy}); 
+  background-size: cover;
   height: 100vh;
   max-height: 100vh;
   max-width: 100vw;
-  width: 100%;
-  background-image: url(${Bouncy}); 
-  background-size: cover;
   opacity: .75;
-  background-color: black;
+  width: 100%;
 `
-
 
 const TwitchPageContainer = styled.section `
   display: grid;
@@ -31,12 +31,17 @@ const TwitchPageContainer = styled.section `
   }
 `
 
-const LogoWrapper = styled.div `
+const LogoWrapper = styled(Link)
+`
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   height: 7rem;
   width: 11.75rem;
+
+  &:hover {
+    cursor: pointer;
+  }
 
   @media (max-width: ${mediaBreakpoints.phone}) {
     height: 8rem;

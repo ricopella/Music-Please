@@ -5,6 +5,7 @@ import Image from "../components/image"
 import ExternalLink from "../components/link"
 import "../components/layout.css"
 import useTwitchLiveStreams from "../hooks/useTwitchLiveStream"
+import BackButton from "../components/returnButton.js"
 
 // ASSETS
 import Venmo from "../images/svg/venmo-icon.svg"
@@ -13,13 +14,15 @@ import Live from "../images/gif/live.gif"
 
 const Twitch = () => {
   const [streams] = useTwitchLiveStreams()
+
   return (
     <Styled.TwitchContainer>
+      <BackButton />
       <Styled.TwitchPageContainer>
         {(streams || []).length ? (
           <Styled.LiveNow src={Live} />
         ) : (
-          <Styled.LogoWrapper>
+          <Styled.LogoWrapper to={"/"}>
             <Image
               filename="no_BG_MUSICPLEASE.png"
               alt="Music Please Main Logo"
