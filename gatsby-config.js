@@ -1,8 +1,17 @@
+const activeEnv =
+    process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || "development"
+
+console.log(`Using environment config: '${activeEnv}'`)
+
+require("dotenv").config({
+    path: `.env.${activeEnv}`,
+})
+
 module.exports = {
     siteMetadata: {
         title: `The Music Please.`,
         description: `The Music Please is a collective of DJ's and Artists`,
-        author: `Ricopella`
+        author: `Ricopella`,
     },
     plugins: [
         `gatsby-plugin-react-helmet`,
@@ -11,6 +20,7 @@ module.exports = {
             options: {
                 name: `images`,
                 path: `${__dirname}/src/images`,
+                exclude: `${__dirname}/src/images/svg`
             },
         },
         `gatsby-transformer-sharp`,
@@ -23,7 +33,15 @@ module.exports = {
                 start_url: `/`,
                 background_color: `#000000`,
             },
+        },
+        `gatsby-plugin-emotion`,
+        {
+            resolve: "gatsby-plugin-react-svg",
+            options: {
+                rule: {
+                    include: `${__dirname}/src/images/svg`
+                }
+            }
         }
-        // 'gatsby-plugin-offline',
     ],
 }
