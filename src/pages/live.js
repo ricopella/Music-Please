@@ -6,11 +6,11 @@ import ExternalLink from "../components/link"
 import "../components/layout.css"
 import useTwitchLiveStreams from "../hooks/useTwitchLiveStream"
 import BackButton from "../components/returnbutton.js"
+import LiveNow from "../components/livenow"
 
 // ASSETS
 import Venmo from "../images/svg/venmo-icon.svg"
 import CashApp from "../images/svg/cash-app.svg"
-import Live from "../images/gif/live.gif"
 
 const Twitch = () => {
   const [streams] = useTwitchLiveStreams()
@@ -20,7 +20,7 @@ const Twitch = () => {
       <BackButton />
       <Styled.TwitchPageContainer>
         {(streams || []).length ? (
-          <Styled.LiveNow src={Live} />
+          <LiveNow />
         ) : (
           <Styled.LogoWrapper to={"/"}>
             <Image
