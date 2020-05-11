@@ -88,17 +88,10 @@ const ContactHeading = styled.h4 `
   margin: 0 0;
 `
 
-const LiveNow = styled.img `
-  width: 6rem;
-  height: auto;
-  padding-top: 2rem;
-`
-
 export default {
     ContactHeading,
     ContactWrapper,
     LinksWrapper,
-    LiveNow,
     LogoWrapper,
     TwitchContainer,
     TwitchPageContainer,
