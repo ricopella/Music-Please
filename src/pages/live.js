@@ -44,7 +44,7 @@ const Twitch = () => {
         </Styled.TwitchVideosWrapper>
         <Styled.ContactWrapper>
           <Styled.LinksWrapper>
-            <ExternalLink href="https://venmo.com/Bryant-">
+            <ExternalLink href="https://venmo.com/musicplease">
               <Venmo style={{ height: 24, width: 24 }} alt="Venmo" />
             </ExternalLink>
             <ExternalLink href="https://cash.app/$musicplease">
