@@ -13,8 +13,9 @@ import Venmo from "../images/svg/venmo-icon.svg"
 import CashApp from "../images/svg/cash-app.svg"
 
 const Twitch = () => {
-  const [streams] = useTwitchLiveStreams()
-
+  // TODO: need to move /streams to a back end API
+  // const [streams] = useTwitchLiveStreams()
+  const streams = []
   return (
     <Styled.TwitchContainer>
       <BackButton />
@@ -44,7 +45,7 @@ const Twitch = () => {
         </Styled.TwitchVideosWrapper>
         <Styled.ContactWrapper>
           <Styled.LinksWrapper>
-            <ExternalLink href="https://venmo.com/musicplease">
+            <ExternalLink href="https://venmo.com/code?user_id=1944702211325952399">
               <Venmo style={{ height: 24, width: 24 }} alt="Venmo" />
             </ExternalLink>
             <ExternalLink href="https://cash.app/$musicplease">
