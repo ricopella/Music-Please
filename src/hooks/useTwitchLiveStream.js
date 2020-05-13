@@ -3,6 +3,7 @@ import axios from "axios"
 
 const useTwitchLiveStreams = () => {
     const [streams, seStreams] = useState([])
+    const [error, setError] = useState(null);
 
     const loadStreams = useCallback(
         () =>
@@ -25,6 +26,7 @@ const useTwitchLiveStreams = () => {
             } catch (e) {
                 // TODO: handle error
                 console.error(e)
+                setError(e)
             }
         })(), [seStreams]
     )
@@ -33,7 +35,7 @@ const useTwitchLiveStreams = () => {
         loadStreams()
     }, [loadStreams])
 
-    return [streams]
+    return [streams, error]
 }
 
 export default useTwitchLiveStreams

@@ -4,7 +4,6 @@ import styled from "@emotion/styled"
 const ContactLink = styled.a`
   &:hover {
     cursor: pointer;
-    transform: scale(1.2);
   }
 `
 

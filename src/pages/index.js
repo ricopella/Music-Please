@@ -13,7 +13,9 @@ const LiveLink = styled(Link)`
 `
 
 const IndexPage = () => {
-  const [streams] = useTwitchLiveStreams()
+  // TODO: move /streams call to backend api
+  // const [streams] = useTwitchLiveStreams()
+  const streams = []
 
   return (
     <Layout>
