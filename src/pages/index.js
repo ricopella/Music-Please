@@ -7,6 +7,7 @@ import useTwitchLiveStreams from "../hooks/useTwitchLiveStream"
 import LiveNow from "../components/livenow"
 import { Link } from "gatsby"
 import styled from "@emotion/styled"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 const LiveLink = styled(Link)`
   margin: 0 auto;
@@ -40,9 +41,9 @@ const IndexPage = () => {
           </LiveLink>
         ) : null}
         <div className="logoContainer">
-          <a href="mailto:musicpleaseradio@gmail.com">
+          <OutboundLink href="mailto:musicpleaseradio@gmail.com">
             <Image filename="PLEASE.png" alt="Music Please Main Logo" />
-          </a>
+          </OutboundLink>
         </div>
         <Socials />
       </div>
