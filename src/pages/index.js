@@ -17,35 +17,24 @@ const IndexPage = () => {
   const [streams] = useTwitchLiveStreams()
 
   return (
-    <Layout>
-      <SEO
-        title="Music Please."
-        keywords={[
-          `music please`,
-          `dj`,
-          `deejay`,
-          `radio`,
-          `recording`,
-          `live performance`,
-          `production`,
-          `mixes`,
-          `show`,
-        ]}
-      />
-      <div className="wrapper">
-        {(streams || []).length ? (
-          <LiveLink to="/live">
-            <LiveNow />
-          </LiveLink>
-        ) : null}
-        <div className="logoContainer">
-          <OutboundLink href="mailto:musicpleaseradio@gmail.com">
-            <Image filename="PLEASE.png" alt="Music Please Main Logo" />
-          </OutboundLink>
+    <>
+      <SEO title="HOME" />
+      <Layout>
+        <div className="wrapper">
+          {(streams || []).length ? (
+            <LiveLink to="/live">
+              <LiveNow />
+            </LiveLink>
+          ) : null}
+          <div className="logoContainer">
+            <OutboundLink href="mailto:musicpleaseradio@gmail.com">
+              <Image filename="PLEASE.png" alt="Music Please Main Logo" />
+            </OutboundLink>
+          </div>
+          <Socials />
         </div>
-        <Socials />
-      </div>
-    </Layout>
+      </Layout>
+    </>
   )
 }
 
