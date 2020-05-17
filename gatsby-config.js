@@ -11,7 +11,7 @@ module.exports = {
     siteMetadata: {
         title: `MUSIC PLEASE TECH. DEPT. 2020`,
         description: `   CREATIVE CURATION | TECHNOLOGICAL SOLUTIONS | DIGITAL DESIGN   `,
-        author: `RICOPELLA   C/O  THE MUSIC PLEASE TECHNOLOGICAL DEPARTMENT`,
+        author: `RICOPELLA   C/O  THE MUSIC PLEASE TECHNOLOGICAL`,
         lang: `en`,
         siteUrl: `https://themusicplease.com`,
         keywords: [
@@ -32,7 +32,7 @@ module.exports = {
             'design'
         ],
         twitterUserName: `@themusicplease`,
-        image: '/images/PLEASE.png'
+        image: `/images/PLEASE.png`
     },
     plugins: [
         `gatsby-plugin-react-helmet`,
@@ -88,5 +88,14 @@ module.exports = {
                 },
             },
         },
+        {
+            resolve: `gatsby-source-cloudinary`,
+            options: {
+                cloudName: process.env.CLOUDINARY_CLOUD_NAME,
+                apiKey: process.env.CLOUDINARY_API_KEY,
+                apiSecret: process.env.CLOUDINARY_API_SECRET,
+                resourceType: `image`,
+            }
+        }
     ],
 }

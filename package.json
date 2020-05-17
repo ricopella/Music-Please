@@ -21,6 +21,7 @@
         "gatsby-plugin-robots-txt": "^1.5.0",
         "gatsby-plugin-sharp": "^2.0.22",
         "gatsby-plugin-sitemap": "^2.4.2",
+        "gatsby-source-cloudinary": "^0.1.14",
         "gatsby-source-filesystem": "^2.0.22",
         "gatsby-transformer-sharp": "^2.1.14",
         "iframe-resizer-react": "^1.0.3",

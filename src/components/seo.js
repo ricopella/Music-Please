@@ -2,6 +2,7 @@ import React from "react"
 import Helmet from "react-helmet"
 import useSiteMetaData from "../hooks/useSiteMetaData"
 import { useLocation } from "@reach/router"
+import useImage from "../hooks/useImage"
 
 function SEO({ description, image, title }) {
   const { pathname } = useLocation()
@@ -12,14 +13,15 @@ function SEO({ description, image, title }) {
     keywords,
     twitterUserName,
     siteUrl,
-    image: defaultImage,
   } = useSiteMetaData()
+
+  const logoImage = useImage("PLEASE.png")
 
   const seo = {
     title: title || defaultTitle,
     description: description || defaultDescription,
     url: `${siteUrl}/${pathname}`,
-    image: `${siteUrl}${image || defaultImage}`,
+    image: image || logoImage.src,
   }
 
   return (
@@ -30,6 +32,10 @@ function SEO({ description, image, title }) {
       title={seo.title}
       titleTemplate={`${title} | ${defaultTitle}`}
       meta={[
+        {
+          name: "viewport",
+          content: "width=device-width, initial-scale=1.0",
+        },
         {
           name: `description`,
           content: seo.description,
@@ -49,6 +55,10 @@ function SEO({ description, image, title }) {
         {
           property: `og:url`,
           content: seo.url,
+        },
+        {
+          property: "og:locale",
+          content: "en_US",
         },
         {
           name: `twitter:card`,
@@ -86,7 +96,9 @@ function SEO({ description, image, title }) {
             }
           : []
       )}
-    />
+    >
+      <link rel="canonical" href={seo.url} />
+    </Helmet>
   )
 }
 

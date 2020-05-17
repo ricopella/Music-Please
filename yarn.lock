@@ -3379,6 +3379,14 @@ clone-response@1.0.2, clone-response@^1.0.2:
   dependencies:
     mimic-response "^1.0.0"
 
+cloudinary@^1.11.0:
+  version "1.21.0"
+  resolved "https://registry.yarnpkg.com/cloudinary/-/cloudinary-1.21.0.tgz#9c30935190f49f2e9a0e26a16cd8ade580f675cc"
+  integrity sha512-am8wpHbHl8bcpy9oGSlWrpWLNQ9szkW/jmhcJdEpMjaL23BYt05V1frWyrXDlo8Jt7aCo5NE6EO0CM9Zaynd5g==
+  dependencies:
+    lodash "^4.17.11"
+    q "^1.5.1"
+
 coa@^2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/coa/-/coa-2.0.2.tgz#43f6c21151b4ef2bf57187db0d73de229e3e7ec3"
@@ -6060,6 +6068,14 @@ gatsby-recipes@^0.1.8:
     ws "^7.2.5"
     xstate "^4.9.1"
 
+gatsby-source-cloudinary@^0.1.14:
+  version "0.1.14"
+  resolved "https://registry.yarnpkg.com/gatsby-source-cloudinary/-/gatsby-source-cloudinary-0.1.14.tgz#d4db9cc3dcde86407217b69bb855585acf1004db"
+  integrity sha512-qL+ShxmekYEnj3RoEW86v6fYPuDK44nLYVznNjQ8WefAVc+1w4Yf6wmHKM6DQevs3t2ABnFGYaG+tAQzJT/Wfg==
+  dependencies:
+    cloudinary "^1.11.0"
+    lodash.snakecase "^4.1.1"
+
 gatsby-source-filesystem@^2.0.22:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-2.3.0.tgz#2c308b7e023b6cb37814156da9b681a3deb7b4c3"
@@ -8490,6 +8506,11 @@ lodash.memoize@^4.1.2:
   resolved "https://registry.yarnpkg.com/lodash.memoize/-/lodash.memoize-4.1.2.tgz#bcc6c49a42a2840ed997f323eada5ecd182e0bfe"
   integrity sha1-vMbEmkKihA7Zl/Mj6tpezRguC/4=
 
+lodash.snakecase@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/lodash.snakecase/-/lodash.snakecase-4.1.1.tgz#39d714a35357147837aefd64b5dcbb16becd8f8d"
+  integrity sha1-OdcUo1NXFHg3rv1ktdy7Fr7Nj40=
+
 lodash.template@^4.4.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/lodash.template/-/lodash.template-4.5.0.tgz#f976195cf3f347d0d5f52483569fe8031ccce8ab"
@@ -10769,7 +10790,7 @@ punycode@^1.2.4:
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-1.4.1.tgz#c0d5a63b2718800ad8e1eb0fa5269c84dd41845e"
   integrity sha1-wNWmOycYgArY4esPpSachN1BhF4=
 
-q@^1.1.2:
+q@^1.1.2, q@^1.5.1:
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/q/-/q-1.5.1.tgz#7e32f75b41381291d04611f1bf14109ac00651d7"
   integrity sha1-fjL3W0E4EpHQRhHxvxQQmsAGUdc=
