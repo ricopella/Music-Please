@@ -8,6 +8,7 @@ import useTwitchLiveStreams from "../hooks/useTwitchLiveStream"
 import BackButton from "../components/returnbutton.js"
 import LiveNow from "../components/livenow"
 import SEO from "../components/seo"
+import Footer from "../components/footer"
 
 // ASSETS
 import Venmo from "../images/svg/venmo-icon.svg"
@@ -60,6 +61,7 @@ const Twitch = () => {
             </Styled.LinksWrapper>
           </Styled.ContactWrapper>
         </Styled.TwitchPageContainer>
+        <Footer />
       </Styled.TwitchContainer>
     </>
   )

@@ -96,6 +96,12 @@ module.exports = {
                 apiSecret: process.env.CLOUDINARY_API_SECRET,
                 resourceType: `image`,
             }
+        },
+        {
+            resolve: "gatsby-plugin-typography",
+            options: {
+                pathToConfigModule: "src/utils/typography.js"
+            }
         }
     ],
 }

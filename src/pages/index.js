@@ -8,16 +8,25 @@ import LiveNow from "../components/livenow"
 import { Link } from "gatsby"
 import styled from "@emotion/styled"
 import { OutboundLink } from "gatsby-plugin-google-analytics"
+import Footer from "../components/footer"
 
 const LiveLink = styled(Link)`
   margin: 0 auto;
+`
+
+const PageContainer = styled.div`
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr max-content;
+  height: 100vh;
+  width: 100vw;
 `
 
 const IndexPage = () => {
   // const [streams] = useTwitchLiveStreams()
 
   return (
-    <>
+    <PageContainer>
       <SEO title="HOME" />
       <Layout>
         <div className="wrapper">
@@ -36,7 +45,8 @@ const IndexPage = () => {
           <Socials />
         </div>
       </Layout>
-    </>
+      <Footer />
+    </PageContainer>
   )
 }
 
