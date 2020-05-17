@@ -21,7 +21,7 @@ function SEO({ description, image, title }) {
     title: title || defaultTitle,
     description: description || defaultDescription,
     url: `${siteUrl}/${pathname}`,
-    image: ${siteUrl}`${image || logoImage.src}`,
+    image: `${siteUrl}`${image || logoImage.src}`,
   }
 
   return (
