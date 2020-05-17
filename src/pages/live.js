@@ -15,7 +15,7 @@ import Venmo from "../images/svg/venmo-icon.svg"
 import CashApp from "../images/svg/cash-app.svg"
 
 const PAGE_META_DESCRIPTION = "MUSIC PLEASE BROADCAST NETWORK"
-const PAGE_TITLE = "LIVE"
+const PAGE_TITLE = "LIVE BROADCAST"
 
 const Twitch = () => {
   // TODO: need to move /streams to a back end API
