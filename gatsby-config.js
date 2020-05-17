@@ -9,9 +9,30 @@ require("dotenv").config({
 
 module.exports = {
     siteMetadata: {
-        title: `The Music Please.`,
-        description: `The Music Please is a collective of DJ's and Artists`,
-        author: `Ricopella`,
+        title: `MUSIC PLEASE TECH. DEPT. 2020`,
+        description: `   CREATIVE CURATION | TECHNOLOGICAL SOLUTIONS | DIGITAL DESIGN   `,
+        author: `RICOPELLA   C/O  THE MUSIC PLEASE TECHNOLOGICAL`,
+        lang: `en`,
+        siteUrl: `https://themusicplease.com`,
+        keywords: [
+            `music please`,
+            `dj`,
+            `deejay`,
+            `radio`,
+            `recording`,
+            `live performance`,
+            `production`,
+            `mixes`,
+            `show`,
+            'web development',
+            'podcast',
+            'live stream',
+            'creative',
+            'technology',
+            'design'
+        ],
+        twitterUserName: `@themusicplease`,
+        image: `/images/PLEASE.png`
     },
     plugins: [
         `gatsby-plugin-react-helmet`,
@@ -28,10 +49,12 @@ module.exports = {
         {
             resolve: `gatsby-plugin-manifest`,
             options: {
-                name: `music-please`,
-                short_name: `musicplease`,
+                name: `THE MUSIC PLEASE APP`,
+                short_name: `MUSIC PLEASE`,
                 start_url: `/`,
                 background_color: `#000000`,
+                display: 'minimal-ui'
+                    // icon: `src/images/favicon/favicon.ico`
             },
         },
         `gatsby-plugin-emotion`,
@@ -49,5 +72,30 @@ module.exports = {
                 trackingId: process.env.GOOGLE_ANALYTICS_ID,
             },
         },
+        `gatsby-plugin-sitemap`,
+        {
+            resolve: 'gatsby-plugin-robots-txt',
+            options: {
+                host: 'https://www.themusicplease.com',
+                sitemap: 'https://www.themusicplease.com/sitemap.xml',
+                env: {
+                    development: {
+                        policy: [{ userAgent: '*', disallow: ['/'] }],
+                    },
+                    production: {
+                        policy: [{ userAgent: '*', allow: '/' }],
+                    },
+                },
+            },
+        },
+        {
+            resolve: `gatsby-source-cloudinary`,
+            options: {
+                cloudName: process.env.CLOUDINARY_CLOUD_NAME,
+                apiKey: process.env.CLOUDINARY_API_KEY,
+                apiSecret: process.env.CLOUDINARY_API_SECRET,
+                resourceType: `image`,
+            }
+        }
     ],
 }
