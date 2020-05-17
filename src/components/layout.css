@@ -19,7 +19,6 @@ body {
     grid-template-columns: 1fr;
     grid-template-rows: max-content max-content;
     grid-row-gap: 0;
-    height: 100vh;
     position: relative;
 }
 
@@ -62,7 +61,6 @@ body {
 
 @media only screen and (max-width: 68.75rem) {
     .container {
-        height: 100vh;
         align-content: center;
     }
     .social_icon {
@@ -80,7 +78,6 @@ body {
 
 @media only screen and (max-width: 48rem) {
     .container {
-        height: 100vh;
         align-content: center;
     }
     .social_icon {

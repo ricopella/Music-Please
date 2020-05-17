@@ -13,6 +13,7 @@ const TwitchContainer = styled.div `
   max-width: 100vw;
   opacity: .75;
   width: 100%;
+  grid-template-rows: 1fr max-content;
 `
 
 const TwitchPageContainer = styled.section `
