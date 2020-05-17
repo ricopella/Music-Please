@@ -1,5 +1,13 @@
 import React from "react"
 import SocialImg from "./image"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
+import styled from "@emotion/styled"
+
+const SocialLinkWrapper = styled(OutboundLink)`
+  &:hover {
+    cursor: pointer;
+  }
+`
 
 const Socials = () => (
   <div className="social_icons_container">
@@ -37,11 +45,11 @@ const Socials = () => (
 )
 
 const SocialLink = ({ filename, title, alt, link }) => (
-  <a href={link} target="_blank" rel="noopener noreferrer">
+  <SocialLinkWrapper href={link} target="_blank" rel="noopener noreferrer">
     <div className={`social_icon ${title === "Twitch" ? "twitch" : ""}`}>
       <SocialImg filename={filename} title={title} alt={alt} />
     </div>
-  </a>
+  </SocialLinkWrapper>
 )
 
 export default Socials
