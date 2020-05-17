@@ -31,73 +31,29 @@ function SEO({ description, image, title }) {
       }}
       title={seo.title}
       titleTemplate={`${title} | ${defaultTitle}`}
-      meta={[
-        {
-          name: "viewport",
-          content: "width=device-width, initial-scale=1.0",
-        },
-        {
-          name: `description`,
-          content: seo.description,
-        },
-        {
-          property: `og:title`,
-          content: seo.title,
-        },
-        {
-          property: `og:description`,
-          content: seo.description,
-        },
-        {
-          property: `og:type`,
-          content: `website`,
-        },
-        {
-          property: `og:url`,
-          content: seo.url,
-        },
-        {
-          property: "og:locale",
-          content: "en_US",
-        },
-        {
-          name: `twitter:card`,
-          content: `summary_large_image`,
-        },
-        {
-          name: `twitter:creator`,
-          content: twitterUserName,
-        },
-        {
-          name: `twitter:title`,
-          content: seo.title,
-        },
-        {
-          name: `twitter:description`,
-          content: seo.description,
-        },
-        {
-          name: "image",
-          content: seo.image,
-        },
-        {
-          name: "og:image",
-          content: seo.image,
-        },
-        {
-          name: "twitter:image",
-          content: seo.image,
-        },
-      ].concat(
-        keywords.length > 0
-          ? {
-              name: `keywords`,
-              content: (keywords || []).join(`, `),
-            }
-          : []
-      )}
     >
       <link rel="canonical" href={seo.url} />
+      <meta name="description" content={seo.description} />
+      <meta name="image" content={seo.image} />
+      {seo.url && <meta property="og:url" content={seo.url} />}
+      {seo.title && <meta property="og:title" content={seo.title} />}
+      {seo.description && (
+        <meta property="og:description" content={seo.description} />
+      )}
+      {seo.image && <meta property="og:image" content={seo.image} />}
+      <meta name="twitter:card" content="summary_large_image" />
+      {twitterUserName && (
+        <meta name="twitter:creator" content={twitterUserName} />
+      )}
+      {seo.title && <meta name="twitter:title" content={seo.title} />}
+      {seo.description && (
+        <meta name="twitter:description" content={seo.description} />
+      )}
+      {seo.image && <meta name="twitter:image" content={seo.image} />}
+      <meta property="og:locale" content="en_US" />
+      <meta property="og:type" content="website" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="keywords" content={(keywords || []).join(`, `)} />
     </Helmet>
   )
 }
