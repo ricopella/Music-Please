@@ -3,6 +3,7 @@ import Helmet from "react-helmet"
 import useSiteMetaData from "../hooks/useSiteMetaData"
 import { useLocation } from "@reach/router"
 import useImage from "../hooks/useImage"
+import favicon from "../images/favicon/favicon.ico"
 
 function SEO({ description, image, title }) {
   const { pathname } = useLocation()
@@ -32,6 +33,7 @@ function SEO({ description, image, title }) {
       title={seo.title}
       titleTemplate={`${title} | ${defaultTitle}`}
     >
+      <link rel="icon" href={favicon} />
       <link rel="canonical" href={seo.url} />
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />

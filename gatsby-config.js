@@ -54,7 +54,7 @@ module.exports = {
                 start_url: `/`,
                 background_color: `#000000`,
                 display: 'minimal-ui'
-                    // icon: `src/images/favicon/favicon.ico`
+                icon: `src/images/favicon/favicon.ico`
             },
         },
         `gatsby-plugin-emotion`,
