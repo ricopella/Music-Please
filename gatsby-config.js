@@ -53,8 +53,8 @@ module.exports = {
                 short_name: `MUSIC PLEASE`,
                 start_url: `/`,
                 background_color: `#000000`,
-                display: 'minimal-ui'
-                    // icon: `src/images/favicon/favicon.ico`
+                display: 'minimal-ui',
+                icon: `src/images/favicon/favicon.ico`
             },
         },
         `gatsby-plugin-emotion`,

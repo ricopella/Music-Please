@@ -27,7 +27,7 @@ const IndexPage = () => {
 
   return (
     <PageContainer>
-      <SEO title="HOME" />
+      <SEO title="THE MUSIC PLEASE ONLINE" />
       <Layout>
         <div className="wrapper">
           {/*

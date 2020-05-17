@@ -12,7 +12,7 @@ const FooterContainer = styled.footer`
 `
 
 const FooterContent = styled.div`
-  color: white;
+  color: #39ff14;
   font-size: 0.75rem;
 `
 
