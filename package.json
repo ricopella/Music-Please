@@ -25,6 +25,7 @@
         "gatsby-plugin-typography": "^2.5.1",
         "gatsby-source-cloudinary": "^0.1.14",
         "gatsby-source-filesystem": "^2.0.22",
+        "gatsby-source-shopify": "^3.2.3",
         "gatsby-transformer-sharp": "^2.1.14",
         "iframe-resizer-react": "^1.0.3",
         "prop-types": "^15.7.2",
@@ -32,6 +33,7 @@
         "react-dom": "^16.8.3",
         "react-helmet": "^5.2.0",
         "react-typography": "^0.16.19",
+        "shopify-buy": "^2.10.0",
         "typography": "^0.16.19",
         "yarn": "^1.22.4"
     },
