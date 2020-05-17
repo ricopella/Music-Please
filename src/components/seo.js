@@ -20,7 +20,7 @@ function SEO({ description, image, title }) {
   const seo = {
     title: title || defaultTitle,
     description: description || defaultDescription,
-    url: `${siteUrl}/${pathname}`,
+    url: `${siteUrl}${pathname}`,
     image: `${siteUrl}${image || logoImage.src}`,
   }
 
