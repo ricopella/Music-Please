@@ -40,6 +40,10 @@ const SocialContainerLower = styled.div`
 const SocialIcon = styled.div`
   width: 8.5rem;
 
+  &.ig {
+    width: 3rem;
+  }
+
   &.twitch {
     width: 5rem;
   }
@@ -50,6 +54,14 @@ const SocialIcon = styled.div`
 
   &.live {
     width: 3.5rem;
+  }
+
+  &.fb {
+    width: 3rem;
+  }
+
+  &.tw {
+    width: 4rem;
   }
 
   // smaller desktop
@@ -83,6 +95,18 @@ const SocialIcon = styled.div`
     &.email {
       width: 2.75rem;
     }
+
+    &.ig {
+      width: 2rem;
+    }
+
+    &.tw {
+      width: 3.5rem;
+    }
+
+    &.fb {
+      width: 2rem;
+    }
   }
 
   // mobile
@@ -115,18 +139,21 @@ const Socials = () => (
         title="Instagram"
         alt="Instagram - @themusicplease"
         link="https://instagram.com/themusicplease"
+        className="ig"
       />
       <SocialLink
         filename="TW.png"
         title="TWitter"
         alt="Twitter - @themusicplease"
         link="https://twitter.com/themusicplease"
+        className="tw"
       />
       <SocialLink
         filename="FB.png"
         title="Facebook"
         alt="Facebook - @themusicplease"
         link="https://facebook.com/themusicplease"
+        className="fb"
       />
     </SocialContainer>
     <SocialContainerLower>
@@ -146,7 +173,7 @@ const Socials = () => (
         internal
       />
       <SocialLink
-        filename="email.png"
+        filename="email1.png"
         title="E-Mail"
         alt="Email = musicpleaseradio@gmail.com"
         link="mailto:musicpleaseradio@gmail.com"
