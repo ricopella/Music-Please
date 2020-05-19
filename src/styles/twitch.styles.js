@@ -9,7 +9,9 @@ const TwitchContainer = styled.div `
   background-image: url(${Bouncy}); 
   background-size: cover;
   height: 100vh;
+  height: ${props => props.vh}px;
   max-height: 100vh;
+  max-height: ${props => props.vh}px;
   max-width: 100vw;
   opacity: .75;
   width: 100%;
@@ -23,7 +25,7 @@ const TwitchPageContainer = styled.section `
   grid-template-rows: max-content 1fr max-content;
   height: 100%;
   justify-items: center;
-  max-height: 100vh;
+  max-height: ${props => props.vh}px;
   max-width: 100vw;
   width: 100%;
 
