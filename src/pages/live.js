@@ -9,6 +9,7 @@ import BackButton from "../components/returnbutton.js"
 import LiveNow from "../components/livenow"
 import SEO from "../components/seo"
 import Footer from "../components/footer"
+import { useWindowSize } from "react-use"
 
 // ASSETS
 import Venmo from "../images/svg/venmo-icon.svg"
@@ -21,10 +22,12 @@ const Twitch = () => {
   // TODO: need to move /streams to a back end API
   // const [streams] = useTwitchLiveStreams()
   const streams = []
+  const { height } = useWindowSize()
+
   return (
     <>
       <SEO description={PAGE_META_DESCRIPTION} title={PAGE_TITLE} />
-      <Styled.TwitchContainer>
+      <Styled.TwitchContainer vh={height}>
         <BackButton />
         <Styled.TwitchPageContainer>
           {(streams || []).length ? (

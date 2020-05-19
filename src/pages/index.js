@@ -9,6 +9,7 @@ import { Link } from "gatsby"
 import styled from "@emotion/styled"
 import { OutboundLink } from "gatsby-plugin-google-analytics"
 import Footer from "../components/footer"
+import { useWindowSize } from "react-use"
 
 const LiveLink = styled(Link)`
   margin: 0 auto;
@@ -18,15 +19,17 @@ const PageContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr max-content;
-  height: 100vh;
+  height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+  height: ${props => props.vh}px;
   width: 100vw;
 `
 
 const IndexPage = () => {
   // const [streams] = useTwitchLiveStreams()
+  const { height } = useWindowSize()
 
   return (
-    <PageContainer>
+    <PageContainer vh={height}>
       <SEO title="THE MUSIC PLEASE ONLINE" />
       <Layout>
         <div className="wrapper">
@@ -38,9 +41,7 @@ const IndexPage = () => {
           ) : null}
         */}
           <div className="logoContainer">
-            <OutboundLink href="mailto:musicpleaseradio@gmail.com">
-              <Image filename="PLEASE.png" alt="Music Please Main Logo" />
-            </OutboundLink>
+            <Image filename="PLEASE.png" alt="Music Please Main Logo" />
           </div>
           <Socials />
         </div>
