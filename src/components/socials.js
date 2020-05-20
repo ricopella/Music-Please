@@ -4,9 +4,10 @@ import { OutboundLink } from "gatsby-plugin-google-analytics"
 import styled from "@emotion/styled"
 import { Link } from "gatsby"
 import { css } from "@emotion/core"
+import { mediaBreakpoints } from "../styles/constants"
 
 const SocialLinkWrapper = css`
-  width: 8.5rem;
+  width: 7.5rem;
   height: auto;
   display: grid;
   align-content: center;
@@ -16,8 +17,8 @@ const SocialLinkWrapper = css`
     cursor: pointer;
   }
 
-  @media only screen and (max-width: 48rem) {
-    width: 5rem;
+  @media only screen and (max-width: ${mediaBreakpoints.tablet}) {
+    width: 4.5rem;
   }
 `
 
@@ -38,7 +39,7 @@ const SocialContainerLower = styled.div`
 `
 
 const SocialIcon = styled.div`
-  width: 8.5rem;
+  width: 7.5rem;
 
   &.ig {
     width: 3rem;
@@ -49,7 +50,7 @@ const SocialIcon = styled.div`
   }
 
   &.email {
-    width: 4.5rem;
+    width: 2.75rem;
   }
 
   &.live {
@@ -57,15 +58,15 @@ const SocialIcon = styled.div`
   }
 
   &.fb {
-    width: 3rem;
+    width: 2.5rem;
   }
 
   &.tw {
-    width: 4rem;
+    width: 2.75rem;
   }
 
   // smaller desktop
-  @media only screen and (max-width: 68.75rem) {
+  @media only screen and (max-width: ${mediaBreakpoints.smallDesktop}) {
     width: 7.75rem;
 
     &.twitch {
@@ -77,13 +78,13 @@ const SocialIcon = styled.div`
     }
 
     &.email {
-      width: 4rem;
+      width: 1.75rem;
     }
   }
 
   // tablet
-  @media only screen and (max-width: 48rem) {
-    width: 5rem;
+  @media only screen and (max-width: ${mediaBreakpoints.tablet}) {
+    width: 4rem;
     &.twitch {
       width: 3rem;
     }
@@ -93,7 +94,7 @@ const SocialIcon = styled.div`
     }
 
     &.email {
-      width: 2.75rem;
+      width: 1.75rem;
     }
 
     &.ig {
@@ -101,7 +102,7 @@ const SocialIcon = styled.div`
     }
 
     &.tw {
-      width: 3.5rem;
+      width: 2.25rem;
     }
 
     &.fb {
@@ -110,7 +111,7 @@ const SocialIcon = styled.div`
   }
 
   // mobile
-  @media only screen and (max-width: 25.875rem) {
+  @media only screen and (max-width: ${mediaBreakpoints.phone}) {
     &.twitch {
       width: 2.5rem;
     }
@@ -120,7 +121,11 @@ const SocialIcon = styled.div`
     }
 
     &.email {
-      width: 2.25rem;
+      width: 1.75rem;
+    }
+
+    &.tw {
+      width: 2rem;
     }
   }
 `
@@ -142,7 +147,7 @@ const Socials = () => (
         className="ig"
       />
       <SocialLink
-        filename="TW.png"
+        filename="TW1.png"
         title="TWitter"
         alt="Twitter - @themusicplease"
         link="https://twitter.com/themusicplease"
@@ -173,7 +178,7 @@ const Socials = () => (
         internal
       />
       <SocialLink
-        filename="email1.png"
+        filename="email.png"
         title="E-Mail"
         alt="Email = musicpleaseradio@gmail.com"
         link="mailto:musicpleaseradio@gmail.com"
