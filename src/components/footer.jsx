@@ -10,10 +10,6 @@ const FooterContainer = styled.footer`
   justify-content: center;
   width: 100vw;
   margin: 1rem 0;
-
-  @media (max-width: ${MEDIA_BREAKPOINTS.TABLET}) {
-    margin-bottom: 2.5rem;
-  }
 `
 
 const FooterContent = styled.div`

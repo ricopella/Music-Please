@@ -9,9 +9,7 @@ const TwitchContainer = styled.div `
   background-image: url(${Bouncy}); 
   background-size: cover;
   height: 100vh;
-  height: ${props => props.vh}px;
   max-height: 100vh;
-  max-height: ${props => props.vh}px;
   max-width: 100vw;
   opacity: .75;
   width: 100%;
