@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "@emotion/styled"
 import getYear from "date-fns/getYear"
+import { COLORS } from "../styles/constants"
 
 const FooterContainer = styled.footer`
   display: grid;
@@ -12,7 +13,7 @@ const FooterContainer = styled.footer`
 `
 
 const FooterContent = styled.div`
-  color: #39ff14;
+  color: ${COLORS.NEON_GREEN};
   font-size: 0.75rem;
 `
 

@@ -34,6 +34,7 @@
         "react-helmet": "^5.2.0",
         "react-typography": "^0.16.19",
         "shopify-buy": "^2.10.0",
+        "react-use": "^15.1.0",
         "typography": "^0.16.19",
         "yarn": "^1.22.4"
     },

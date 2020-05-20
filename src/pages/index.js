@@ -2,10 +2,10 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Image from "../components/image"
-import Socials from "../components/socials"
+import Socials from "../components/socials.jsx"
 import styled from "@emotion/styled"
-import { OutboundLink } from "gatsby-plugin-google-analytics"
 import Footer from "../components/footer"
+import Bouncy from "../images/gif/BOUNCY.gif"
 
 const PageContainer = styled.div`
   display: grid;
@@ -13,6 +13,9 @@ const PageContainer = styled.div`
   grid-template-rows: 1fr max-content;
   height: 100vh;
   width: 100vw;
+  background-color: black;
+  background-image: url(${Bouncy});
+  background-size: cover;
 `
 
 const IndexPage = () => {
@@ -22,9 +25,10 @@ const IndexPage = () => {
       <Layout>
         <div className="wrapper">
           <div className="logoContainer">
-            <OutboundLink href="mailto:musicpleaseradio@gmail.com">
-              <Image filename="PLEASE.png" alt="Music Please Main Logo" />
-            </OutboundLink>
+            <Image
+              filename="no_BG_MUSICPLEASE.png"
+              alt="Music Please Main Logo"
+            />
           </div>
           <Socials />
         </div>
