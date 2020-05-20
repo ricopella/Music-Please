@@ -4,7 +4,6 @@ import IframeResizer from "iframe-resizer-react"
 import Image from "../components/image"
 import ExternalLink from "../components/link"
 import "../components/layout.css"
-import useTwitchLiveStreams from "../hooks/useTwitchLiveStream"
 import BackButton from "../components/returnbutton.js"
 import LiveNow from "../components/livenow"
 import SEO from "../components/seo"
@@ -18,8 +17,6 @@ const PAGE_META_DESCRIPTION = "MUSIC PLEASE BROADCAST NETWORK"
 const PAGE_TITLE = "LIVE BROADCAST"
 
 const Twitch = () => {
-  // TODO: need to move /streams to a back end API
-  // const [streams] = useTwitchLiveStreams()
   const streams = []
   return (
     <>
