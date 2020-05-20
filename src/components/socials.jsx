@@ -4,7 +4,12 @@ import { OutboundLink } from "gatsby-plugin-google-analytics"
 import styled from "@emotion/styled"
 import { Link } from "gatsby"
 import { css } from "@emotion/core"
-import { mediaBreakpoints } from "../styles/constants"
+import {
+  MEDIA_BREAKPOINTS,
+  SLIDE_IN_ANIMATION_OPTIONS,
+  FADE_IN_ANIMATION_OPTIONS,
+} from "../styles/constants"
+import { motion } from "framer-motion"
 
 const SocialLinkWrapper = css`
   width: 7.5rem;
@@ -17,7 +22,7 @@ const SocialLinkWrapper = css`
     cursor: pointer;
   }
 
-  @media only screen and (max-width: ${mediaBreakpoints.tablet}) {
+  @media only screen and (max-width: ${MEDIA_BREAKPOINTS.TABLET}) {
     width: 4.5rem;
   }
 `
@@ -66,7 +71,7 @@ const SocialIcon = styled.div`
   }
 
   // smaller desktop
-  @media only screen and (max-width: ${mediaBreakpoints.smallDesktop}) {
+  @media only screen and (max-width: ${MEDIA_BREAKPOINTS.SMALL_DESKTOP}) {
     width: 7.75rem;
 
     &.twitch {
@@ -83,7 +88,7 @@ const SocialIcon = styled.div`
   }
 
   // tablet
-  @media only screen and (max-width: ${mediaBreakpoints.tablet}) {
+  @media only screen and (max-width: ${MEDIA_BREAKPOINTS.TABLET}) {
     width: 4rem;
     &.twitch {
       width: 3rem;
@@ -111,7 +116,7 @@ const SocialIcon = styled.div`
   }
 
   // mobile
-  @media only screen and (max-width: ${mediaBreakpoints.phone}) {
+  @media only screen and (max-width: ${MEDIA_BREAKPOINTS.PHONE}) {
     &.twitch {
       width: 2.5rem;
     }
@@ -131,7 +136,7 @@ const SocialIcon = styled.div`
 `
 
 const Socials = () => (
-  <>
+  <motion.div {...SLIDE_IN_ANIMATION_OPTIONS}>
     <SocialContainer>
       <SocialLink
         filename="SC.png"
@@ -185,7 +190,7 @@ const Socials = () => (
         className="email"
       />
     </SocialContainerLower>
-  </>
+  </motion.div>
 )
 
 const SocialLink = ({

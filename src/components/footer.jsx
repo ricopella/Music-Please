@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "@emotion/styled"
 import getYear from "date-fns/getYear"
-import { mediaBreakpoints } from "../styles/constants"
+import { COLORS, MEDIA_BREAKPOINTS } from "../styles/constants"
 
 const FooterContainer = styled.footer`
   display: grid;
@@ -11,13 +11,13 @@ const FooterContainer = styled.footer`
   width: 100vw;
   margin: 1rem 0;
 
-  @media (max-width: ${mediaBreakpoints.tablet}) {
+  @media (max-width: ${MEDIA_BREAKPOINTS.TABLET}) {
     margin-bottom: 2.5rem;
   }
 `
 
 const FooterContent = styled.div`
-  color: #39ff14;
+  color: ${COLORS.NEON_GREEN};
   font-size: 0.75rem;
 `
 

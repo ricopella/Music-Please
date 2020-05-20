@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { mediaBreakpoints } from '../constants/breakpoints';
+import { MEDIA_BREAKPOINTS } from '../styles/constants';
 import Bouncy from '../images/gif/BOUNCY.gif'
 import { Link } from "gatsby"
 
@@ -29,7 +29,7 @@ const TwitchPageContainer = styled.section `
   max-width: 100vw;
   width: 100%;
 
-  @media (max-width: ${mediaBreakpoints.phone}) {
+  @media (max-width: ${MEDIA_BREAKPOINTS.PHONE}) {
     grid-template-rows: max-content 25rem max-content;
   }
 `
@@ -46,7 +46,7 @@ const LogoWrapper = styled(Link)
     cursor: pointer;
   }
 
-  @media (max-width: ${mediaBreakpoints.phone}) {
+  @media (max-width: ${MEDIA_BREAKPOINTS.PHONE}) {
     height: 8rem;
     width: 12.75rem;
   }
@@ -61,11 +61,11 @@ const TwitchVideosWrapper = styled.div `
   max-width: calc(100% - 12rem);
   width: 100%;
 
-  @media (max-width: ${mediaBreakpoints.tablet}) {
+  @media (max-width: ${MEDIA_BREAKPOINTS.TABLET}) {
     max-width: calc(100% - 2rem);
   }
 
-  @media (max-width: ${mediaBreakpoints.phone}) {
+  @media (max-width: ${MEDIA_BREAKPOINTS.PHONE}) {
     max-width: calc(100% - 2rem);
     max-height: 26rem;
   }
