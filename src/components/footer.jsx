@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "@emotion/styled"
 import getYear from "date-fns/getYear"
+import { mediaBreakpoints } from "../styles/constants"
 
 const FooterContainer = styled.footer`
   display: grid;
@@ -9,6 +10,10 @@ const FooterContainer = styled.footer`
   justify-content: center;
   width: 100vw;
   margin: 1rem 0;
+
+  @media (max-width: ${mediaBreakpoints.tablet}) {
+    margin-bottom: 2.5rem;
+  }
 `
 
 const FooterContent = styled.div`
