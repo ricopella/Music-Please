@@ -3,6 +3,7 @@ import useShopifyProducts from "../hooks/useShopifyProducts"
 import styled from "@emotion/styled"
 import SEO from "../components/seo"
 import Footer from "../components/footer"
+import Layout from "../components/layout"
 
 const ShopContainer = styled.div`
   height: 100vh;
@@ -28,7 +29,7 @@ const Shop = () => {
   const products = useShopifyProducts()
 
   return (
-    <div>
+    <Layout>
       <SEO title="THE MUSIC PLEASE SHOP" />
       <ShopContainer>
         <h1>THE MUSIC PLEASE SHOP</h1>
@@ -46,7 +47,7 @@ const Shop = () => {
         </ShopProductsWrapper>
         <Footer />
       </ShopContainer>
-    </div>
+    </Layout>
   )
 }
 
