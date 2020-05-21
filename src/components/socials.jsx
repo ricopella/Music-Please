@@ -7,7 +7,6 @@ import { css } from "@emotion/core"
 import {
   MEDIA_BREAKPOINTS,
   SLIDE_IN_ANIMATION_OPTIONS,
-  FADE_IN_ANIMATION_OPTIONS,
 } from "../styles/constants"
 import { motion } from "framer-motion"
 

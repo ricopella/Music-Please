@@ -102,6 +102,13 @@ module.exports = {
             options: {
                 pathToConfigModule: "src/utils/typography.js"
             }
-        }
+        },
+        {
+            resolve: `gatsby-source-shopify`,
+            options: {
+                shopName: `musicpleaseshop`,
+                accessToken: process.env.SHOPIFY_ACCESS_TOKEN,
+            },
+        },
     ],
 }

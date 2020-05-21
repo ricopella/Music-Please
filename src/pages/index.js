@@ -3,16 +3,9 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Image from "../components/image"
 import Socials from "../components/socials.jsx"
-import LiveNow from "../components/livenow"
-import { Link } from "gatsby"
 import styled from "@emotion/styled"
-import { OutboundLink } from "gatsby-plugin-google-analytics"
 import Footer from "../components/footer"
 import Bouncy from "../images/gif/BOUNCY.gif"
-
-const LiveLink = styled(Link)`
-  margin: 0 auto;
-`
 
 const PageContainer = styled.div`
   display: grid;
