@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "@emotion/styled"
 import { COLORS } from "../styles/constants"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 const ContactContainer = styled.div`
   padding: 0 2rem 0 2rem;
@@ -27,6 +28,24 @@ const TextArea = styled.textarea`
   width: 100%;
 `
 
+const EmailLink = styled(OutboundLink)`
+  color: ${COLORS.NEON_GREEN};
+`
+
+const FormActionContainer = styled.div`
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  align-items: center;
+`
+
+const Button = styled.button`
+  width: 6.25rem;
+
+  &:hover {
+    cursor: pointer;
+  }
+`
+
 const Contact = () => {
   return (
     <ContactContainer>
@@ -48,9 +67,22 @@ const Contact = () => {
           <label htmlFor="message">MESSAGE:</label>
           <TextArea name="message" id="message" />
         </p>
-        <p>
-          <button type="submit">SEND</button>
-        </p>
+        <FormActionContainer>
+          {" "}
+          <Button type="submit">SEND</Button>
+          <div>
+            Or{" "}
+            <EmailLink
+              href={`mailto:musicpleaseradio@gmail.com`}
+              target="_blank"
+              rel="noopener noreferrer"
+              title="musicpleaseradio@gmail.com"
+            >
+              email
+            </EmailLink>{" "}
+            us directly
+          </div>
+        </FormActionContainer>
       </form>
     </ContactContainer>
   )
