@@ -37,7 +37,7 @@ const ContactSuccess = () => {
   return (
     <Layout>
       <ContactSuccessContainer>
-        <SEO title={`CONTACT US`} />
+        <SEO title={`CONTACT US - SUCCESS`} />
         <ContactContainer>
           <ContactWrapper>
             <ContactHeading>CONTACT US</ContactHeading>
