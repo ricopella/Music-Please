@@ -50,7 +50,12 @@ const Contact = () => {
   return (
     <ContactContainer>
       <ContactHeading>CONTACT US</ContactHeading>
-      <form name="contact" method="POST" data-netlify="true">
+      <form
+        action="/contact-success"
+        data-netlify="true"
+        method="POST"
+        name="contact"
+      >
         <p>
           <label>*NAME:</label>
           <Input type="text" name="name" required />

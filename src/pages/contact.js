@@ -14,7 +14,7 @@ const ContactContainer = styled.div`
 
 const Contact = () => (
   <React.Fragment>
-    <SEO />
+    <SEO title={`CONTACT US`} />
     <Layout>
       <ContactContainer>
         <Component />
