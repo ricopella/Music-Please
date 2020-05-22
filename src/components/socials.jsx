@@ -7,7 +7,6 @@ import { css } from "@emotion/core"
 import {
   MEDIA_BREAKPOINTS,
   SLIDE_IN_ANIMATION_OPTIONS,
-  FADE_IN_ANIMATION_OPTIONS,
 } from "../styles/constants"
 import { motion } from "framer-motion"
 
@@ -184,10 +183,11 @@ const Socials = () => (
       />
       <SocialLink
         filename="email.png"
-        title="E-Mail"
-        alt="Email = musicpleaseradio@gmail.com"
-        link="mailto:musicpleaseradio@gmail.com"
+        title="Contact Us"
+        alt="Contact Us"
+        link="/contact"
         className="email"
+        internal
       />
     </SocialContainerLower>
   </motion.div>
