@@ -183,10 +183,11 @@ const Socials = () => (
       />
       <SocialLink
         filename="email.png"
-        title="E-Mail"
-        alt="Email = musicpleaseradio@gmail.com"
-        link="mailto:musicpleaseradio@gmail.com"
+        title="Contact Us"
+        alt="Contact Us"
+        link="/contact"
         className="email"
+        internal
       />
     </SocialContainerLower>
   </motion.div>
