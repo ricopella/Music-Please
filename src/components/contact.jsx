@@ -2,6 +2,7 @@ import React from "react"
 import styled from "@emotion/styled"
 import { COLORS } from "../styles/constants"
 import { OutboundLink } from "gatsby-plugin-google-analytics"
+import useSiteMetaData from "../hooks/useSiteMetaData"
 
 const ContactContainer = styled.div`
   padding: 0 2rem 0 2rem;
@@ -47,11 +48,12 @@ const Button = styled.button`
 `
 
 const Contact = () => {
+  const { siteUrl } = useSiteMetaData()
   return (
     <ContactContainer>
       <ContactHeading>CONTACT US</ContactHeading>
       <form
-        action="/contact-success"
+        action={`${siteUrl}/contact-success`}
         data-netlify="true"
         method="POST"
         name="contact"
