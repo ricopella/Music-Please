@@ -1,8 +1,8 @@
 {
     "name": "music-please",
     "private": true,
-    "description": "MusicPlease.com",
-    "version": "1.0.0",
+    "description": "TheMusicPlease.com",
+    "version": "1.1.0",
     "author": "Narin Sundarabhaya <nrs710@gmail.com>",
     "dependencies": {
         "@emotion/core": "^10.0.28",
