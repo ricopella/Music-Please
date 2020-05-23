@@ -24,15 +24,15 @@ module.exports = {
             `production`,
             `mixes`,
             `show`,
-            'web development',
-            'podcast',
-            'live stream',
-            'creative',
-            'technology',
-            'design'
+            "web development",
+            "podcast",
+            "live stream",
+            "creative",
+            "technology",
+            "design",
         ],
         twitterUserName: `@themusicplease`,
-        image: `/images/PLEASE.png`
+        image: `/images/PLEASE.png`,
     },
     plugins: [
         `gatsby-plugin-react-helmet`,
@@ -41,7 +41,7 @@ module.exports = {
             options: {
                 name: `images`,
                 path: `${__dirname}/src/images`,
-                exclude: `${__dirname}/src/images/svg`
+                exclude: `${__dirname}/src/images/svg`,
             },
         },
         `gatsby-transformer-sharp`,
@@ -53,8 +53,8 @@ module.exports = {
                 short_name: `MUSIC PLEASE`,
                 start_url: `/`,
                 background_color: `#000000`,
-                display: 'minimal-ui',
-                icon: `src/images/favicon/favicon.ico`
+                display: "minimal-ui",
+                icon: `src/images/favicon/favicon.ico`,
             },
         },
         `gatsby-plugin-emotion`,
@@ -62,9 +62,9 @@ module.exports = {
             resolve: "gatsby-plugin-react-svg",
             options: {
                 rule: {
-                    include: `${__dirname}/src/images/svg`
-                }
-            }
+                    include: `${__dirname}/src/images/svg`,
+                },
+            },
         },
         {
             resolve: `gatsby-plugin-google-analytics`,
@@ -74,16 +74,16 @@ module.exports = {
         },
         `gatsby-plugin-sitemap`,
         {
-            resolve: 'gatsby-plugin-robots-txt',
+            resolve: "gatsby-plugin-robots-txt",
             options: {
-                host: 'https://www.themusicplease.com',
-                sitemap: 'https://www.themusicplease.com/sitemap.xml',
+                host: "https://www.themusicplease.com",
+                sitemap: "https://www.themusicplease.com/sitemap.xml",
                 env: {
                     development: {
-                        policy: [{ userAgent: '*', disallow: ['/'] }],
+                        policy: [{ userAgent: "*", disallow: ["/"] }],
                     },
                     production: {
-                        policy: [{ userAgent: '*', allow: '/' }],
+                        policy: [{ userAgent: "*", allow: "/" }],
                     },
                 },
             },
@@ -95,13 +95,13 @@ module.exports = {
                 apiKey: process.env.CLOUDINARY_API_KEY,
                 apiSecret: process.env.CLOUDINARY_API_SECRET,
                 resourceType: `image`,
-            }
+            },
         },
         {
             resolve: "gatsby-plugin-typography",
             options: {
-                pathToConfigModule: "src/utils/typography.ts"
-            }
+                pathToConfigModule: "src/utils/typography.ts",
+            },
         },
         {
             resolve: `gatsby-source-shopify`,
@@ -110,6 +110,21 @@ module.exports = {
                 accessToken: process.env.SHOPIFY_ACCESS_TOKEN,
             },
         },
-        `gatsby-plugin-typescript`
+        `gatsby-plugin-typescript`,
+        {
+            resolve: `gatsby-plugin-alias-imports`,
+            options: {
+                alias: {
+                    "@styled": "src/styled.ts",
+                    "@containers": "src/containers",
+                    "@components": "src/components",
+                    "@hooks": "src/hooks",
+                    "@images": "src/images",
+                    "@styles": "src/styles",
+                    "@utils": "src/utils",
+                },
+                extensions: ["js", "ts"],
+            },
+        },
     ],
 }

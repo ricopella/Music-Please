@@ -1,20 +1,6 @@
-import Bouncy from '../images/gif/BOUNCY.gif'
 import styled from '@emotion/styled'
 import { Link } from 'gatsby'
-import { MEDIA_BREAKPOINTS } from './constants'
-
-const TwitchContainer = styled.div`
-  display: grid;
-  background-color: black;
-  background-image: url(${Bouncy});
-  background-size: cover;
-  height: 100vh;
-  max-height: 100vh;
-  max-width: 100vw;
-  opacity: 0.75;
-  width: 100%;
-  grid-template-rows: 1fr max-content;
-`
+import { MEDIA_BREAKPOINTS } from '../../styles/constants'
 
 const TwitchPageContainer = styled.section`
   display: grid;
@@ -23,7 +9,6 @@ const TwitchPageContainer = styled.section`
   grid-template-rows: max-content 1fr max-content;
   height: 100%;
   justify-items: center;
-  max-height: ${props => props.vh}px;
   max-width: 100vw;
   width: 100%;
 
@@ -93,7 +78,6 @@ export default {
   ContactWrapper,
   LinksWrapper,
   LogoWrapper,
-  TwitchContainer,
   TwitchPageContainer,
   TwitchVideosWrapper,
 }

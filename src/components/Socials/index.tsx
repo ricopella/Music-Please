@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import SocialImg from '../Image'
-import styled from '@emotion/styled'
+import styled from '../../styled'
 import { css } from '@emotion/core'
 import { Link } from 'gatsby'
 import { motion } from 'framer-motion'
@@ -70,7 +70,7 @@ const SocialIcon = styled.div`
   }
 
   // smaller desktop
-  @media only screen and (max-width: ${MEDIA_BREAKPOINTS.SMALL_DESKTOP}) {
+  @media only screen and (max-width: ${props => props.theme.media.l}) {
     width: 7.75rem;
 
     &.twitch {
@@ -87,7 +87,7 @@ const SocialIcon = styled.div`
   }
 
   // tablet
-  @media only screen and (max-width: ${MEDIA_BREAKPOINTS.TABLET}) {
+  @media only screen and (max-width: ${props => props.theme.media.m}) {
     width: 4rem;
     &.twitch {
       width: 3rem;
@@ -115,7 +115,7 @@ const SocialIcon = styled.div`
   }
 
   // mobile
-  @media only screen and (max-width: ${MEDIA_BREAKPOINTS.PHONE}) {
+  @media only screen and (max-width: ${props => props.theme.media.s}) {
     &.twitch {
       width: 2.5rem;
     }
