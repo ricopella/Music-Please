@@ -7,8 +7,8 @@ const PAGE_TITLE = `CONTACT US`
 
 const Contact = () => (
   <React.Fragment>
-    <BackButton />
     <Layout title={PAGE_TITLE}>
+      <BackButton />
       <Component />
     </Layout>
   </React.Fragment>
