@@ -28,7 +28,7 @@ const Twitch = () => {
             <LiveNow />
           ) : (
             <Styled.LogoWrapper to={"/"}>
-              <Image filename="no_BG_MUSICPLEASE.png" alt="MUSIC PLEASE LOGO" />
+              <Image fileName="no_BG_MUSICPLEASE.png" alt="MUSIC PLEASE LOGO" />
             </Styled.LogoWrapper>
           )}
           <Styled.TwitchVideosWrapper>

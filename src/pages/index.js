@@ -26,7 +26,7 @@ const IndexPage = () => {
         <div className="wrapper">
           <div className="logoContainer">
             <Image
-              filename="no_BG_MUSICPLEASE.png"
+              fileName="no_BG_MUSICPLEASE.png"
               alt="Music Please Main Logo"
             />
           </div>

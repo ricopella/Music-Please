@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { FC } from 'react'
 import SocialImg from '../Image'
 import styled from '@emotion/styled'
 import { css } from '@emotion/core'
@@ -138,27 +138,27 @@ const Socials = () => (
   <motion.div {...SLIDE_IN_ANIMATION_OPTIONS}>
     <SocialContainer>
       <SocialLink
-        filename="SC.png"
+        fileName="SC.png"
         title="SoundCloud"
         alt="SoundCloud - @themusicplease"
         link="https://soundcloud.com/themusicplease"
       />
       <SocialLink
-        filename="IG.png"
+        fileName="IG.png"
         title="Instagram"
         alt="Instagram - @themusicplease"
         link="https://instagram.com/themusicplease"
         className="ig"
       />
       <SocialLink
-        filename="TW1.png"
+        fileName="TW1.png"
         title="TWitter"
         alt="Twitter - @themusicplease"
         link="https://twitter.com/themusicplease"
         className="tw"
       />
       <SocialLink
-        filename="FB.png"
+        fileName="FB.png"
         title="Facebook"
         alt="Facebook - @themusicplease"
         link="https://facebook.com/themusicplease"
@@ -167,14 +167,14 @@ const Socials = () => (
     </SocialContainer>
     <SocialContainerLower>
       <SocialLink
-        filename="twitch2.png"
+        fileName="twitch2.png"
         title="Twitch"
         alt="Twitch - @themusicplease"
         link="https://www.twitch.tv/themusicplease"
         className="twitch"
       />
       <SocialLink
-        filename="live.png"
+        fileName="live.png"
         title="Live"
         alt="Live Broadcast"
         className="live"
@@ -182,7 +182,7 @@ const Socials = () => (
         internal
       />
       <SocialLink
-        filename="email.png"
+        fileName="email.png"
         title="Contact Us"
         alt="Contact Us"
         link="/contact"
@@ -193,19 +193,28 @@ const Socials = () => (
   </motion.div>
 )
 
-const SocialLink = ({
-  filename,
-  title,
+interface SocialLinkProps {
+  alt: string
+  classNam?: string
+  fileName: string
+  internal?: boolean
+  link: string
+  title: string
+}
+
+const SocialLink: FC<SocialLinkProps> = ({
   alt,
-  link,
   className = "",
+  fileName,
   internal = false,
+  link,
+  title,
 }) => (
   <>
     {internal ? (
       <Link css={SocialLinkWrapper} to={link}>
         <SocialIcon className={`social_icon ${className}`}>
-          <SocialImg filename={filename} title={title} alt={alt} />
+          <SocialImg fileName={fileName} title={title} alt={alt} />
         </SocialIcon>
       </Link>
     ) : (
@@ -216,7 +225,7 @@ const SocialLink = ({
         rel="noopener noreferrer"
       >
         <SocialIcon className={`social_icon ${className}`}>
-          <SocialImg filename={filename} title={title} alt={alt} />
+          <SocialImg fileName={fileName} title={title} alt={alt} />
         </SocialIcon>
       </OutboundLink>
     )}

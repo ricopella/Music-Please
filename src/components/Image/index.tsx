@@ -1,43 +1,23 @@
-import React from "react"
-import { StaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import Img from 'gatsby-image'
+import React, { CSSProperties, FC } from 'react'
+import useImage from '../../hooks/useImage'
 
-const Image = props => (
-  <StaticQuery
-    query={graphql`
-      query {
-        images: allFile {
-          edges {
-            node {
-              relativePath
-              name
-              childImageSharp {
-                sizes(maxWidth: 780) {
-                  ...GatsbyImageSharpSizes
-                }
-              }
-            }
-          }
-        }
-      }
-    `}
-    render={data => {
-      const image = data.images.edges.find(n => {
-        return n.node.relativePath.includes(props.filename)
-      })
-      if (!image) {
-        return null
-      }
+interface ImageProps {
+  alt: string
+  fileName: string
+  style?: CSSProperties
+  title?: string
+}
 
-      const imageSizes = image.node.childImageSharp.sizes
-      return (
-        <Img
-          alt={props.alt}
-          sizes={imageSizes ? imageSizes : 0}
-          style={props.style}
-        />
-      )
-    }}
-  />
-)
+const Image: FC<ImageProps> = ({ alt, fileName, title, style }) => {
+  const imageSizes = useImage(fileName)
+  return (
+    <Img
+      alt={alt}
+      sizes={imageSizes ? imageSizes : 0}
+      style={style}
+      title={title}
+    />
+  )
+}
 export default Image
