@@ -1,13 +1,13 @@
 import React from "react"
-import Styled from "../styles/twitch.styles.js"
+import Styled from "../styles/twitch.styles.ts"
 import IframeResizer from "iframe-resizer-react"
-import Image from "../components/image"
-import ExternalLink from "../components/link"
-import "../components/layout.css"
-import BackButton from "../components/returnbutton.js"
-import LiveNow from "../components/livenow"
-import SEO from "../components/seo"
-import Footer from "../components/footer"
+import Image from "../components/Image"
+import ExternalLink from "../components/Link"
+import "../components/Layout/index"
+import BackButton from "../components/BackButton"
+import LiveNow from "../components/LiveNow"
+import SEO from "../components/SEO"
+import Footer from "../components/Footer"
 
 // ASSETS
 import Venmo from "../images/svg/venmo-icon.svg"
@@ -19,7 +19,7 @@ const PAGE_TITLE = "LIVE BROADCAST"
 const Twitch = () => {
   const streams = []
   return (
-    <>
+    <React.Fragment>
       <SEO description={PAGE_META_DESCRIPTION} title={PAGE_TITLE} />
       <Styled.TwitchContainer>
         <BackButton />
@@ -28,7 +28,7 @@ const Twitch = () => {
             <LiveNow />
           ) : (
             <Styled.LogoWrapper to={"/"}>
-              <Image filename="no_BG_MUSICPLEASE.png" alt="MUSIC PLEASE LOGO" />
+              <Image fileName="no_BG_MUSICPLEASE.png" alt="MUSIC PLEASE LOGO" />
             </Styled.LogoWrapper>
           )}
           <Styled.TwitchVideosWrapper>
@@ -60,7 +60,7 @@ const Twitch = () => {
         </Styled.TwitchPageContainer>
         <Footer />
       </Styled.TwitchContainer>
-    </>
+    </React.Fragment>
   )
 }
 

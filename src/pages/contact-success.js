@@ -2,9 +2,9 @@ import React from "react"
 import styled from "@emotion/styled"
 import { COLORS } from "../styles/constants"
 import { OutboundLink } from "gatsby-plugin-google-analytics"
-import SEO from "../components/seo"
-import Footer from "../components/footer.jsx"
-import Layout from "../components/layout"
+import SEO from "../components/SEO"
+import Footer from "../components/Footer"
+import Layout from "../components/Layout"
 
 const ContactSuccessContainer = styled.div`
   height: 100vh;

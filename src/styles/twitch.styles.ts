@@ -1,24 +1,24 @@
-import styled from '@emotion/styled';
-import { MEDIA_BREAKPOINTS } from '../styles/constants';
 import Bouncy from '../images/gif/BOUNCY.gif'
-import { Link } from "gatsby"
+import styled from '@emotion/styled'
+import { Link } from 'gatsby'
+import { MEDIA_BREAKPOINTS } from './constants'
 
-const TwitchContainer = styled.div `
+const TwitchContainer = styled.div`
   display: grid;
   background-color: black;
-  background-image: url(${Bouncy}); 
+  background-image: url(${Bouncy});
   background-size: cover;
   height: 100vh;
   max-height: 100vh;
   max-width: 100vw;
-  opacity: .75;
+  opacity: 0.75;
   width: 100%;
   grid-template-rows: 1fr max-content;
 `
 
-const TwitchPageContainer = styled.section `
+const TwitchPageContainer = styled.section`
   display: grid;
-  grid-row-gap: .5rem;
+  grid-row-gap: 0.5rem;
   grid-template-columns: 1fr;
   grid-template-rows: max-content 1fr max-content;
   height: 100%;
@@ -32,8 +32,7 @@ const TwitchPageContainer = styled.section `
   }
 `
 
-const LogoWrapper = styled(Link)
-`
+const LogoWrapper = styled(Link)`
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
@@ -50,7 +49,7 @@ const LogoWrapper = styled(Link)
   }
 `
 
-const TwitchVideosWrapper = styled.div `
+const TwitchVideosWrapper = styled.div`
   align-content: center;
   display: grid;
   grid-template-columns: 1fr;
@@ -69,14 +68,14 @@ const TwitchVideosWrapper = styled.div `
   }
 `
 
-const ContactWrapper = styled.div `
+const ContactWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(2, max-content);
-  grid-row-gap: .5rem;
+  grid-row-gap: 0.5rem;
 `
 
-const LinksWrapper = styled.div `
+const LinksWrapper = styled.div`
   display: grid;
   height: 3.125rem;
   grid-template-columns: max-content max-content;
@@ -85,16 +84,16 @@ const LinksWrapper = styled.div `
   grid-column-gap: 1rem;
 `
 
-const ContactHeading = styled.h4 `
+const ContactHeading = styled.h4`
   margin: 0 0;
 `
 
 export default {
-    ContactHeading,
-    ContactWrapper,
-    LinksWrapper,
-    LogoWrapper,
-    TwitchContainer,
-    TwitchPageContainer,
-    TwitchVideosWrapper,
+  ContactHeading,
+  ContactWrapper,
+  LinksWrapper,
+  LogoWrapper,
+  TwitchContainer,
+  TwitchPageContainer,
+  TwitchVideosWrapper,
 }

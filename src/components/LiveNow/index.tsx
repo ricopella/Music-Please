@@ -1,6 +1,6 @@
-import React from "react"
-import Live from "../images/gif/live.gif"
-import styled from "@emotion/styled"
+import Live from '../../images/gif/live.gif'
+import React from 'react'
+import styled from '@emotion/styled'
 
 const LiveNowWrapper = styled.img`
   width: 6rem;

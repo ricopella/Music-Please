@@ -1,8 +1,8 @@
-import React from "react"
-import styled from "@emotion/styled"
-import { COLORS } from "../styles/constants"
-import { OutboundLink } from "gatsby-plugin-google-analytics"
-import useSiteMetaData from "../hooks/useSiteMetaData"
+import React from 'react'
+import styled from '@emotion/styled'
+import useSiteMetaData from '../../hooks/useSiteMetaData'
+import { COLORS } from '../../styles/constants'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 const ContactContainer = styled.div`
   padding: 0 2rem 0 2rem;

@@ -1,10 +1,10 @@
 import React from "react"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import Image from "../components/image"
-import Socials from "../components/socials.jsx"
+import Layout from "../components/Layout"
+import SEO from "../components/SEO"
+import Image from "../components/Image"
+import Socials from "../components/Socials"
 import styled from "@emotion/styled"
-import Footer from "../components/footer"
+import Footer from "../components/Footer"
 import Bouncy from "../images/gif/BOUNCY.gif"
 
 const PageContainer = styled.div`
@@ -26,7 +26,7 @@ const IndexPage = () => {
         <div className="wrapper">
           <div className="logoContainer">
             <Image
-              filename="no_BG_MUSICPLEASE.png"
+              fileName="no_BG_MUSICPLEASE.png"
               alt="Music Please Main Logo"
             />
           </div>

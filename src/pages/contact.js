@@ -1,8 +1,8 @@
 import React from "react"
-import SEO from "../components/seo"
-import Layout from "../components/layout"
-import Component from "../components/contact.jsx"
-import Footer from "../components/footer.jsx"
+import SEO from "../components/SEO"
+import Layout from "../components/Layout"
+import Component from "../components/Contact"
+import Footer from "../components/Footer"
 import styled from "@emotion/styled"
 
 const ContactContainer = styled.div`

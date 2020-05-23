@@ -1,7 +1,7 @@
-import React from "react"
-import styled from "@emotion/styled"
-import getYear from "date-fns/getYear"
-import { COLORS } from "../styles/constants"
+import getYear from 'date-fns/getYear'
+import React from 'react'
+import styled from '@emotion/styled'
+import { COLORS } from '../../styles/constants'
 
 const FooterContainer = styled.footer`
   display: grid;
