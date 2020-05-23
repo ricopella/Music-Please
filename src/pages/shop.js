@@ -1,9 +1,9 @@
 import React from "react"
 import useShopifyProducts from "../hooks/useShopifyProducts"
 import styled from "@emotion/styled"
-import SEO from "../components/seo"
-import Footer from "../components/footer"
-import Layout from "../components/layout"
+import SEO from "../components/SEO"
+import Footer from "../components/Footer"
+import Layout from "../components/Layout"
 
 const ShopContainer = styled.div`
   height: 100vh;

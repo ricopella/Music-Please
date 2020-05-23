@@ -1,14 +1,14 @@
-import React from "react"
-import SocialImg from "./image"
-import { OutboundLink } from "gatsby-plugin-google-analytics"
-import styled from "@emotion/styled"
-import { Link } from "gatsby"
-import { css } from "@emotion/core"
+import React from 'react'
+import SocialImg from '../Image'
+import styled from '@emotion/styled'
+import { css } from '@emotion/core'
+import { Link } from 'gatsby'
+import { motion } from 'framer-motion'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import {
   MEDIA_BREAKPOINTS,
   SLIDE_IN_ANIMATION_OPTIONS,
-} from "../styles/constants"
-import { motion } from "framer-motion"
+} from "../../styles/constants"
 
 const SocialLinkWrapper = css`
   width: 7.5rem;
