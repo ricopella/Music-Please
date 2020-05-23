@@ -5,7 +5,7 @@ import useImage from '../../hooks/useImage'
 import useSiteMetaData from '../../hooks/useSiteMetaData'
 import { useLocation } from '@reach/router'
 
-interface SEOProps {
+export interface SEOProps {
   description?: string
   image?: string
   title: string
