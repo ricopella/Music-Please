@@ -1,7 +1,9 @@
 import React, { FC, useContext } from 'react'
+import ROUTES from '../../config/routes'
 import StoreContext from '../../context/StoreContext'
 import styled from '../../styled'
 import useShopifyProducts from '../../hooks/useShopifyProducts'
+import { Link } from 'gatsby'
 
 const ShopProductsWrapper = styled.div`
   display: grid;
@@ -12,7 +14,7 @@ const ShopProductsWrapper = styled.div`
 const ProductWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(4, max-content);
+  grid-template-rows: repeat(5, max-content);
 `
 
 const ProductGrid: FC<{}> = () => {
@@ -38,6 +40,7 @@ const ProductGrid: FC<{}> = () => {
             item.node.priceRange.maxVariantPrice.amount
           )}`}</div>
           <div>{item.node.availableForSale ? `IN STOCK` : `OUT OF STOCK`}</div>
+          <Link to={`${ROUTES.shop}/${item.node.handle}`}>View Product</Link>
         </ProductWrapper>
       ))}
     </ShopProductsWrapper>
