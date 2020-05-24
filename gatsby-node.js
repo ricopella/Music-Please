@@ -1,7 +1,7 @@
 const path = require(`path`)
 
 exports.createPages = ({ graphql, actions }) => {
-    const { createPage, createRedirect } = actions
+    // const { createPage, createRedirect } = actions
 
     // REDIRECT FOR /SHOP
     createRedirect({
@@ -11,27 +11,27 @@ exports.createPages = ({ graphql, actions }) => {
         force: true
     });
 
-    return graphql(`
-    {
-      allShopifyProduct {
-        edges {
-          node {
-            handle
-          }
-        }
-      }
-    }
-  `).then(result => {
-        result.data.allShopifyProduct.edges.forEach(({ node }) => {
-            createPage({
-                path: `/shop/${node.handle}/`,
-                component: path.resolve(`./src/templates/ProductPage/index.tsx`),
-                context: {
-                    // Data passed to context is available
-                    // in page queries as GraphQL variables.
-                    handle: node.handle,
-                },
-            })
-        })
-    })
+    //   return graphql(`
+    //   {
+    //     allShopifyProduct {
+    //       edges {
+    //         node {
+    //           handle
+    //         }
+    //       }
+    //     }
+    //   }
+    // `).then(result => {
+    //       result.data.allShopifyProduct.edges.forEach(({ node }) => {
+    //           createPage({
+    //               path: `/shop/${node.handle}/`,
+    //               component: path.resolve(`./src/templates/ProductPage/index.tsx`),
+    //               context: {
+    //                   // Data passed to context is available
+    //                   // in page queries as GraphQL variables.
+    //                   handle: node.handle,
+    //               },
+    //           })
+    //       })
+    //   })
 }
