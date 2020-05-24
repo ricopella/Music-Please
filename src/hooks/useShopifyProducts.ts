@@ -1,11 +1,18 @@
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery } from 'gatsby'
+import { IUseShopifyProducts } from '../types'
 
-const useShopifyProducts = () => {
-    const data = useStaticQuery(graphql `
+const useShopifyProducts = (): IUseShopifyProducts[] => {
+  const data = useStaticQuery(graphql`
     query ShopifyProducts {
-      allShopifyProduct {
+      allShopifyProduct(sort: { fields: [createdAt], order: DESC }) {
         edges {
           node {
+            id
+            handle
+            createdAt
+            variants {
+              price
+            }
             title
             shopifyId
             description
@@ -24,11 +31,11 @@ const useShopifyProducts = () => {
     }
   `)
 
-    if (!data) {
-        return []
-    }
+  if (!data) {
+    return []
+  }
 
-    return data.allShopifyProduct.edges
+  return data.allShopifyProduct.edges
 }
 
 export default useShopifyProducts

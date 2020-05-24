@@ -1741,6 +1741,11 @@
     "@types/glob" "*"
     "@types/node" "*"
 
+"@types/shopify-buy@^1.11.1":
+  version "1.11.1"
+  resolved "https://registry.yarnpkg.com/@types/shopify-buy/-/shopify-buy-1.11.1.tgz#a40ef9e4f4859b490f4bafa6f2894166a527e273"
+  integrity sha512-SK+inKi30Gfju3yAysjk7LUvUJYytkQhJcbI5afQPpvGrdBNGLuDat9vcogV9vCh2gpPRymQIzaA/qd7eJG5+g==
+
 "@types/tmp@^0.0.33":
   version "0.0.33"
   resolved "https://registry.yarnpkg.com/@types/tmp/-/tmp-0.0.33.tgz#1073c4bc824754ae3d10cfab88ab0237ba964e4d"
