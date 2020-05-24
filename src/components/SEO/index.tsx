@@ -1,11 +1,17 @@
-import React from "react"
-import Helmet from "react-helmet"
-import useSiteMetaData from "../hooks/useSiteMetaData"
-import { useLocation } from "@reach/router"
-import useImage from "../hooks/useImage"
-import favicon from "../images/favicon/favicon.ico"
+import favicon from '../../images/favicon/favicon.ico'
+import Helmet from 'react-helmet'
+import React, { FC } from 'react'
+import useImage from '../../hooks/useImage'
+import useSiteMetaData from '../../hooks/useSiteMetaData'
+import { useLocation } from '@reach/router'
 
-function SEO({ description, image, title }) {
+export interface SEOProps {
+  description?: string
+  image?: string
+  title: string
+}
+
+const SEO: FC<SEOProps> = ({ description, image, title }) => {
   const { pathname } = useLocation()
   const {
     title: defaultTitle,

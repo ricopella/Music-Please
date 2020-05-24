@@ -1,14 +1,14 @@
-import React from "react"
-import SocialImg from "./image"
-import { OutboundLink } from "gatsby-plugin-google-analytics"
-import styled from "@emotion/styled"
-import { Link } from "gatsby"
-import { css } from "@emotion/core"
+import React, { FC } from 'react'
+import SocialImg from '../Image'
+import styled from '../../styled'
+import { css } from '@emotion/core'
+import { Link } from 'gatsby'
+import { motion } from 'framer-motion'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import {
   MEDIA_BREAKPOINTS,
   SLIDE_IN_ANIMATION_OPTIONS,
-} from "../styles/constants"
-import { motion } from "framer-motion"
+} from "../../styles/constants"
 
 const SocialLinkWrapper = css`
   width: 7.5rem;
@@ -70,7 +70,7 @@ const SocialIcon = styled.div`
   }
 
   // smaller desktop
-  @media only screen and (max-width: ${MEDIA_BREAKPOINTS.SMALL_DESKTOP}) {
+  @media only screen and (max-width: ${props => props.theme.media.l}) {
     width: 7.75rem;
 
     &.twitch {
@@ -87,7 +87,7 @@ const SocialIcon = styled.div`
   }
 
   // tablet
-  @media only screen and (max-width: ${MEDIA_BREAKPOINTS.TABLET}) {
+  @media only screen and (max-width: ${props => props.theme.media.m}) {
     width: 4rem;
     &.twitch {
       width: 3rem;
@@ -115,7 +115,7 @@ const SocialIcon = styled.div`
   }
 
   // mobile
-  @media only screen and (max-width: ${MEDIA_BREAKPOINTS.PHONE}) {
+  @media only screen and (max-width: ${props => props.theme.media.s}) {
     &.twitch {
       width: 2.5rem;
     }
@@ -138,27 +138,27 @@ const Socials = () => (
   <motion.div {...SLIDE_IN_ANIMATION_OPTIONS}>
     <SocialContainer>
       <SocialLink
-        filename="SC.png"
+        fileName="SC.png"
         title="SoundCloud"
         alt="SoundCloud - @themusicplease"
         link="https://soundcloud.com/themusicplease"
       />
       <SocialLink
-        filename="IG.png"
+        fileName="IG.png"
         title="Instagram"
         alt="Instagram - @themusicplease"
         link="https://instagram.com/themusicplease"
         className="ig"
       />
       <SocialLink
-        filename="TW1.png"
+        fileName="TW1.png"
         title="TWitter"
         alt="Twitter - @themusicplease"
         link="https://twitter.com/themusicplease"
         className="tw"
       />
       <SocialLink
-        filename="FB.png"
+        fileName="FB.png"
         title="Facebook"
         alt="Facebook - @themusicplease"
         link="https://facebook.com/themusicplease"
@@ -167,14 +167,14 @@ const Socials = () => (
     </SocialContainer>
     <SocialContainerLower>
       <SocialLink
-        filename="twitch2.png"
+        fileName="twitch2.png"
         title="Twitch"
         alt="Twitch - @themusicplease"
         link="https://www.twitch.tv/themusicplease"
         className="twitch"
       />
       <SocialLink
-        filename="live.png"
+        fileName="live.png"
         title="Live"
         alt="Live Broadcast"
         className="live"
@@ -182,7 +182,7 @@ const Socials = () => (
         internal
       />
       <SocialLink
-        filename="email.png"
+        fileName="email.png"
         title="Contact Us"
         alt="Contact Us"
         link="/contact"
@@ -193,19 +193,28 @@ const Socials = () => (
   </motion.div>
 )
 
-const SocialLink = ({
-  filename,
-  title,
+interface SocialLinkProps {
+  alt: string
+  classNam?: string
+  fileName: string
+  internal?: boolean
+  link: string
+  title: string
+}
+
+const SocialLink: FC<SocialLinkProps> = ({
   alt,
-  link,
   className = "",
+  fileName,
   internal = false,
+  link,
+  title,
 }) => (
   <>
     {internal ? (
       <Link css={SocialLinkWrapper} to={link}>
         <SocialIcon className={`social_icon ${className}`}>
-          <SocialImg filename={filename} title={title} alt={alt} />
+          <SocialImg fileName={fileName} title={title} alt={alt} />
         </SocialIcon>
       </Link>
     ) : (
@@ -216,7 +225,7 @@ const SocialLink = ({
         rel="noopener noreferrer"
       >
         <SocialIcon className={`social_icon ${className}`}>
-          <SocialImg filename={filename} title={title} alt={alt} />
+          <SocialImg fileName={fileName} title={title} alt={alt} />
         </SocialIcon>
       </OutboundLink>
     )}

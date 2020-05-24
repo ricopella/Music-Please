@@ -1,7 +1,6 @@
-import React from "react"
-import styled from "@emotion/styled"
-import getYear from "date-fns/getYear"
-import { COLORS } from "../styles/constants"
+import getYear from 'date-fns/getYear'
+import React from 'react'
+import styled from '../../styled'
 
 const FooterContainer = styled.footer`
   display: grid;
@@ -13,7 +12,7 @@ const FooterContainer = styled.footer`
 `
 
 const FooterContent = styled.div`
-  color: ${COLORS.NEON_GREEN};
+  color: ${props => props.theme.colors.action};
   font-size: 0.75rem;
 `
 

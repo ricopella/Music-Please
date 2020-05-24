@@ -1,6 +1,6 @@
-import React from "react"
-import styled from "@emotion/styled"
-import { OutboundLink } from "gatsby-plugin-google-analytics"
+import React, { FC } from 'react'
+import styled from '@emotion/styled'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 const ContactLink = styled(OutboundLink)`
   &:hover {
@@ -8,7 +8,7 @@ const ContactLink = styled(OutboundLink)`
   }
 `
 
-const ExternalLink = ({ children, href = "" }) => (
+const ExternalLink: FC<{ href: string }> = ({ children, href = "" }) => (
   <ContactLink
     href={href}
     rel="noopener noreferrer"

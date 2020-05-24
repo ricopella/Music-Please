@@ -1,8 +1,7 @@
-import React, { useState } from "react"
-import styled from "@emotion/styled"
-import { COLORS } from "../styles/constants"
-import { OutboundLink } from "gatsby-plugin-google-analytics"
-import { navigate } from "gatsby-link"
+import React, { useState } from 'react'
+import styled from '../../styled'
+import { navigate } from 'gatsby-link'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 const ContactContainer = styled.div`
   padding: 0 2rem 0 2rem;
@@ -19,18 +18,18 @@ const ContactHeading = styled.h1`
 
 const Input = styled.input`
   background-color: transparent;
-  color: ${COLORS.NEON_GREEN};
+  color: ${props => props.theme.colors.action};
   width: 100%;
 `
 
 const TextArea = styled.textarea`
   background-color: transparent;
-  color: ${COLORS.NEON_GREEN};
+  color: ${props => props.theme.colors.action};
   width: 100%;
 `
 
 const EmailLink = styled(OutboundLink)`
-  color: ${COLORS.NEON_GREEN};
+  color: ${props => props.theme.colors.action};
 `
 
 const FormActionContainer = styled.div`
