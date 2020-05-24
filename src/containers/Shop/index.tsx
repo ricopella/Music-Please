@@ -21,7 +21,7 @@ const Shop = () => {
       <Layout title={PAGE_TITLE}>
         <BackButton />
         <ShopContainer>
-          <h1>THE GIFT SHOP</h1>
+          <h1>SHOP</h1>
           <ProductGrid />
         </ShopContainer>
       </Layout>

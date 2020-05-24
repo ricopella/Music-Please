@@ -1,7 +1,16 @@
 const path = require(`path`)
 
 exports.createPages = ({ graphql, actions }) => {
-    const { createPage } = actions
+    const { createPage, createRedirect } = actions
+
+    // REDIRECT FOR /SHOP
+    createRedirect({
+        fromPath: "/shop",
+        toPath: "https://musicpleaseshop.myshopify.com/collections/all",
+        isPermanent: true,
+        force: true
+    });
+
     return graphql(`
     {
       allShopifyProduct {
