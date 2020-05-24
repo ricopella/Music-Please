@@ -1,7 +1,7 @@
 const path = require(`path`)
 
 exports.createPages = ({ graphql, actions }) => {
-    // const { createPage, createRedirect } = actions
+    const { createPage, createRedirect } = actions
 
     // REDIRECT FOR /SHOP
     createRedirect({
