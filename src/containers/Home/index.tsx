@@ -3,6 +3,7 @@ import Layout from '../../components/Layout'
 import React from 'react'
 import Socials from '../../components/Socials'
 import styled from '@emotion/styled'
+import Ticker from '../../components/Ticker'
 import { MEDIA_BREAKPOINTS } from '../../styles/constants'
 
 const HomeWrapper = styled.div`
@@ -30,6 +31,7 @@ const PAGE_TITLE = "THE MUSIC PLEASE ONLINE"
 const Home = () => {
   return (
     <Layout title={PAGE_TITLE} bouncy>
+      <Ticker />
       <HomeWrapper>
         <LogoContainer>
           <Image
