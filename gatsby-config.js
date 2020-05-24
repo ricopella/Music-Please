@@ -126,5 +126,6 @@ module.exports = {
                 extensions: ["js", "ts"],
             },
         },
+        `gatsby-plugin-netlify`
     ],
 }
