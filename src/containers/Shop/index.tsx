@@ -13,7 +13,7 @@ const ShopContainer = styled.div`
   grid-template-rows: max-content 1fr;
 `
 
-const PAGE_TITLE = "THE MUSIC PLEASE SHOP"
+const PAGE_TITLE = "THE GIFT SHOP"
 
 const Shop = () => {
   return (
@@ -21,7 +21,7 @@ const Shop = () => {
       <Layout title={PAGE_TITLE}>
         <BackButton />
         <ShopContainer>
-          <h1>THE MUSIC PLEASE SHOP</h1>
+          <h1>THE GIFT SHOP</h1>
           <ProductGrid />
         </ShopContainer>
       </Layout>
