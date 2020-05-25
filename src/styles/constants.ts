@@ -1,6 +1,6 @@
 export const MEDIA_BREAKPOINTS = {
   PHONE: `25.875rem`,
-  SMALL_DESKTOP: `68.75rem`,
+  SMALL_DESKTOP: `77.5rem`,
   TABLET: `48rem`,
 }
 

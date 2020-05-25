@@ -2,9 +2,8 @@ import Image from '../../components/Image'
 import Layout from '../../components/Layout'
 import React from 'react'
 import Socials from '../../components/Socials'
-import styled from '@emotion/styled'
+import styled from '../../styled'
 import Ticker from '../../components/Ticker'
-import { MEDIA_BREAKPOINTS } from '../../styles/constants'
 
 const HomeWrapper = styled.div`
   position: absolute;
@@ -18,10 +17,16 @@ const HomeWrapper = styled.div`
 const LogoContainer = styled.div`
   display: grid;
   align-self: center;
+  height: 21.75rem;
   justify-self: center;
   width: 43.75rem;
 
-  @media only screen and (max-width: ${MEDIA_BREAKPOINTS.TABLET}) {
+  @media only screen and (max-width: ${props => props.theme.media.l}) {
+    height: 14.75rem;
+    width: 30rem;
+  }
+
+  @media only screen and (max-width: ${props => props.theme.media.m}) {
     width: 80%;
   }
 `
