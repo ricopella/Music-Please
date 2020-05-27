@@ -92,6 +92,11 @@ const Path = styled(motion.path)`
   stroke: ${props => props.theme.colors.action};
 `
 
+const SocialNavWrapper = styled(motion.div)`
+  position: absolute;
+  bottom: 1rem;
+`
+
 const NAV_VARIANTS = {
   open: {
     transition: { staggerChildren: 0.07, delayChildren: 0.2 },
@@ -161,15 +166,16 @@ const MENU_ITEM_VARIANTS = {
 }
 
 export default {
-  Nav,
-  NavBackground,
-  SIDEBAR_VARIANTS,
-  TOGGLE_WRAPPER_VARIANTS,
-  NAV_VARIANTS,
-  MenuItemUl,
-  MenuItemLi,
   HomepageLink,
   MENU_ITEM_VARIANTS,
+  MenuItemLi,
+  MenuItemUl,
   MenuToggleButton,
+  NAV_VARIANTS,
+  Nav,
+  NavBackground,
   Path,
+  SIDEBAR_VARIANTS,
+  SocialNavWrapper,
+  TOGGLE_WRAPPER_VARIANTS,
 }

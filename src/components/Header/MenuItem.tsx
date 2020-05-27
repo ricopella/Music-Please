@@ -13,7 +13,7 @@ const MenuItem: FC<{ item: string }> = ({ item }) => (
   <Styled.MenuItemLi variants={Styled.MENU_ITEM_VARIANTS} {...BUTTON_ANIMATION}>
     <Styled.HomepageLink
       to={item === "home" ? "/" : item}
-    >{`+ ${item}`}</Styled.HomepageLink>
+    >{`+ ${item.toUpperCase()}`}</Styled.HomepageLink>
   </Styled.MenuItemLi>
 )
 

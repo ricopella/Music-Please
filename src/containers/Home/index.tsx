@@ -2,7 +2,6 @@ import Header from '../../components/Header'
 import Image from '../../components/Image'
 import Layout from '../../components/Layout'
 import React from 'react'
-import Socials from '../../components/Socials'
 import styled from '../../styled'
 import Ticker from '../../components/Ticker'
 
@@ -46,7 +45,6 @@ const Home = () => {
             fileName="no_BG_MUSICPLEASE.png"
           />
         </LogoContainer>
-        <Socials />
       </HomeWrapper>
     </Layout>
   )
