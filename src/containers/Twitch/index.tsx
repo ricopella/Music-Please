@@ -22,7 +22,7 @@ const Twitch = () => {
         <Styled.TwitchVideosWrapper>
           <IframeResizer
             log
-            src="https://player.twitch.tv/?channel=themusicplease&parent=https://themusicplease.com"
+            src="https://player.twitch.tv/?channel=themusicplease&parent=themusicplease.com"
             style={{
               border: "none",
               height: 1,
