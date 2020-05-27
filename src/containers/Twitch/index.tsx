@@ -1,6 +1,6 @@
-import BackButton from '../../components/BackButton'
 import CashApp from '../../images/svg/cash-app.svg'
 import ExternalLink from '../../components/Link'
+import Header from '../../components/Header'
 import IframeResizer from 'iframe-resizer-react'
 import Image from '../../components/Image'
 import Layout from '../../components/Layout'
@@ -14,7 +14,7 @@ const PAGE_TITLE = "LIVE BROADCAST"
 const Twitch = () => {
   return (
     <Layout bouncy description={PAGE_META_DESCRIPTION} title={PAGE_TITLE}>
-      <BackButton />
+      <Header />
       <Styled.TwitchPageContainer>
         <Styled.LogoWrapper to={"/"}>
           <Image fileName="no_BG_MUSICPLEASE.png" alt="MUSIC PLEASE LOGO" />

@@ -1,3 +1,4 @@
+import Header from '../../components/Header'
 import Image from '../../components/Image'
 import Layout from '../../components/Layout'
 import React from 'react'
@@ -37,6 +38,7 @@ const Home = () => {
   return (
     <Layout title={PAGE_TITLE} bouncy>
       <Ticker />
+      <Header />
       <HomeWrapper>
         <LogoContainer>
           <Image

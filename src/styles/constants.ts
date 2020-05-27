@@ -50,3 +50,12 @@ export const FADE_IN_ANIMATION_OPTIONS = {
     },
   },
 }
+
+export const BUTTON_ANIMATION = {
+  whileHover: {
+    scale: 1.1,
+  },
+  whileTap: {
+    scale: 0.95,
+  },
+}
