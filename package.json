@@ -59,7 +59,7 @@
     ],
     "license": "MIT",
     "scripts": {
-        "build": "gatsby build",
+        "build": "lambda/getStreamStatus && npm i && gatsby build",
         "develop": "gatsby develop",
         "format": "prettier --write src/**/*.{js,jsx}",
         "serve": "gatsby serve",
