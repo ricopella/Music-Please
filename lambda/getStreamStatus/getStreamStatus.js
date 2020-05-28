@@ -12,7 +12,7 @@ exports.handler = async function(event, context) {
             }
         )
 
-        if (tokenResponse.data) {
+        if (tokenResponse && tokenResponse.data) {
             const { access_token } = tokenResponse.data
 
             const response = await axios.get(`https://api.twitch.tv/helix/streams`, {
@@ -27,10 +27,20 @@ exports.handler = async function(event, context) {
                 },
             })
 
-            return {
-                statusCode: 200,
-                body: JSON.stringify({ data: response.data.data }),
+            if (response && response.data) {
+                return {
+                    statusCode: 200,
+                    body: JSON.stringify({ data: response.data.data }),
+                }
+            } else {
+                return {
+                    statusCode: 200,
+                    body: JSON.stringify({
+                        msg: `NO STREAMS RECEIVED`,
+                    }),
+                }
             }
+
         } else {
             return {
                 statusCode: 400,
