@@ -1,9 +1,11 @@
 import Image from '../../components/Image'
 import Layout from '../../components/Layout'
+import LiveNow from '../../components/LiveNow'
 import React from 'react'
 import Socials from '../../components/Socials'
 import styled from '../../styled'
 import Ticker from '../../components/Ticker'
+import useTwitchLiveStreams from '../../hooks/useTwitchLiveStream'
 
 const HomeWrapper = styled.div`
   position: absolute;
@@ -34,10 +36,12 @@ const LogoContainer = styled.div`
 const PAGE_TITLE = "THE MUSIC PLEASE ONLINE"
 
 const Home = () => {
+  const [streams, error] = useTwitchLiveStreams()
   return (
     <Layout title={PAGE_TITLE} bouncy>
       <Ticker />
       <HomeWrapper>
+        {(streams || []).length >= 1 ? <LiveNow /> : null}
         <LogoContainer>
           <Image
             alt="Music Please Main Logo"
