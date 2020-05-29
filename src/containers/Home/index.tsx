@@ -6,6 +6,7 @@ import Socials from '../../components/Socials'
 import styled from '../../styled'
 import Ticker from '../../components/Ticker'
 import useTwitchLiveStreams from '../../hooks/useTwitchLiveStream'
+import { Link } from 'gatsby'
 
 const HomeWrapper = styled.div`
   position: absolute;
@@ -33,6 +34,10 @@ const LogoContainer = styled.div`
   }
 `
 
+const LiveNowWrapper = styled(Link)`
+  margin: 0 auto;
+`
+
 const PAGE_TITLE = "THE MUSIC PLEASE ONLINE"
 
 const Home = () => {
@@ -41,7 +46,11 @@ const Home = () => {
     <Layout title={PAGE_TITLE} bouncy>
       <Ticker />
       <HomeWrapper>
-        {(streams || []).length >= 1 ? <LiveNow /> : null}
+        {(streams || []).length >= 1 ? (
+          <LiveNowWrapper to="/live">
+            <LiveNow />
+          </LiveNowWrapper>
+        ) : null}
         <LogoContainer>
           <Image
             alt="Music Please Main Logo"
