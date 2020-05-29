@@ -67,6 +67,10 @@ const HomepageLink = styled(Link)`
   &:focus {
     text-decoration: underline;
   }
+
+  &.active {
+    color: ${props => props.theme.colors.accent};
+  }
 `
 
 const MenuToggleButton = styled(motion.button)`
