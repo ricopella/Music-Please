@@ -24,3 +24,8 @@ export interface ShopifyProductItem {
 export interface ProductVariant {
   price: string
 }
+
+export interface IHeaderMenuItem {
+  path: string
+  title: string
+}

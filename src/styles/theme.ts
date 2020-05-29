@@ -12,6 +12,9 @@ const theme = {
     l: MEDIA_BREAKPOINTS.SMALL_DESKTOP,
     m: MEDIA_BREAKPOINTS.TABLET,
   },
+  zIndex: {
+    header: 1000,
+  },
 }
 
 export type ThemeType = typeof theme
