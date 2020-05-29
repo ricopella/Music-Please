@@ -17,6 +17,10 @@ const TwitchPageContainer = styled.section`
   }
 `
 
+const LiveNowWrapper = styled.div`
+  margin: 1rem 0;
+`
+
 const LogoWrapper = styled(Link)`
   display: grid;
   grid-template-columns: 1fr;
@@ -80,4 +84,5 @@ export default {
   LogoWrapper,
   TwitchPageContainer,
   TwitchVideosWrapper,
+  LiveNowWrapper,
 }
