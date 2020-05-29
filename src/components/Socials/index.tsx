@@ -1,7 +1,9 @@
+import HeaderStyles from '../Header/Header.styles'
 import React, { FC } from 'react'
 import SocialImg from '../Image'
 import styled from '../../styled'
-import { BUTTON_ANIMATION } from '../../styles/constants'
+import { AnimatePresence } from 'framer-motion'
+import { BUTTON_ANIMATION, MEDIA_BREAKPOINTS } from '../../styles/constants'
 import { css } from '@emotion/core'
 import { Link } from 'gatsby'
 import { motion } from 'framer-motion'
@@ -18,9 +20,13 @@ const SocialLinkWrapper = css`
   &:hover {
     cursor: pointer;
   }
+
+  @media (max-width: ${MEDIA_BREAKPOINTS.PHONE}) {
+    width: 2.75rem;
+  }
 `
 
-const SocialContainer = styled.div`
+const SocialContainer = styled(motion.div)`
   display: grid;
   grid-template-columns: repeat(4, max-content);
   grid-template-rows: 1fr;
@@ -42,8 +48,21 @@ const AnimatedButton = styled(motion.button)`
 `
 
 const Socials = () => (
-  <motion.div {...SLIDE_IN_ANIMATION_OPTIONS}>
-    <SocialContainer>
+  <AnimatePresence>
+    <SocialContainer
+      variants={{
+        open: {
+          opacity: 1,
+          y: 0,
+          transition: { delay: 0.5 },
+        },
+        closed: {
+          opacity: 0,
+          y: 30,
+          transition: { delay: 0.25 },
+        },
+      }}
+    >
       <SocialLink
         fileName="SC.png"
         title="SoundCloud"
@@ -73,7 +92,7 @@ const Socials = () => (
         className="fb"
       />
     </SocialContainer>
-  </motion.div>
+  </AnimatePresence>
 )
 
 interface SocialLinkProps {
