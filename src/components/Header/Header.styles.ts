@@ -95,6 +95,7 @@ const Path = styled(motion.path)`
 const SocialNavWrapper = styled(motion.div)`
   position: absolute;
   bottom: 1rem;
+  width: 100%;
 `
 
 const NAV_VARIANTS = {
