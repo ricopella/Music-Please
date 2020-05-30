@@ -67,7 +67,7 @@
         "start": "npm run develop",
         "type-check": "tsc --noEmit",
         "postinstall": "netlify-lambda install",
-        "prebuild": "cd lambda/getStreamStatus && npm i"
+        "prebuild": "cd lambda/getStreamStatus && npm i && cd lambda/getSpotifyPlaylists && npm i"
     },
     "repository": {
         "type": "git",
