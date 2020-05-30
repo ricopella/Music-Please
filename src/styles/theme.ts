@@ -6,6 +6,7 @@ const theme = {
     action: COLORS.NEON_GREEN,
     primary: COLORS.BLACK,
     secondary: COLORS.PURPLE,
+    navBackground: COLORS.DARK_GRAY,
   },
   media: {
     s: MEDIA_BREAKPOINTS.PHONE,

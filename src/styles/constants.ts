@@ -9,6 +9,7 @@ export const COLORS = {
   NEON_GREEN: `#00FF00`,
   ORANGE: `#FF6600`,
   PURPLE: `#CC00FF`,
+  DARK_GRAY: `#777777`,
 }
 
 export const SLIDE_IN_ANIMATION_OPTIONS = {
