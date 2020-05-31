@@ -1,24 +1,21 @@
 import styled from '../../styled'
 import { Link } from 'gatsby'
 import { motion } from 'framer-motion'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 const Nav = styled(motion.nav)<{ isOpen: boolean }>`
-  bottom: 0;
   left: 0;
   position: fixed;
   top: 0;
   z-index: 1000;
-  width: ${props => (props.isOpen ? `18.75rem` : 0)};
+  width: ${props => (props.isOpen ? `8.75rem` : 0)};
 `
 
 const NavBackground = styled(motion.div)`
-  background: ${props => props.theme.colors.secondary};
-  bottom: 0;
+  background: ${props => props.theme.colors.navBackground};
   display: grid;
-  left: 0;
   position: absolute;
-  top: 0;
-  width: 18.75rem;
+  width: 9.75rem;
 `
 
 const MenuItemUl = styled(motion.ul)`
@@ -54,6 +51,25 @@ const MenuItemLi = styled(motion.li)`
   }
 `
 
+const HomePageExternalLink = styled(OutboundLink)`
+  color: ${props => props.theme.colors.action};
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  align-self: center;
+  justify-self: center;
+  text-transform: capitalize;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+
+  &.active {
+    color: ${props => props.theme.colors.accent};
+  }
+`
+
 const HomepageLink = styled(Link)`
   color: ${props => props.theme.colors.action};
   cursor: pointer;
@@ -82,10 +98,10 @@ const MenuToggleButton = styled(motion.button)`
   border: none;
   cursor: pointer;
   height: 3.125rem;
-  left: 0.9375rem;
+  left: 2rem;
   outline: none;
   position: absolute;
-  top: 1.125rem;
+  top: 3rem;
   width: 3.125rem;
   z-index: 1000;
 `
@@ -114,7 +130,8 @@ const NAV_VARIANTS = {
 const SIDEBAR_VARIANTS = {
   open: (height = 1000) => ({
     clipPath: `circle(${height * 2 + 200}px at 2.5rem 2.5rem)`,
-    opacity: 0.99,
+    opacity: 0.7,
+    height: `23.4375rem`,
     transition: {
       type: "spring",
       stiffness: 20,
@@ -123,7 +140,10 @@ const SIDEBAR_VARIANTS = {
   }),
   closed: {
     clipPath: "circle(1.875rem at 2.5rem 2.5rem)",
-    opacity: 0.7,
+    top: 0,
+    left: 0,
+    opacity: 0,
+    height: 0,
     transition: {
       delay: 0.5,
       type: "spring",
@@ -171,6 +191,7 @@ const MENU_ITEM_VARIANTS = {
 }
 
 export default {
+  HomePageExternalLink,
   HomepageLink,
   MENU_ITEM_VARIANTS,
   MenuItemLi,

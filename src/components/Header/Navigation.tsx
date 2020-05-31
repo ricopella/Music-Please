@@ -34,9 +34,6 @@ export const PureNavigation: FC<{ headerItems: IHeaderMenuItem[] }> = ({
           />
         ))}
       </Styled.MenuItemUl>
-      <Styled.SocialNavWrapper variants={Styled.TOGGLE_WRAPPER_VARIANTS}>
-        <Socials />
-      </Styled.SocialNavWrapper>
     </>
   )
 }
@@ -49,6 +46,16 @@ const Navigation: FC<{}> = () => {
         { path: ROUTES.shop, title: `shop` },
         { path: ROUTES.live, title: "live" },
         { path: ROUTES.contact, title: `contact` },
+        {
+          path: `https://instagram.com/themusicplease`,
+          title: `instagram`,
+          external: true,
+        },
+        {
+          path: `https://twitter.com/themusicplease`,
+          title: `twitter`,
+          external: true,
+        },
       ]}
     />
   )

@@ -15,11 +15,21 @@ interface IMenuItem {
  */
 const MenuItem: FC<IMenuItem> = ({ className = "", item, title }) => (
   <Styled.MenuItemLi variants={Styled.MENU_ITEM_VARIANTS} {...BUTTON_ANIMATION}>
-    <Styled.HomepageLink
-      to={item?.path}
-      className={className}
-      title={title}
-    >{`+ ${item.title.toUpperCase()}`}</Styled.HomepageLink>
+    {item?.external ? (
+      <Styled.HomePageExternalLink
+        href={item.path}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {`+ ${item.title.toUpperCase()}`}
+      </Styled.HomePageExternalLink>
+    ) : (
+      <Styled.HomepageLink
+        to={item?.path}
+        className={className}
+        title={title}
+      >{`+ ${item.title.toUpperCase()}`}</Styled.HomepageLink>
+    )}
   </Styled.MenuItemLi>
 )
 

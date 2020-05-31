@@ -12,7 +12,7 @@ const FooterContainer = styled.footer`
 `
 
 const FooterContent = styled.div`
-  color: ${props => props.theme.colors.action};
+  color: ${props => props.theme.colors.content};
   font-size: 0.75rem;
 `
 
