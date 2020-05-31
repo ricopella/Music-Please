@@ -6,9 +6,11 @@ export const MEDIA_BREAKPOINTS = {
 
 export const COLORS = {
   BLACK: `#000000`,
+  DARK_GRAY: `#777777`,
   NEON_GREEN: `#00FF00`,
   ORANGE: `#FF6600`,
   PURPLE: `#CC00FF`,
+  WHITE: `#ffffff`,
 }
 
 export const SLIDE_IN_ANIMATION_OPTIONS = {

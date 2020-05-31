@@ -8,10 +8,9 @@ import { css } from '@emotion/core'
 import { Link } from 'gatsby'
 import { motion } from 'framer-motion'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
-import { SLIDE_IN_ANIMATION_OPTIONS } from '../../styles/constants'
 
 const SocialLinkWrapper = css`
-  width: 3.75rem;
+  // width: 3.75rem;
   height: auto;
   display: grid;
   align-content: center;
@@ -22,14 +21,14 @@ const SocialLinkWrapper = css`
   }
 
   @media (max-width: ${MEDIA_BREAKPOINTS.PHONE}) {
-    width: 2.75rem;
+    // width: 2.75rem;
   }
 `
 
 const SocialContainer = styled(motion.div)`
   display: grid;
-  grid-template-columns: repeat(4, max-content);
-  grid-template-rows: 1fr;
+  grid-template-rows: repeat(4, max-content);
+  grid-template-columns: 1fr;
   align-content: center;
   justify-content: center;
 `
@@ -48,51 +47,36 @@ const AnimatedButton = styled(motion.button)`
 `
 
 const Socials = () => (
-  <AnimatePresence>
-    <SocialContainer
-      variants={{
-        open: {
-          opacity: 1,
-          y: 0,
-          transition: { delay: 0.5 },
-        },
-        closed: {
-          opacity: 0,
-          y: 30,
-          transition: { delay: 0.25 },
-        },
-      }}
-    >
-      <SocialLink
-        fileName="SC.png"
-        title="SoundCloud"
-        alt="SoundCloud - @themusicplease"
-        link="https://soundcloud.com/themusicplease"
-        className="sc"
-      />
-      <SocialLink
-        fileName="IG.png"
-        title="Instagram"
-        alt="Instagram - @themusicplease"
-        link="https://instagram.com/themusicplease"
-        className="ig"
-      />
-      <SocialLink
-        fileName="TW1.png"
-        title="TWitter"
-        alt="Twitter - @themusicplease"
-        link="https://twitter.com/themusicplease"
-        className="tw"
-      />
-      <SocialLink
-        fileName="FB.png"
-        title="Facebook"
-        alt="Facebook - @themusicplease"
-        link="https://facebook.com/themusicplease"
-        className="fb"
-      />
-    </SocialContainer>
-  </AnimatePresence>
+  <>
+    <SocialLink
+      fileName="SC.png"
+      title="SoundCloud"
+      alt="SoundCloud - @themusicplease"
+      link="https://soundcloud.com/themusicplease"
+      className="sc"
+    />
+    <SocialLink
+      fileName="IG.png"
+      title="Instagram"
+      alt="Instagram - @themusicplease"
+      link="https://instagram.com/themusicplease"
+      className="ig"
+    />
+    <SocialLink
+      fileName="TW1.png"
+      title="TWitter"
+      alt="Twitter - @themusicplease"
+      link="https://twitter.com/themusicplease"
+      className="tw"
+    />
+    <SocialLink
+      fileName="FB.png"
+      title="Facebook"
+      alt="Facebook - @themusicplease"
+      link="https://facebook.com/themusicplease"
+      className="fb"
+    />
+  </>
 )
 
 interface SocialLinkProps {
@@ -112,7 +96,7 @@ const SocialLink: FC<SocialLinkProps> = ({
   link,
   title,
 }) => (
-  <>
+  <motion.div variants={HeaderStyles.MENU_ITEM_VARIANTS}>
     {internal ? (
       <AnimatedButton {...BUTTON_ANIMATION}>
         <Link css={SocialLinkWrapper} to={link}>
@@ -135,7 +119,7 @@ const SocialLink: FC<SocialLinkProps> = ({
         </OutboundLink>
       </AnimatedButton>
     )}
-  </>
+  </motion.div>
 )
 
 export default Socials
