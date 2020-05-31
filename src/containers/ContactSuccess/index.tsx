@@ -1,4 +1,4 @@
-import BackButton from '../../components/BackButton'
+import Header from '../../components/Header'
 import Layout from '../../components/Layout'
 import React from 'react'
 import SimpleSplash from '../../components/SimpleSplash'
@@ -11,7 +11,7 @@ const ContactP = styled.p`
 const ContactSuccess = () => {
   return (
     <Layout title={`CONTACT US - SUCCESS`}>
-      <BackButton />
+      <Header />
       <SimpleSplash title={"CONTACT US"}>
         <ContactP>Thank you! We'll be in touch.</ContactP>
       </SimpleSplash>

@@ -6,10 +6,11 @@ export const MEDIA_BREAKPOINTS = {
 
 export const COLORS = {
   BLACK: `#000000`,
+  DARK_GRAY: `#777777`,
   NEON_GREEN: `#00FF00`,
   ORANGE: `#FF6600`,
   PURPLE: `#CC00FF`,
-  DARK_GRAY: `#777777`,
+  WHITE: `#ffffff`,
 }
 
 export const SLIDE_IN_ANIMATION_OPTIONS = {
@@ -49,5 +50,14 @@ export const FADE_IN_ANIMATION_OPTIONS = {
     visible: {
       opacity: 1,
     },
+  },
+}
+
+export const BUTTON_ANIMATION = {
+  whileHover: {
+    scale: 1.1,
+  },
+  whileTap: {
+    scale: 0.95,
   },
 }
