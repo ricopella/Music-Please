@@ -34,6 +34,7 @@
         "gatsby-source-filesystem": "^2.0.22",
         "gatsby-source-shopify": "^3.2.3",
         "gatsby-transformer-sharp": "^2.1.14",
+        "http-proxy-middleware": "^1.0.4",
         "iframe-resizer-react": "^1.0.3",
         "netlify-lambda": "^1.6.3",
         "prop-types": "^15.7.2",

@@ -183,7 +183,9 @@ const MENU_ITEM_VARIANTS = {
   closed: {
     y: 50,
     opacity: 0,
-    display: "none",
+    transitionEnd: {
+      display: "none",
+    },
     transition: {
       y: { stiffness: 1000 },
     },

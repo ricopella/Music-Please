@@ -6,20 +6,21 @@ const useSpotifyPlaylists = () => {
   const [error, setError] = useState(null)
 
   const loadPlaylists = useCallback(
-    () => async () => {
-      try {
-        const response = await axios.get(
-          `/.netlify/functions/getSpotifyPlaylists`
-        )
-        console.log(response)
-        const { data } = await response.data
-        setPlaylists(data)
-      } catch (e) {
-        // TODO: handle error
-        console.error(e)
-        setError(e)
-      }
-    },
+    () =>
+      (async () => {
+        try {
+          const response = await axios.get(
+            `/.netlify/functions/getSpotifyPlaylists`
+          )
+          console.log("here", response)
+          const { data } = await response.data
+          setPlaylists(data)
+        } catch (e) {
+          // TODO: handle error
+          console.error(e)
+          setError(e)
+        }
+      })(),
     [setPlaylists]
   )
 

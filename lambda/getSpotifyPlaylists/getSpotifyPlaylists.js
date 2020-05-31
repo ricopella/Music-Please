@@ -21,7 +21,6 @@ exports.handler = async function(event, context) {
             qs.stringify(data),
             headers
         )
-        console.log(tokenResponse)
 
         if (tokenResponse && tokenResponse.data) {
             const { access_token } = tokenResponse.data
@@ -33,12 +32,11 @@ exports.handler = async function(event, context) {
                     Authorization: `Bearer ${access_token}`,
                 },
             })
-            console.log(response)
 
             if (response && response.data) {
                 return {
                     statusCode: 200,
-                    body: JSON.stringify({ data: response.data }),
+                    body: JSON.stringify({ data: response.data.items }),
                 }
             } else {
                 return {
