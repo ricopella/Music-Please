@@ -16,7 +16,6 @@ const SoundsContainer = styled.div`
   width: 100%;
   padding: 2rem 2rem;
   display: grid;
-  grid-template-rows: max-content 1fr;
   max-width: 62.25rem;
   margin: 0 auto;
   margin-top: 5rem;
@@ -50,6 +49,7 @@ const SoundItemWrapper = styled(motion.div)`
 
 const SoundItemTitle = styled.p`
   text-align: center;
+  opacity: 1;
 `
 const PlaylistImage = styled.img`
   max-width: 15.625rem;
@@ -64,9 +64,9 @@ const PlaylistDescriptionWrapper = styled(motion.div)`
   left: 0;
   opacity: 0.8;
   width: 100%;
-  height: 15.625rem;
+  height: 100%;
   display: grid;
-  grid-template-rows: calc(15.625rem - 32px) max-content;
+  grid-template-rows: 12.5rem max-content;
 
   & p {
     padding: 1rem;
@@ -134,7 +134,6 @@ const Sounds = () => {
                 {isHovered[key] && (
                   <PlaylistDescriptionWrapper>
                     <p> {item.description}</p>
-
                     <PlaylistLinksWrapper
                       animate={isHovered[key] ? "open" : "closed"}
                       initial={"closed"}
@@ -184,15 +183,18 @@ const Sounds = () => {
                 <MixesImage src={item.image} />
                 <SoundItemTitle>{item.title}</SoundItemTitle>
                 {isMixHovered[key] && (
-                  <MixesLinkWrapper {...SLIDE_IN_ANIMATION_OPTIONS}>
-                    <MixesLink
-                      href={item?.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Image fileName="SC.png" style={{ width: 60 }} />
-                    </MixesLink>
-                  </MixesLinkWrapper>
+                  <PlaylistDescriptionWrapper>
+                    <p>A description will go here...</p>
+                    <MixesLinkWrapper {...SLIDE_IN_ANIMATION_OPTIONS}>
+                      <MixesLink
+                        href={item?.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Image fileName="SC.png" style={{ width: 60 }} />
+                      </MixesLink>
+                    </MixesLinkWrapper>
+                  </PlaylistDescriptionWrapper>
                 )}
               </MixesItemWrapper>
             ))}

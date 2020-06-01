@@ -98,7 +98,7 @@ const MenuToggleButton = styled(motion.button)`
   border: none;
   cursor: pointer;
   height: 3.125rem;
-  left: 2rem;
+  left: 1rem;
   outline: none;
   position: absolute;
   top: 3rem;

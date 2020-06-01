@@ -12,7 +12,7 @@ const PLAYLISTS = [
     image: `https://i.scdn.co/image/ab67706c0000da84db227f5ba6abeb188766bd7e`,
   },
   {
-    title: `IN MY F*%#iNG FEELINZ"`,
+    title: `"IN MY F*%#iNG FEELINZ"`,
     spotify: `https://open.spotify.com/playlist/4WjwWtUtJzvLSpbqBZnr7q`,
     description: `For a while, I've been playing this (loud) & surrendering to the emotions evoked. `,
     image: `https://i.scdn.co/image/ab67706c0000da84dda70893c5a85e92378ac111`,
