@@ -21,6 +21,16 @@ const SoundsContainer = styled.div`
   margin-top: 5rem;
 `
 
+const SoundsBody = styled.section`
+  display: grid;
+  grid-template-rows: repeat(2, max-content);
+`
+
+const SoundsGroup = styled.div`
+  display: grid;
+  grid-template-rows: max-content: 1fr;
+`
+
 const LogoWrapper = styled.div`
   width: 100%;
   margin: 0 auto;
@@ -33,9 +43,19 @@ const SoundsHeading = styled.h2`
 const PlaylistWrapper = styled.div`
   display: grid;
   gap: 1rem 3rem;
-  grid-template-columns: repeat(3, max-content);
+  grid-template-columns: repeat(3, 1fr);
   position: relative;
   margin-top: 1rem;
+
+  @media (max-width: 56.875rem) {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 auto;
+  }
+
+  @media (max-width: 39.375rem) {
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+  }
 `
 
 const SoundItemWrapper = styled(motion.div)`
@@ -114,91 +134,101 @@ const Sounds = () => {
           <LogoWrapper>
             <CenteredLogo />
           </LogoWrapper>
-          <SoundsHeading>PLAYLISTS</SoundsHeading>
-          <PlaylistWrapper>
-            {PLAYLISTS.map((item, key) => (
-              <SoundItemWrapper
-                key={`sounds_playlist_item_${item.title}`}
-                whileHover={{
-                  scale: 1.2,
-                  transition: { duration: 1 },
-                }}
-                onMouseEnter={prev => setHovered({ ...prev, [key]: true })}
-                onMouseLeave={prev => setHovered({ ...prev, [key]: false })}
-              >
-                <PlaylistImage
-                  src={item.image}
-                  style={{ opacity: isHovered ? `0.75` : 1 }}
-                />
-                <SoundItemTitle>{item.title}</SoundItemTitle>
-                {isHovered[key] && (
-                  <PlaylistDescriptionWrapper>
-                    <p> {item.description}</p>
-                    <PlaylistLinksWrapper
-                      animate={isHovered[key] ? "open" : "closed"}
-                      initial={"closed"}
-                      variants={HeaderStyles.NAV_VARIANTS}
-                    >
-                      <PlaylistLinksItem
-                        variants={HeaderStyles.MENU_ITEM_VARIANTS}
-                      >
-                        <PlaylistLink
-                          href={item?.spotify}
-                          target="_blank"
-                          rel="noopener noreferrer"
+          <SoundsBody>
+            <SoundsGroup>
+              <SoundsHeading>PLAYLISTS</SoundsHeading>
+              <PlaylistWrapper>
+                {PLAYLISTS.map((item, key) => (
+                  <SoundItemWrapper
+                    key={`sounds_playlist_item_${item.title}`}
+                    whileHover={{
+                      scale: 1.2,
+                      transition: { duration: 1 },
+                    }}
+                    onMouseEnter={prev => setHovered({ ...prev, [key]: true })}
+                    onMouseLeave={prev => setHovered({ ...prev, [key]: false })}
+                  >
+                    <PlaylistImage
+                      src={item.image}
+                      style={{ opacity: isHovered ? `0.75` : 1 }}
+                    />
+                    <SoundItemTitle>{item.title}</SoundItemTitle>
+                    {isHovered[key] && (
+                      <PlaylistDescriptionWrapper>
+                        <p> {item.description}</p>
+                        <PlaylistLinksWrapper
+                          animate={isHovered[key] ? "open" : "closed"}
+                          initial={"closed"}
+                          variants={HeaderStyles.NAV_VARIANTS}
                         >
-                          <Image
-                            alt="Spotify"
-                            fileName="spotify.png"
-                            style={{ width: 24 }}
-                          />
-                        </PlaylistLink>
-                      </PlaylistLinksItem>
-                      <PlaylistLinksItem
-                        variants={HeaderStyles.MENU_ITEM_VARIANTS}
-                        style={{ backgroundColor: "white" }}
-                      >
-                        <Tidal
-                          alt="Tidal"
-                          style={{ width: 50, height: `auto` }}
-                        />
-                      </PlaylistLinksItem>
-                    </PlaylistLinksWrapper>
-                  </PlaylistDescriptionWrapper>
-                )}
-              </SoundItemWrapper>
-            ))}
-          </PlaylistWrapper>
-          <SoundsHeading>MIXES</SoundsHeading>
-          <PlaylistWrapper>
-            {MIXES.map((item, key) => (
-              <MixesItemWrapper
-                whileHover={{
-                  scale: 1.2,
-                  transition: { duration: 1 },
-                }}
-                onMouseEnter={prev => setMixHovered({ ...prev, [key]: true })}
-                onMouseLeave={prev => setMixHovered({ ...prev, [key]: false })}
-              >
-                <MixesImage src={item.image} />
-                <SoundItemTitle>{item.title}</SoundItemTitle>
-                {isMixHovered[key] && (
-                  <PlaylistDescriptionWrapper>
-                    <p>A description will go here...</p>
-                    <MixesLinkWrapper {...SLIDE_IN_ANIMATION_OPTIONS}>
-                      <MixesLink
-                        href={item?.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <Image fileName="SC.png" style={{ width: 60 }} />
-                      </MixesLink>
-                    </MixesLinkWrapper>
-                  </PlaylistDescriptionWrapper>
-                )}
-              </MixesItemWrapper>
-            ))}
-          </PlaylistWrapper>
+                          <PlaylistLinksItem
+                            variants={HeaderStyles.MENU_ITEM_VARIANTS}
+                          >
+                            <PlaylistLink
+                              href={item?.spotify}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <Image
+                                alt="Spotify"
+                                fileName="spotify.png"
+                                style={{ width: 24 }}
+                              />
+                            </PlaylistLink>
+                          </PlaylistLinksItem>
+                          <PlaylistLinksItem
+                            variants={HeaderStyles.MENU_ITEM_VARIANTS}
+                            style={{ backgroundColor: "white" }}
+                          >
+                            <Tidal
+                              alt="Tidal"
+                              style={{ width: 50, height: `auto` }}
+                            />
+                          </PlaylistLinksItem>
+                        </PlaylistLinksWrapper>
+                      </PlaylistDescriptionWrapper>
+                    )}
+                  </SoundItemWrapper>
+                ))}
+              </PlaylistWrapper>
+            </SoundsGroup>
+            <SoundsGroup>
+              <SoundsHeading>MIXES</SoundsHeading>
+              <PlaylistWrapper>
+                {MIXES.map((item, key) => (
+                  <MixesItemWrapper
+                    whileHover={{
+                      scale: 1.2,
+                      transition: { duration: 1 },
+                    }}
+                    onMouseEnter={prev =>
+                      setMixHovered({ ...prev, [key]: true })
+                    }
+                    onMouseLeave={prev =>
+                      setMixHovered({ ...prev, [key]: false })
+                    }
+                  >
+                    <MixesImage src={item.image} />
+                    <SoundItemTitle>{item.title}</SoundItemTitle>
+                    {isMixHovered[key] && (
+                      <PlaylistDescriptionWrapper>
+                        <p>A description will go here...</p>
+                        <MixesLinkWrapper {...SLIDE_IN_ANIMATION_OPTIONS}>
+                          <MixesLink
+                            href={item?.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <Image fileName="SC.png" style={{ width: 60 }} />
+                          </MixesLink>
+                        </MixesLinkWrapper>
+                      </PlaylistDescriptionWrapper>
+                    )}
+                  </MixesItemWrapper>
+                ))}
+              </PlaylistWrapper>
+            </SoundsGroup>
+          </SoundsBody>
         </SoundsContainer>
       </Layout>
     </ContextProvider>
