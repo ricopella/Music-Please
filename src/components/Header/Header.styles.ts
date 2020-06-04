@@ -131,11 +131,11 @@ const SIDEBAR_VARIANTS = {
   open: (height = 1000) => ({
     clipPath: `circle(${height * 2 + 200}px at 2.5rem 2.5rem)`,
     opacity: 0.7,
-    height: `23.4375rem`,
+    height: `25rem`,
     transition: {
       type: "spring",
       stiffness: 20,
-      restDelta: 2,
+      duration: 0.25,
     },
   }),
   closed: {

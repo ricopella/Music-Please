@@ -3,4 +3,5 @@ export default {
   live: "/live",
   root: `/`,
   shop: `/shop`,
+  sounds: `/sounds`,
 }
