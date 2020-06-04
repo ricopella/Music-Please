@@ -27,4 +27,23 @@ const MIXES = [
   },
 ]
 
-export { MIXES, PLAYLISTS }
+const ItemImageVariants = {
+  exit: "hidden",
+  initial: "hidden",
+  variants: {
+    exit: {
+      opacity: 0,
+      y: 30,
+    },
+    visible: {
+      opacity: 0.8,
+      y: 0,
+    },
+    hidden: {
+      opacity: 0,
+      y: 30,
+    },
+  },
+}
+
+export { MIXES, PLAYLISTS, ItemImageVariants }

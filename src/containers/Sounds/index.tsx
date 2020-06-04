@@ -7,10 +7,13 @@ import Layout from '../../components/Layout'
 import React, { useState } from 'react'
 import styled from '../../styled'
 import Tidal from '../../images/svg/tidal.svg'
-import { MIXES, PLAYLISTS } from './config'
+import { createBreakpoint } from 'react-use'
+import { ItemImageVariants, MIXES, PLAYLISTS } from './config'
 import { motion } from 'framer-motion'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import { SLIDE_IN_ANIMATION_OPTIONS } from '../../styles/constants'
+
+const useBreakpoint = createBreakpoint()
 
 const SoundsContainer = styled.div`
   width: 100%;
@@ -71,7 +74,7 @@ const SoundItemTitle = styled.p`
   text-align: center;
   opacity: 1;
 `
-const PlaylistImage = styled.img`
+const PlaylistImage = styled(motion.img)`
   max-width: 15.625rem;
   height: auto;
   width: 100%;
@@ -96,9 +99,17 @@ const PlaylistDescriptionWrapper = styled(motion.div)`
 const PlaylistLinksWrapper = styled(motion.ul)`
   display: grid;
   gap: 0 1rem;
-  grid-template-columns: repeat(2, max-content);
+  grid-template-columns: repeat(3, max-content);
   justify-content: center;
   width: calc(100% - (1rem * 2));
+  list-style-type: none;
+`
+
+const MobileOnlyPlaylistLinksWrapper = styled(PlaylistLinksWrapper)`
+  display: none;
+  @media (max-width: ${props => props.theme.media.s}) {
+    display: grid;
+  }
 `
 
 const PlaylistLinksItem = styled(motion.li)``
@@ -110,7 +121,7 @@ const MixesItemWrapper = styled(motion.div)`
   max-width: 15.625rem;
 `
 
-const MixesImage = styled.img`
+const MixesImage = styled(motion.img)`
   max-width: 15.625rem;
 `
 
@@ -119,11 +130,19 @@ const MixesLinkWrapper = styled(motion.div)`
   justify-content: center;
 `
 
+const MobileOnlyMixesLinkWrapper = styled(MixesLinkWrapper)`
+  display: none;
+  @media (max-width: ${props => props.theme.media.s}) {
+    display: grid;
+  }
+`
+
 const MixesLink = styled(OutboundLink)``
 
 const PAGE_TITLE = "SOUNDS"
 
 const Sounds = () => {
+  const breakpoint = useBreakpoint()
   const [isHovered, setHovered] = useState({})
   const [isMixHovered, setMixHovered] = useState({})
   return (
@@ -150,15 +169,32 @@ const Sounds = () => {
                   >
                     <PlaylistImage
                       src={item.image}
-                      style={{ opacity: isHovered ? `0.75` : 1 }}
+                      animate={isHovered ? "visible" : "hidden"}
+                      {...ItemImageVariants}
                     />
                     <SoundItemTitle>{item.title}</SoundItemTitle>
                     {isHovered[key] && (
-                      <PlaylistDescriptionWrapper>
+                      <PlaylistDescriptionWrapper
+                        animate={"visible"}
+                        exit="hidden"
+                        initial={"hidden"}
+                        variants={{
+                          exit: {
+                            opacity: 0,
+                            y: 30,
+                          },
+                          visible: {
+                            opacity: 0.8,
+                            y: 0,
+                          },
+                          hidden: {
+                            opacity: 0,
+                            y: 30,
+                          },
+                        }}
+                      >
                         <p> {item.description}</p>
                         <PlaylistLinksWrapper
-                          animate={isHovered[key] ? "open" : "closed"}
-                          initial={"closed"}
                           variants={HeaderStyles.NAV_VARIANTS}
                         >
                           <PlaylistLinksItem
@@ -185,9 +221,55 @@ const Sounds = () => {
                               style={{ width: 50, height: `auto` }}
                             />
                           </PlaylistLinksItem>
+                          <PlaylistLinksItem
+                            variants={HeaderStyles.MENU_ITEM_VARIANTS}
+                            style={{ backgroundColor: "white" }}
+                          >
+                            <Tidal
+                              alt="Apple"
+                              style={{ width: 50, height: `auto` }}
+                            />
+                          </PlaylistLinksItem>
                         </PlaylistLinksWrapper>
                       </PlaylistDescriptionWrapper>
                     )}
+                    <MobileOnlyPlaylistLinksWrapper
+                      variants={HeaderStyles.NAV_VARIANTS}
+                    >
+                      <PlaylistLinksItem
+                        variants={HeaderStyles.MENU_ITEM_VARIANTS}
+                      >
+                        <PlaylistLink
+                          href={item?.spotify}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Image
+                            alt="Spotify"
+                            fileName="spotify.png"
+                            style={{ width: 24 }}
+                          />
+                        </PlaylistLink>
+                      </PlaylistLinksItem>
+                      <PlaylistLinksItem
+                        variants={HeaderStyles.MENU_ITEM_VARIANTS}
+                        style={{ backgroundColor: "white" }}
+                      >
+                        <Tidal
+                          alt="Tidal"
+                          style={{ width: 50, height: `auto` }}
+                        />
+                      </PlaylistLinksItem>
+                      <PlaylistLinksItem
+                        variants={HeaderStyles.MENU_ITEM_VARIANTS}
+                        style={{ backgroundColor: "white" }}
+                      >
+                        <Tidal
+                          alt="Apple"
+                          style={{ width: 50, height: `auto` }}
+                        />
+                      </PlaylistLinksItem>
+                    </MobileOnlyPlaylistLinksWrapper>
                   </SoundItemWrapper>
                 ))}
               </PlaylistWrapper>
@@ -224,6 +306,15 @@ const Sounds = () => {
                         </MixesLinkWrapper>
                       </PlaylistDescriptionWrapper>
                     )}
+                    <MobileOnlyMixesLinkWrapper {...SLIDE_IN_ANIMATION_OPTIONS}>
+                      <MixesLink
+                        href={item?.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Image fileName="SC.png" style={{ width: 60 }} />
+                      </MixesLink>
+                    </MobileOnlyMixesLinkWrapper>
                   </MixesItemWrapper>
                 ))}
               </PlaylistWrapper>
