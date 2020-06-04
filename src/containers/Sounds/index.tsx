@@ -23,8 +23,9 @@ const SoundsContainer = styled.div`
   margin: 0 auto;
   max-width: 62.25rem;
   min-height: 100%;
-  padding: 2rem 2rem;
+  padding: 4rem 2rem;
   width: 100%;
+  grid-row-gap: 2rem;
 `
 
 const SoundsBody = styled.section`
@@ -97,6 +98,10 @@ const PlaylistDescriptionWrapper = styled(motion.div)`
 
   & p {
     padding: 1rem;
+  }
+
+  @media (max-width: ${props => props.theme.media.s}) {
+    display: none;
   }
 `
 
