@@ -16,12 +16,15 @@ import { SLIDE_IN_ANIMATION_OPTIONS } from '../../styles/constants'
 const useBreakpoint = createBreakpoint()
 
 const SoundsContainer = styled.div`
-  width: 100%;
-  padding: 2rem 2rem;
   display: grid;
-  max-width: 62.25rem;
-  margin: 0 auto;
+  grid-template-rows: max-content max-content;
+  height: 100%;
   margin-top: 5rem;
+  margin: 0 auto;
+  max-width: 62.25rem;
+  min-height: 100%;
+  padding: 2rem 2rem;
+  width: 100%;
 `
 
 const SoundsBody = styled.section`
@@ -32,6 +35,7 @@ const SoundsBody = styled.section`
 const SoundsGroup = styled.div`
   display: grid;
   grid-template-rows: max-content: 1fr;
+
 `
 
 const LogoWrapper = styled.div`
