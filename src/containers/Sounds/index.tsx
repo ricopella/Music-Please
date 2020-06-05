@@ -121,7 +121,11 @@ const MobileOnlyPlaylistLinksWrapper = styled(PlaylistLinksWrapper)`
   }
 `
 
-const PlaylistLinksItem = styled(motion.li)``
+const PlaylistLinksItem = styled(motion.li)<{ disabled?: boolean }>`
+  align-self: center;
+  margin-bottom: 0;
+  opacity: ${props => (props.disabled ? 0.5 : 1)};
+`
 
 const PlaylistLink = styled(OutboundLink)``
 
@@ -223,20 +227,27 @@ const Sounds = () => {
                           </PlaylistLinksItem>
                           <PlaylistLinksItem
                             variants={HeaderStyles.MENU_ITEM_VARIANTS}
-                            style={{ backgroundColor: "white" }}
                           >
-                            <Tidal
-                              alt="Tidal"
-                              style={{ width: 50, height: `auto` }}
-                            />
+                            <PlaylistLink
+                              href={item?.tidal}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <Image
+                                alt="tidal"
+                                fileName="tidal.png"
+                                style={{ width: 24 }}
+                              />
+                            </PlaylistLink>
                           </PlaylistLinksItem>
                           <PlaylistLinksItem
                             variants={HeaderStyles.MENU_ITEM_VARIANTS}
-                            style={{ backgroundColor: "white" }}
+                            disabled={true}
                           >
-                            <Tidal
-                              alt="Apple"
-                              style={{ width: 50, height: `auto` }}
+                            <Image
+                              alt="apple"
+                              fileName="apple.png"
+                              style={{ width: 24 }}
                             />
                           </PlaylistLinksItem>
                         </PlaylistLinksWrapper>
@@ -262,16 +273,22 @@ const Sounds = () => {
                       </PlaylistLinksItem>
                       <PlaylistLinksItem
                         variants={HeaderStyles.MENU_ITEM_VARIANTS}
-                        style={{ backgroundColor: "white" }}
                       >
-                        <Tidal
-                          alt="Tidal"
-                          style={{ width: 50, height: `auto` }}
-                        />
+                        <PlaylistLink
+                          href={item?.tidal}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {" "}
+                          <Tidal
+                            alt="Tidal"
+                            style={{ width: 50, height: `auto` }}
+                          />
+                        </PlaylistLink>
                       </PlaylistLinksItem>
                       <PlaylistLinksItem
                         variants={HeaderStyles.MENU_ITEM_VARIANTS}
-                        style={{ backgroundColor: "white" }}
+                        disabled={true}
                       >
                         <Tidal
                           alt="Apple"
