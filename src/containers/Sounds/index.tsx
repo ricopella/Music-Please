@@ -279,10 +279,10 @@ const Sounds = () => {
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          {" "}
-                          <Tidal
-                            alt="Tidal"
-                            style={{ width: 50, height: `auto` }}
+                          <Image
+                            alt="tidal"
+                            fileName="tidal.png"
+                            style={{ width: 24 }}
                           />
                         </PlaylistLink>
                       </PlaylistLinksItem>
@@ -290,9 +290,10 @@ const Sounds = () => {
                         variants={HeaderStyles.MENU_ITEM_VARIANTS}
                         disabled={true}
                       >
-                        <Tidal
-                          alt="Apple"
-                          style={{ width: 50, height: `auto` }}
+                        <Image
+                          alt="apple"
+                          fileName="apple.png"
+                          style={{ width: 24 }}
                         />
                       </PlaylistLinksItem>
                     </MobileOnlyPlaylistLinksWrapper>
