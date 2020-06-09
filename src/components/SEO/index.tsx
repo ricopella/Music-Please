@@ -62,6 +62,11 @@ const SEO: FC<SEOProps> = ({ description, image, title }) => {
       <meta property="og:type" content="website" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta name="keywords" content={(keywords || []).join(`, `)} />
+      <link
+        href="//db.onlinewebfonts.com/c/736cf5b08b01082a3645e14038868e20?family=Krungthep"
+        rel="stylesheet"
+        type="text/css"
+      />
     </Helmet>
   )
 }
