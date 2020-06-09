@@ -28,7 +28,7 @@ const Container = styled.div`
   }
 
   &.bouncy {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
       url(${Bouncy});
     background-size: cover;
     background-position: center top;
