@@ -28,9 +28,10 @@ const Container = styled.div`
   }
 
   &.bouncy {
-    background-color: black;
-    background-image: url(${Bouncy});
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(${Bouncy});
     background-size: cover;
+    background-position: center top;
   }
 `
 
