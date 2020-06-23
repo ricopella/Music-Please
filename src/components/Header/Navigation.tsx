@@ -45,6 +45,7 @@ const Navigation: FC<{}> = () => {
         { path: ROUTES.root, title: `home` },
         { path: ROUTES.shop, title: `shop` },
         { path: ROUTES.live, title: "live" },
+        { path: ROUTES.sounds, title: "sounds" },
         { path: ROUTES.contact, title: `contact` },
         {
           path: `https://instagram.com/themusicplease`,

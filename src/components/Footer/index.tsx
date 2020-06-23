@@ -19,7 +19,7 @@ const FooterContent = styled.div`
 const Footer = () => (
   <FooterContainer>
     <FooterContent>
-      &copy;{`${getYear(new Date())} MUSIC PLEASE TECHNOLOGICAL`}
+      &copy;{`${getYear(new Date())} MUSIC PLEASE CREATIVE PARTNERS`}
     </FooterContent>
   </FooterContainer>
 )

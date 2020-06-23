@@ -5,7 +5,7 @@ import Ticker from 'react-ticker'
 
 const TickerWrapper = styled.div`
   display: grid;
-  grid-template-columns: repeat(8, max-content);
+  grid-template-columns: repeat(10, max-content);
   gap: 0 2rem;
   grid-template-rows: 1fr;
   white-space: nowrap;
@@ -30,6 +30,7 @@ const CODES: { key: string; value?: string }[] = [
     key: `bangkok`,
     value: "ASIA/Bangkok",
   },
+
   {
     key: `tokyo`,
     value: "ASIA/Tokyo",
@@ -37,6 +38,10 @@ const CODES: { key: string; value?: string }[] = [
   {
     key: `los angeles`,
     value: "US/Pacific",
+  },
+  {
+    key: `cartagena`,
+    value: "America/Bogota"
   },
   {
     key: `new york`,
@@ -47,13 +52,17 @@ const CODES: { key: string; value?: string }[] = [
     value: "Europe/London",
   },
   {
+    key: `milan`,
+    value: "Europe/Rome"
+  },
+  {
     key: `paris`,
     value: "Europe/Paris",
   },
   {
     key: `dubai`,
     value: "ASIA/Dubai",
-  },
+  }
 ]
 
 const TickerComponent = () => (

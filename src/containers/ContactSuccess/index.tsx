@@ -10,7 +10,7 @@ const ContactP = styled.p`
 
 const ContactSuccess = () => {
   return (
-    <Layout title={`CONTACT US - SUCCESS`}>
+    <Layout title={`CONTACT US - SUCCESS`} bouncy>
       <Header />
       <SimpleSplash title={"CONTACT US"}>
         <ContactP>Thank you! We'll be in touch.</ContactP>

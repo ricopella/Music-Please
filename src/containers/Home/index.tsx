@@ -2,6 +2,7 @@ import Header from '../../components/Header'
 import Image from '../../components/Image'
 import Layout from '../../components/Layout'
 import LiveNow from '../../components/LiveNow'
+import MP_Logo from '../../images/gif/MP_3dnar.gif'
 import React from 'react'
 import styled from '../../styled'
 import Ticker from '../../components/Ticker'
@@ -20,18 +21,22 @@ const HomeWrapper = styled.div`
 const LogoContainer = styled.div`
   display: grid;
   align-self: center;
-  height: 21.75rem;
+  height: 35.75rem;
   justify-self: center;
   width: 43.75rem;
 
   @media only screen and (max-width: ${props => props.theme.media.l}) {
-    height: 14.75rem;
+    height: 22.75rem;
     width: 30rem;
   }
 
   @media only screen and (max-width: ${props => props.theme.media.m}) {
     width: 80%;
   }
+`
+
+const Logo = styled.img`
+  margin: 0 auto;
 `
 
 const LiveNowWrapper = styled(Link)`
@@ -53,10 +58,7 @@ const Home = () => {
           </LiveNowWrapper>
         ) : null}
         <LogoContainer>
-          <Image
-            alt="Music Please Main Logo"
-            fileName="no_BG_MUSICPLEASE.png"
-          />
+          <Logo src={MP_Logo} />
         </LogoContainer>
       </HomeWrapper>
     </Layout>

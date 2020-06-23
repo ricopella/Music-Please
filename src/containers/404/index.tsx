@@ -6,7 +6,7 @@ import SimpleSplash from '../../components/SimpleSplash'
 const PAGE_TITLE = "404: Page Not found"
 
 const NotFoundPage = () => (
-  <Layout title={PAGE_TITLE}>
+  <Layout title={PAGE_TITLE} bouncy>
     <Header />
     <SimpleSplash title={"NOT FOUND"}>
       <p>You just hit a route that doesn&#39;t exist... the sadness.</p>

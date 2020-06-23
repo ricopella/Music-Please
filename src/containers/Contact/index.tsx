@@ -6,7 +6,7 @@ import React from 'react'
 const PAGE_TITLE = `CONTACT US`
 
 const Contact = () => (
-  <Layout title={PAGE_TITLE}>
+  <Layout title={PAGE_TITLE} bouncy>
     <Header />
     <Component />
   </Layout>

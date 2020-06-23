@@ -1,4 +1,4 @@
-import Bouncy from '../../images/gif/BOUNCY.gif'
+import Spacey from '../../images/gif/spacey.gif'
 import Footer from '../Footer'
 import React, { FC } from 'react'
 import SEO, { SEOProps } from '../SEO'
@@ -15,7 +15,7 @@ const Container = styled.div`
   grid-row-gap: 0;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr max-content;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
   width: 100vw;
 
@@ -28,9 +28,9 @@ const Container = styled.div`
   }
 
   &.bouncy {
-    background-color: black;
-    background-image: url(${Bouncy});
+    background: url(${Spacey});
     background-size: cover;
+    background-position: center top;
   }
 `
 
