@@ -160,7 +160,7 @@ const Sounds = () => {
   const [isMixHovered, setMixHovered] = useState({})
   return (
     <ContextProvider>
-      <Layout title={PAGE_TITLE}>
+      <Layout title={PAGE_TITLE} bouncy>
         <Header />
         <SoundsContainer>
           <LogoWrapper>
@@ -321,7 +321,7 @@ const Sounds = () => {
                     <SoundItemTitle>{item.title}</SoundItemTitle>
                     {isMixHovered[key] && (
                       <PlaylistDescriptionWrapper>
-                        <p>A description will go here...</p>
+                        <p>{item?.description}</p>
                         <MixesLinkWrapper {...SLIDE_IN_ANIMATION_OPTIONS}>
                           <MixesLink
                             href={item?.href}

@@ -1,4 +1,4 @@
-import Bouncy from '../../images/gif/BOUNCY.gif'
+import Spacey from '../../images/gif/spacey.gif'
 import Footer from '../Footer'
 import React, { FC } from 'react'
 import SEO, { SEOProps } from '../SEO'
@@ -28,8 +28,7 @@ const Container = styled.div`
   }
 
   &.bouncy {
-    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
-      url(${Bouncy});
+    background: url(${Spacey});
     background-size: cover;
     background-position: center top;
   }
