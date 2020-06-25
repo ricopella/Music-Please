@@ -12,14 +12,14 @@ const FooterContainer = styled.footer`
 `
 
 const FooterContent = styled.div`
-  color: ${props => props.theme.colors.action};
+  color: ${props => props.theme.colors.content};
   font-size: 0.75rem;
 `
 
 const Footer = () => (
   <FooterContainer>
     <FooterContent>
-      &copy;{`${getYear(new Date())} MUSIC PLEASE TECHNOLOGICAL`}
+      &copy;{`${getYear(new Date())} MUSIC PLEASE CREATIVE PARTNERS`}
     </FooterContent>
   </FooterContainer>
 )

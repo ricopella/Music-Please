@@ -1,5 +1,4 @@
 import styled from '@emotion/styled'
-import { Link } from 'gatsby'
 import { MEDIA_BREAKPOINTS } from '../../styles/constants'
 
 const TwitchPageContainer = styled.section`
@@ -19,23 +18,6 @@ const TwitchPageContainer = styled.section`
 
 const LiveNowWrapper = styled.div`
   margin: 1rem 0;
-`
-
-const LogoWrapper = styled(Link)`
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  height: 7rem;
-  width: 11.75rem;
-
-  &:hover {
-    cursor: pointer;
-  }
-
-  @media (max-width: ${MEDIA_BREAKPOINTS.PHONE}) {
-    height: 8rem;
-    width: 12.75rem;
-  }
 `
 
 const TwitchVideosWrapper = styled.div`
@@ -81,7 +63,6 @@ export default {
   ContactHeading,
   ContactWrapper,
   LinksWrapper,
-  LogoWrapper,
   TwitchPageContainer,
   TwitchVideosWrapper,
   LiveNowWrapper,

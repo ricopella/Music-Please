@@ -1,5 +1,5 @@
-import BackButton from '../../components/BackButton'
 import ContextProvider from '../../provider/ContextProvider'
+import Home from '../../components/Home'
 import Layout from '../../components/Layout'
 import ProductGrid from '../../components/ProductGrid'
 import React from 'react'
@@ -19,7 +19,7 @@ const Shop = () => {
   return (
     <ContextProvider>
       <Layout title={PAGE_TITLE}>
-        <BackButton />
+        <Home />
         <ShopContainer>
           <h1>SHOP</h1>
           <ProductGrid />

@@ -1,3 +1,5 @@
+const { createProxyMiddleware } = require("http-proxy-middleware")
+
 const activeEnv =
     process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || "development"
 
@@ -33,6 +35,18 @@ module.exports = {
         ],
         twitterUserName: `@themusicplease`,
         image: `/images/PLEASE.png`,
+    },
+    // to solve CORS for local development usage of lambda functions
+    developMiddleware: app => {
+        app.use(
+            "/.netlify/functions/",
+            createProxyMiddleware({
+                target: "http://localhost:8888",
+                pathRewrite: {
+                    "/.netlify/functions/": "",
+                },
+            })
+        )
     },
     plugins: [
         `gatsby-plugin-react-helmet`,
@@ -126,6 +140,6 @@ module.exports = {
                 extensions: ["js", "ts"],
             },
         },
-        `gatsby-plugin-netlify`
+        `gatsby-plugin-netlify`,
     ],
 }
