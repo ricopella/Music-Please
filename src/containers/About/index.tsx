@@ -2,8 +2,10 @@ import ContextProvider from "../../provider/ContextProvider"
 import Layout from "../../components/Layout"
 import React from "react"
 import styled from "../../styled"
+import { motion } from "framer-motion"
+import { SLIDE_IN_ANIMATION_OPTIONS } from "../../styles/constants"
 
-const AboutContainer = styled.div`
+const AboutContainer = styled(motion.div)`
   display: grid;
   grid-template-rows: max-content;
   height: 100%;
@@ -27,7 +29,7 @@ const About = () => {
   return (
     <ContextProvider>
       <Layout title={PAGE_TITLE} hasCenteredLogo>
-        <AboutContainer>
+        <AboutContainer {...SLIDE_IN_ANIMATION_OPTIONS}>
           <AboutBody>
             <P>
               The Music Please was founded in 2010 for a self-titled (Music

@@ -8,6 +8,7 @@ import React from "react"
 import Styled from "./twitch.styles"
 import useTwitchLiveStreams from "../../hooks/useTwitchLiveStream"
 import Venmo from "../../images/svg/venmo-icon.svg"
+import { SLIDE_IN_ANIMATION_OPTIONS } from "../../styles/constants"
 
 const PAGE_META_DESCRIPTION = "MUSIC PLEASE BROADCAST NETWORK"
 const PAGE_TITLE = "LIVE BROADCAST"
@@ -16,7 +17,7 @@ const Twitch = () => {
   const [streams, error] = useTwitchLiveStreams()
   return (
     <Layout description={PAGE_META_DESCRIPTION} title={PAGE_TITLE}>
-      <Styled.TwitchPageContainer>
+      <Styled.TwitchPageContainer {...SLIDE_IN_ANIMATION_OPTIONS}>
         {(streams || []).length >= 1 ? (
           <Styled.LiveNowWrapper>
             <LiveNow />

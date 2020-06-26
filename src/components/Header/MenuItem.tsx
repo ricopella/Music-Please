@@ -1,7 +1,7 @@
-import React, { FC } from 'react'
-import Styled from './Header.styles'
-import { BUTTON_ANIMATION } from '../../styles/constants'
-import { IHeaderMenuItem } from '../../types'
+import React, { FC } from "react"
+import Styled from "./Header.styles"
+import { BUTTON_ANIMATION } from "../../styles/constants"
+import { IHeaderMenuItem } from "../../types"
 
 interface IMenuItem {
   item: IHeaderMenuItem
@@ -25,6 +25,7 @@ const MenuItem: FC<IMenuItem> = ({ className = "", item, title }) => (
       </Styled.HomePageExternalLink>
     ) : (
       <Styled.HomepageLink
+        fade
         to={item?.path}
         className={className}
         title={title}
