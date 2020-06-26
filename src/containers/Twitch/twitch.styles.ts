@@ -1,5 +1,5 @@
-import styled from '@emotion/styled'
-import { MEDIA_BREAKPOINTS } from '../../styles/constants'
+import styled from "@emotion/styled"
+import { MEDIA_BREAKPOINTS } from "../../styles/constants"
 
 const TwitchPageContainer = styled.section`
   display: grid;
@@ -22,9 +22,7 @@ const LiveNowWrapper = styled.div`
 
 const TwitchVideosWrapper = styled.div`
   align-content: center;
-  display: grid;
   grid-template-columns: 1fr;
-  justify-items: center;
   max-height: 100%;
   max-width: calc(100% - 12rem);
   width: 100%;

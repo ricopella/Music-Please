@@ -34,7 +34,6 @@ const Container = styled.div`
   &.bouncy {
     background: url(${Spacey});
     background-size: cover;
-    background-position: center top;
   }
 `
 

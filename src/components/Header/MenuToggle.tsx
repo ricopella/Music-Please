@@ -1,12 +1,12 @@
-import HeaderStyled from './Header.styles'
-import React, { FC } from 'react'
-import styled from '../../styled'
-import { BUTTON_ANIMATION } from '../../styles/constants'
-import { Cycle, motion } from 'framer-motion'
+import HeaderStyled from "./Header.styles"
+import React, { FC } from "react"
+import styled from "../../styled"
+import { BUTTON_ANIMATION } from "../../styles/constants"
+import { Cycle, motion } from "framer-motion"
 
 const Chevron = styled(motion.div)`
-  border-right: 0.2em solid ${props => props.theme.colors.action};
-  border-top: 0.2em solid ${props => props.theme.colors.action};
+  border-left: 0.2em solid ${props => props.theme.colors.action};
+  border-bottom: 0.2em solid ${props => props.theme.colors.action};
   height: 1.25rem;
   position: relative;
   width: 1.25rem;
