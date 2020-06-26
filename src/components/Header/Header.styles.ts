@@ -2,6 +2,7 @@ import styled from "../../styled"
 import { Link } from "gatsby"
 import { motion } from "framer-motion"
 import { OutboundLink } from "gatsby-plugin-google-analytics"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 const Nav = styled(motion.nav)<{ isOpen: boolean }>`
   left: 0;
@@ -70,7 +71,7 @@ const HomePageExternalLink = styled(OutboundLink)`
   }
 `
 
-const HomepageLink = styled(Link)`
+const HomepageLink = styled(AniLink)`
   color: ${props => props.theme.colors.action};
   cursor: pointer;
   font-size: 1rem;
@@ -135,7 +136,7 @@ const SIDEBAR_VARIANTS = {
   open: (height = 1000) => ({
     clipPath: `circle(${height * 2 + 200}px at 2.5rem 2.5rem)`,
     opacity: 0.7,
-    height: `25rem`,
+    height: `30rem`,
     transition: {
       type: "spring",
       stiffness: 20,

@@ -1,4 +1,5 @@
 export default {
+  about: "/about",
   contact: "/contact",
   live: "/live",
   root: `/`,
