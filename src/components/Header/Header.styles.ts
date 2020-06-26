@@ -1,7 +1,7 @@
-import styled from '../../styled'
-import { Link } from 'gatsby'
-import { motion } from 'framer-motion'
-import { OutboundLink } from 'gatsby-plugin-google-analytics'
+import styled from "../../styled"
+import { Link } from "gatsby"
+import { motion } from "framer-motion"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 const Nav = styled(motion.nav)<{ isOpen: boolean }>`
   left: 0;
@@ -131,7 +131,7 @@ const SIDEBAR_VARIANTS = {
   open: (height = 1000) => ({
     clipPath: `circle(${height * 2 + 200}px at 2.5rem 2.5rem)`,
     opacity: 0.7,
-    height: `25rem`,
+    height: `30rem`,
     transition: {
       type: "spring",
       stiffness: 20,

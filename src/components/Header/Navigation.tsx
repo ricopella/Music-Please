@@ -1,10 +1,10 @@
-import MenuItem from './MenuItem'
-import React, { FC } from 'react'
-import ROUTES from '../../config/routes'
-import Socials from '../../components/Socials'
-import Styled from './Header.styles'
-import { IHeaderMenuItem } from '../../types'
-import { useLocation } from '@reach/router'
+import MenuItem from "./MenuItem"
+import React, { FC } from "react"
+import ROUTES from "../../config/routes"
+import Socials from "../../components/Socials"
+import Styled from "./Header.styles"
+import { IHeaderMenuItem } from "../../types"
+import { useLocation } from "@reach/router"
 
 export const PureNavigation: FC<{ headerItems: IHeaderMenuItem[] }> = ({
   headerItems = [],
@@ -43,6 +43,7 @@ const Navigation: FC<{}> = () => {
     <PureNavigation
       headerItems={[
         { path: ROUTES.root, title: `home` },
+        { path: ROUTES.about, title: "about" },
         { path: ROUTES.shop, title: `shop` },
         { path: ROUTES.live, title: "live" },
         { path: ROUTES.sounds, title: "sounds" },
