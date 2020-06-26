@@ -1,31 +1,22 @@
-import CenteredLogo from "../../components/Logo/HeadingCentered"
 import ContextProvider from "../../provider/ContextProvider"
-import Header from "../../components/Header"
 import Layout from "../../components/Layout"
 import React from "react"
 import styled from "../../styled"
 
 const AboutContainer = styled.div`
   display: grid;
-  grid-template-rows: max-content max-content;
+  grid-template-rows: max-content;
   height: 100%;
-  margin-top: 5rem;
   margin: 0 auto;
   max-width: 62.25rem;
   min-height: 100%;
-  padding: 4rem 2rem;
+  padding: 0 2rem;
   width: 100%;
-  grid-row-gap: 2rem;
 `
 
 const AboutBody = styled.section`
   display: grid;
   grid-template-rows: 1fr;
-`
-
-const LogoWrapper = styled.div`
-  width: 100%;
-  margin: 0 auto;
 `
 
 const P = styled.p``
@@ -35,12 +26,8 @@ const PAGE_TITLE = "ABOUT"
 const About = () => {
   return (
     <ContextProvider>
-      <Layout title={PAGE_TITLE} bouncy>
-        <Header />
+      <Layout title={PAGE_TITLE} hasCenteredLogo>
         <AboutContainer>
-          <LogoWrapper>
-            <CenteredLogo />
-          </LogoWrapper>
           <AboutBody>
             <P>
               The Music Please was founded in 2010 for a self-titled (Music

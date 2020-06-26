@@ -1,13 +1,11 @@
-import Header from '../../components/Header'
-import Image from '../../components/Image'
-import Layout from '../../components/Layout'
-import LiveNow from '../../components/LiveNow'
-import MP_Logo from '../../images/gif/MP_3dnar.gif'
-import React from 'react'
-import styled from '../../styled'
-import Ticker from '../../components/Ticker'
-import useTwitchLiveStreams from '../../hooks/useTwitchLiveStream'
-import { Link } from 'gatsby'
+import Layout from "../../components/Layout"
+import LiveNow from "../../components/LiveNow"
+import MP_Logo from "../../images/gif/MP_3dnar.gif"
+import React from "react"
+import styled from "../../styled"
+import Ticker from "../../components/Ticker"
+import useTwitchLiveStreams from "../../hooks/useTwitchLiveStream"
+import { Link } from "gatsby"
 
 const HomeWrapper = styled.div`
   position: absolute;
@@ -48,9 +46,8 @@ const PAGE_TITLE = "THE MUSIC PLEASE ONLINE"
 const Home = () => {
   const [streams, error] = useTwitchLiveStreams()
   return (
-    <Layout title={PAGE_TITLE} bouncy>
+    <Layout title={PAGE_TITLE}>
       <Ticker />
-      <Header />
       <HomeWrapper>
         {(streams || []).length >= 1 ? (
           <LiveNowWrapper to="/live">

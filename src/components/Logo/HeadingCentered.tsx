@@ -1,8 +1,7 @@
-import Image from '../../components/Image'
-import MP_GIF from '../../images/gif/MP_3dnar.gif'
-import React from 'react'
-import styled from '../../styled'
-import { Link } from 'gatsby'
+import MP_GIF from "../../images/gif/MP_3dnar.gif"
+import React from "react"
+import styled from "../../styled"
+import { Link } from "gatsby"
 
 const LogoWrapper = styled(Link)`
   display: grid;
@@ -21,9 +20,13 @@ const LogoWrapper = styled(Link)`
   }
 `
 
+const Img = styled.img`
+  margin-bottom: 0;
+`
+
 const HeadingCentered = () => (
   <LogoWrapper to={"/"}>
-    <img src={MP_GIF} alt="MUSIC PLEASE LOGO" />
+    <Img src={MP_GIF} alt="MUSIC PLEASE LOGO" />
   </LogoWrapper>
 )
 
