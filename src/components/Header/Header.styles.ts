@@ -1,7 +1,7 @@
-import styled from '../../styled'
-import { Link } from 'gatsby'
-import { motion } from 'framer-motion'
-import { OutboundLink } from 'gatsby-plugin-google-analytics'
+import styled from "../../styled"
+import { Link } from "gatsby"
+import { motion } from "framer-motion"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 const Nav = styled(motion.nav)<{ isOpen: boolean }>`
   left: 0;
@@ -98,12 +98,16 @@ const MenuToggleButton = styled(motion.button)`
   border: none;
   cursor: pointer;
   height: 3.125rem;
-  left: 1rem;
+  left: 2rem;
   outline: none;
   position: absolute;
   top: 3rem;
   width: 3.125rem;
   z-index: 1000;
+
+  @media (max-width: ${props => props.theme.media.s}) {
+    left: 1rem;
+  }
 `
 
 const Path = styled(motion.path)`

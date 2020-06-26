@@ -1,10 +1,10 @@
-import Spacey from '../../images/gif/spacey.gif'
-import Footer from '../Footer'
-import React, { FC } from 'react'
-import SEO, { SEOProps } from '../SEO'
-import styled from '../../styled'
-import Theme from '../../styles/theme'
-import { ThemeProvider } from 'emotion-theming'
+import Spacey from "../../images/gif/spacey.gif"
+import Footer from "../Footer"
+import React, { FC } from "react"
+import SEO, { SEOProps } from "../SEO"
+import styled from "../../styled"
+import Theme from "../../styles/theme"
+import { ThemeProvider } from "emotion-theming"
 
 interface LayoutProps extends SEOProps {
   bouncy?: boolean
@@ -30,7 +30,6 @@ const Container = styled.div`
   &.bouncy {
     background: url(${Spacey});
     background-size: cover;
-    background-position: center top;
   }
 `
 

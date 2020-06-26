@@ -81,7 +81,7 @@ const Contact = () => {
   }
   return (
     <ContactContainer>
-      <ContactHeading>CONTACT US</ContactHeading>
+      <ContactHeading>CONTACT</ContactHeading>
       <form
         action={`/contact-success/`}
         data-netlify="true"
@@ -117,16 +117,14 @@ const Contact = () => {
           {" "}
           <Button type="submit">SEND</Button>
           <div>
-            Or{" "}
             <EmailLink
               href={`mailto:musicpleaseradio@gmail.com`}
               target="_blank"
               rel="noopener noreferrer"
               title="musicpleaseradio@gmail.com"
             >
-              email
-            </EmailLink>{" "}
-            us directly
+              E-Mail
+            </EmailLink>
           </div>
         </FormActionContainer>
       </form>
