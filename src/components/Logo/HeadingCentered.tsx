@@ -1,7 +1,7 @@
-import MP_GIF from "../../images/gif/MP_3dnar.gif"
-import React from "react"
-import styled from "../../styled"
-import { Link } from "gatsby"
+import { Link } from 'gatsby';
+import React from 'react';
+import MP_GIF from '../../images/gif/MP_3dnarv3.gif';
+import styled from '../../styled';
 
 const LogoWrapper = styled(Link)`
   display: grid;

@@ -1,11 +1,11 @@
-import Layout from "../../components/Layout"
-import LiveNow from "../../components/LiveNow"
-import MP_Logo from "../../images/gif/MP_3dnar.gif"
-import React from "react"
-import styled from "../../styled"
-import Ticker from "../../components/Ticker"
-import useTwitchLiveStreams from "../../hooks/useTwitchLiveStream"
-import { Link } from "gatsby"
+import { Link } from 'gatsby';
+import React from 'react';
+import Layout from '../../components/Layout';
+import LiveNow from '../../components/LiveNow';
+import Ticker from '../../components/Ticker';
+import useTwitchLiveStreams from '../../hooks/useTwitchLiveStream';
+import MP_Logo from '../../images/gif/MP_3dnarv3.gif';
+import styled from '../../styled';
 
 const HomeWrapper = styled.div`
   position: absolute;
