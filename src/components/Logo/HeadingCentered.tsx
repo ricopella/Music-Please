@@ -1,6 +1,7 @@
 import { Link } from 'gatsby';
 import React from 'react';
-import MP_GIF from '../../images/gif/MP_3dnarv3.gif';
+import { PUBLIC_ID } from '../../config/cloudinaryIds';
+import useCloudinaryImage from '../../hooks/useCloudinaryImage';
 import styled from '../../styled';
 
 const LogoWrapper = styled(Link)`
@@ -9,7 +10,7 @@ const LogoWrapper = styled(Link)`
   grid-template-rows: 1fr;
   height: auto;
   width: 11.75rem;
-  margin: 0 auto;
+  margin: 2rem auto;
 
   &:hover {
     cursor: pointer;
@@ -24,10 +25,13 @@ const Img = styled.img`
   margin-bottom: 0;
 `
 
-const HeadingCentered = () => (
-  <LogoWrapper to={"/"}>
-    <Img src={MP_GIF} alt="MUSIC PLEASE LOGO" />
-  </LogoWrapper>
-)
+const HeadingCentered = () => {
+  const url = useCloudinaryImage(PUBLIC_ID.MP_GIF)
+  return (
+    <LogoWrapper to={"/"}>
+      <Img src={url} alt="MUSIC PLEASE LOGO" />
+    </LogoWrapper>
+  )
+}
 
 export default HeadingCentered

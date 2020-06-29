@@ -27,7 +27,8 @@ const MIXES = [
     title: "BALCONY BOUNCE",
     image: `https://i1.sndcdn.com/artworks-000123296201-oi1v77-t500x500.jpg`,
     href: `https://soundcloud.com/themusicplease/balcony`,
-    description: 'We brought just enough bounce without jumping off the ledge with this one.'
+    description:
+      "We brought just enough bounce without jumping off the ledge with this one.",
   },
 ]
 
