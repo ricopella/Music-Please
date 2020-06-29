@@ -1,13 +1,13 @@
-import HeaderStyles from '../Header/Header.styles'
-import React, { FC } from 'react'
-import SocialImg from '../Image'
-import styled from '../../styled'
-import { AnimatePresence } from 'framer-motion'
-import { BUTTON_ANIMATION, MEDIA_BREAKPOINTS } from '../../styles/constants'
-import { css } from '@emotion/core'
-import { Link } from 'gatsby'
-import { motion } from 'framer-motion'
-import { OutboundLink } from 'gatsby-plugin-google-analytics'
+import { css } from '@emotion/core';
+import { AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
+import { Link } from 'gatsby';
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
+import React, { FC } from 'react';
+import styled from '../../styled';
+import { BUTTON_ANIMATION, MEDIA_BREAKPOINTS } from '../../styles/constants';
+import HeaderStyles from '../Header/Header.styles';
+import SocialImg from '../Image';
 
 const SocialLinkWrapper = css`
   // width: 3.75rem;
@@ -46,15 +46,13 @@ const AnimatedButton = styled(motion.button)`
   border: none;
 `
 
+const SocialsWrapper = styled.div`
+  display: grid;
+  grid-template-columns: max-content max-content;
+`
+
 const Socials = () => (
-  <>
-    <SocialLink
-      fileName="SC.png"
-      title="SoundCloud"
-      alt="SoundCloud - @themusicplease"
-      link="https://soundcloud.com/themusicplease"
-      className="sc"
-    />
+  <SocialsWrapper>
     <SocialLink
       fileName="IG.png"
       title="Instagram"
@@ -69,14 +67,7 @@ const Socials = () => (
       link="https://twitter.com/themusicplease"
       className="tw"
     />
-    <SocialLink
-      fileName="FB.png"
-      title="Facebook"
-      alt="Facebook - @themusicplease"
-      link="https://facebook.com/themusicplease"
-      className="fb"
-    />
-  </>
+  </SocialsWrapper>
 )
 
 interface SocialLinkProps {

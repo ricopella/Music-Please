@@ -1,11 +1,12 @@
-import Layout from "../../components/Layout"
-import LiveNow from "../../components/LiveNow"
-import MP_Logo from "../../images/gif/MP_3dnar.gif"
-import React from "react"
-import styled from "../../styled"
-import Ticker from "../../components/Ticker"
-import useTwitchLiveStreams from "../../hooks/useTwitchLiveStream"
-import { Link } from "gatsby"
+import { Link } from 'gatsby';
+import React from 'react';
+import Layout from '../../components/Layout';
+import LiveNow from '../../components/LiveNow';
+import Ticker from '../../components/Ticker';
+import { PUBLIC_ID } from '../../config/cloudinaryIds';
+import useCloudinaryImage from '../../hooks/useCloudinaryImage';
+import useTwitchLiveStreams from '../../hooks/useTwitchLiveStream';
+import styled from '../../styled';
 
 const HomeWrapper = styled.div`
   position: absolute;
@@ -45,6 +46,7 @@ const PAGE_TITLE = "THE MUSIC PLEASE ONLINE"
 
 const Home = () => {
   const [streams, error] = useTwitchLiveStreams()
+  const url = useCloudinaryImage(PUBLIC_ID.MP_GIF)
   return (
     <Layout title={PAGE_TITLE}>
       <Ticker />
@@ -55,7 +57,7 @@ const Home = () => {
           </LiveNowWrapper>
         ) : null}
         <LogoContainer>
-          <Logo src={MP_Logo} />
+          <Logo src={url} />
         </LogoContainer>
       </HomeWrapper>
     </Layout>

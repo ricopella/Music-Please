@@ -1,8 +1,8 @@
-import styled from "../../styled"
-import { Link } from "gatsby"
-import { motion } from "framer-motion"
-import { OutboundLink } from "gatsby-plugin-google-analytics"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
+import { motion } from 'framer-motion';
+import { Link } from 'gatsby';
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
+import styled from '../../styled';
 
 const Nav = styled(motion.nav)<{ isOpen: boolean }>`
   left: 0;
@@ -50,6 +50,11 @@ const MenuItemLi = styled(motion.li)`
       cursor: pointer;
     }
   }
+
+  &:nth-of-type(4),
+  &:nth-of-type(5) {
+    margin-top: 2rem;
+  }
 `
 
 const HomePageExternalLink = styled(OutboundLink)`
@@ -60,6 +65,7 @@ const HomePageExternalLink = styled(OutboundLink)`
   align-self: center;
   justify-self: center;
   text-transform: capitalize;
+  text-decoration: none;
 
   &:hover,
   &:focus {
@@ -79,6 +85,7 @@ const HomepageLink = styled(AniLink)`
   align-self: center;
   justify-self: center;
   text-transform: capitalize;
+  text-decoration: none;
 
   &:hover,
   &:focus {

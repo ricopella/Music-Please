@@ -1,15 +1,14 @@
-import ContextProvider from "../../provider/ContextProvider"
-import HeaderStyles from "../../components/Header/Header.styles"
-import Image from "../../components/Image"
-import Layout from "../../components/Layout"
-import React, { useState } from "react"
-import styled from "../../styled"
-import Tidal from "../../images/svg/tidal.svg"
-import { createBreakpoint } from "react-use"
-import { ItemImageVariants, MIXES, PLAYLISTS } from "./config"
-import { motion } from "framer-motion"
-import { OutboundLink } from "gatsby-plugin-google-analytics"
-import { SLIDE_IN_ANIMATION_OPTIONS } from "../../styles/constants"
+import { motion } from 'framer-motion';
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
+import React, { useState } from 'react';
+import { createBreakpoint } from 'react-use';
+import HeaderStyles from '../../components/Header/Header.styles';
+import Image from '../../components/Image';
+import Layout from '../../components/Layout';
+import ContextProvider from '../../provider/ContextProvider';
+import styled from '../../styled';
+import { SLIDE_IN_ANIMATION_OPTIONS } from '../../styles/constants';
+import { ItemImageVariants, MIXES, PLAYLISTS } from './config';
 
 const useBreakpoint = createBreakpoint()
 

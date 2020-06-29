@@ -1,12 +1,12 @@
-import Spacey from "../../images/gif/spacey.gif"
-import Footer from "../Footer"
-import React, { FC } from "react"
-import SEO, { SEOProps } from "../SEO"
-import styled from "../../styled"
-import Theme from "../../styles/theme"
-import { ThemeProvider } from "emotion-theming"
-import Header from "../../components/Header"
-import CenteredLogo from "../../components/Logo/HeadingCentered"
+import { ThemeProvider } from 'emotion-theming';
+import React, { FC } from 'react';
+import Header from '../../components/Header';
+import CenteredLogo from '../../components/Logo/HeadingCentered';
+import Spacey from '../../images/gif/spacey.gif';
+import styled from '../../styled';
+import Theme from '../../styles/theme';
+import Footer from '../Footer';
+import SEO, { SEOProps } from '../SEO';
 
 interface LayoutProps extends SEOProps {
   hasBackground?: boolean
@@ -33,7 +33,6 @@ const Container = styled.div`
 
   &.bouncy {
     background: url(${Spacey});
-    background-size: cover;
   }
 `
 
