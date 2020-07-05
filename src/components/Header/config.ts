@@ -6,7 +6,7 @@ const HOME_ITEMS = [
   { path: ROUTES.contact, title: `contact` },
 ]
 
-const SHOP_ITEMS = [{ path: ROUTES.shop, title: `shop` }]
+const SHOP_ITEMS = [{ path: ROUTES.shop, title: `shop`, external: true }]
 
 const ART_ITEMS = [
   { path: ROUTES.live, title: "live" },
