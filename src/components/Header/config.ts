@@ -1,8 +1,8 @@
-import ROUTES from '../../config/routes';
+import ROUTES from "../../config/routes"
 
 const HOME_ITEMS = [
   { path: ROUTES.root, title: `home` },
-  { path: ROUTES.about, title: "about" },
+  // { path: ROUTES.about, title: "about" },
   { path: ROUTES.contact, title: `contact` },
 ]
 

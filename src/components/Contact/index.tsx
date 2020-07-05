@@ -1,7 +1,8 @@
-import React, { useState } from 'react'
-import styled from '../../styled'
-import { navigate } from 'gatsby-link'
-import { OutboundLink } from 'gatsby-plugin-google-analytics'
+import React, { useState } from "react"
+import styled from "../../styled"
+import { navigate } from "gatsby-link"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
+import Socials from "../Socials"
 
 const ContactContainer = styled.div`
   padding: 0 2rem 0 2rem;
@@ -10,6 +11,12 @@ const ContactContainer = styled.div`
   height: 100%;
   display: grid;
   align-content: center;
+`
+
+const SocialContainer = styled.div`
+  display: grid;
+  justify-items: center;
+  width: 100%;
 `
 
 const ContactHeading = styled.h1`
@@ -82,6 +89,9 @@ const Contact = () => {
   return (
     <ContactContainer>
       <ContactHeading>CONTACT</ContactHeading>
+      <SocialContainer>
+        <Socials />
+      </SocialContainer>
       <form
         action={`/contact-success/`}
         data-netlify="true"

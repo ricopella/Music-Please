@@ -1,8 +1,8 @@
-import { Link } from 'gatsby';
-import React from 'react';
-import { PUBLIC_ID } from '../../config/cloudinaryIds';
-import useCloudinaryImage from '../../hooks/useCloudinaryImage';
-import styled from '../../styled';
+import { Link } from "gatsby"
+import React from "react"
+import { PUBLIC_ID } from "../../config/cloudinaryIds"
+import useCloudinaryImage from "../../hooks/useCloudinaryImage"
+import styled from "../../styled"
 
 const LogoWrapper = styled(Link)`
   display: grid;
