@@ -11,47 +11,7 @@ export const PureNavigation: FC<{}> = () => {
   return (
     <>
       <Styled.MenuItemUl variants={Styled.NAV_VARIANTS}>
-        {CONFIG.HOME_ITEMS.map((item: IHeaderMenuItem) => (
-          <MenuItem
-            key={`menu_item_${item.title}`}
-            item={item}
-            className={`${
-              pathname === item.path + "/" ||
-              pathname === item.path ||
-              (pathname === ROUTES.root && item.path === "/")
-                ? "active"
-                : ""
-            }`}
-            title={
-              pathname === item.path + "/" ||
-              pathname === item.path ||
-              (pathname === ROUTES.root && item.path === "/")
-                ? `You're Here Now`
-                : item.path
-            }
-          />
-        ))}
-        {CONFIG.SHOP_ITEMS.map((item: IHeaderMenuItem) => (
-          <MenuItem
-            key={`menu_item_${item.title}`}
-            item={item}
-            className={`${
-              pathname === item.path + "/" ||
-              pathname === item.path ||
-              (pathname === ROUTES.root && item.path === "/")
-                ? "active"
-                : ""
-            }`}
-            title={
-              pathname === item.path + "/" ||
-              pathname === item.path ||
-              (pathname === ROUTES.root && item.path === "/")
-                ? `You're Here Now`
-                : item.path
-            }
-          />
-        ))}
-        {CONFIG.ART_ITEMS.map((item: IHeaderMenuItem) => (
+        {CONFIG.NAV_ITEMS.map((item: IHeaderMenuItem) => (
           <MenuItem
             key={`menu_item_${item.title}`}
             item={item}

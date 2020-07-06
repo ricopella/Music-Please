@@ -42,13 +42,15 @@ const LiveNowWrapper = styled(Link)`
   margin: 0 auto;
 `
 
-const PAGE_TITLE = "THE MUSIC PLEASE ONLINE"
+const PAGE_TITLE = "MUSIC PLEASE"
+
+const PAGE_DESCRIPTION = `CREATIVE CURATION | TECHNOLOGICAL DESIGN | DIGITAL DIRECTION`
 
 const Home = () => {
   const [streams, error] = useTwitchLiveStreams()
   const url = useCloudinaryImage(PUBLIC_ID.MP_GIF)
   return (
-    <Layout title={PAGE_TITLE}>
+    <Layout title={PAGE_TITLE} description={PAGE_DESCRIPTION}>
       <Ticker />
       <HomeWrapper>
         {(streams || []).length >= 1 ? (

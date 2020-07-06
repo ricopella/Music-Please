@@ -1,8 +1,8 @@
-import { motion } from 'framer-motion';
-import { Link } from 'gatsby';
-import { OutboundLink } from 'gatsby-plugin-google-analytics';
-import AniLink from 'gatsby-plugin-transition-link/AniLink';
-import styled from '../../styled';
+import { motion } from "framer-motion"
+import { Link } from "gatsby"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
+import styled from "../../styled"
 
 const Nav = styled(motion.nav)<{ isOpen: boolean }>`
   left: 0;
@@ -27,7 +27,7 @@ const MenuItemUl = styled(motion.ul)`
   top: 6.25rem;
   width: 14.375rem;
   display: grid;
-  grid-row-gap: 1rem;
+  grid-row-gap: 1.5rem;
 `
 
 const MenuItemLi = styled(motion.li)`
@@ -49,11 +49,6 @@ const MenuItemLi = styled(motion.li)`
     &:hover {
       cursor: pointer;
     }
-  }
-
-  &:nth-of-type(4),
-  &:nth-of-type(5) {
-    margin-top: 2rem;
   }
 `
 
@@ -143,7 +138,7 @@ const SIDEBAR_VARIANTS = {
   open: (height = 1000) => ({
     clipPath: `circle(${height * 2 + 200}px at 2.5rem 2.5rem)`,
     opacity: 0.7,
-    height: `30rem`,
+    height: `22.5rem`,
     transition: {
       type: "spring",
       stiffness: 20,

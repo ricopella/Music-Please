@@ -9,16 +9,17 @@ import Styled from "./twitch.styles"
 import useTwitchLiveStreams from "../../hooks/useTwitchLiveStream"
 import Venmo from "../../images/svg/venmo-icon.svg"
 import { SLIDE_IN_ANIMATION_OPTIONS } from "../../styles/constants"
+import Image from "../../components/Image"
 
-const PAGE_META_DESCRIPTION = "MUSIC PLEASE BROADCAST NETWORK"
-const PAGE_TITLE = "LIVE BROADCAST"
+const PAGE_TITLE = "MUSIC PLEASE | LIVE"
 
 const Twitch = () => {
   const [streams, error] = useTwitchLiveStreams()
+  const isLive = (streams || []).length >= 1
   return (
-    <Layout description={PAGE_META_DESCRIPTION} title={PAGE_TITLE}>
+    <Layout title={PAGE_TITLE}>
       <Styled.TwitchPageContainer {...SLIDE_IN_ANIMATION_OPTIONS}>
-        {(streams || []).length >= 1 ? (
+        {isLive ? (
           <Styled.LiveNowWrapper>
             <LiveNow />
           </Styled.LiveNowWrapper>
@@ -26,17 +27,21 @@ const Twitch = () => {
           <HeadingCentered />
         )}
         <Styled.TwitchVideosWrapper>
-          <IframeResizer
-            log
-            src="https://player.twitch.tv/?channel=themusicplease&parent=themusicplease.com"
-            style={{
-              border: "none",
-              height: 1,
-              minHeight: "100%",
-              minWidth: "100%",
-              width: 1,
-            }}
-          />
+          {isLive ? (
+            <IframeResizer
+              log
+              src="https://player.twitch.tv/?channel=themusicplease&parent=themusicplease.com"
+              style={{
+                border: "none",
+                height: 1,
+                minHeight: "100%",
+                minWidth: "100%",
+                width: 1,
+              }}
+            />
+          ) : (
+            <Image fileName="offline.jpg" alt="WE'RE CURRENTLY OFFLINE" />
+          )}
         </Styled.TwitchVideosWrapper>
         <Styled.ContactWrapper>
           <Styled.LinksWrapper>

@@ -41,7 +41,7 @@ const EmailLink = styled(OutboundLink)`
 
 const FormActionContainer = styled.div`
   display: grid;
-  grid-template-columns: 1fr max-content;
+  grid-template-columns: 1fr;
   align-items: center;
 `
 
@@ -124,18 +124,7 @@ const Contact = () => {
           <TextArea name="message" id="message" />
         </p>
         <FormActionContainer>
-          {" "}
           <Button type="submit">SEND</Button>
-          <div>
-            <EmailLink
-              href={`mailto:musicpleaseradio@gmail.com`}
-              target="_blank"
-              rel="noopener noreferrer"
-              title="musicpleaseradio@gmail.com"
-            >
-              E-Mail
-            </EmailLink>
-          </div>
         </FormActionContainer>
       </form>
     </ContactContainer>
