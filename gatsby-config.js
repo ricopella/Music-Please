@@ -11,9 +11,9 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `MUSIC PLEASE TECH. DEPT. 2020`,
-    description: `   CREATIVE CURATION | TECHNOLOGICAL SOLUTIONS | DIGITAL DESIGN   `,
-    author: `RICOPELLA   C/O  THE MUSIC PLEASE TECHNOLOGICAL`,
+    title: `MUSIC PLEASE CREATIVE PARTNERS 2020`,
+    description: `CREATIVE CURATION | TECHNOLOGICAL SOLUTIONS | DIGITAL DESIGN`,
+    author: `RICOPELLA C/O  MUSIC PLEASE CREATIVE PARTNERS`,
     lang: `en`,
     siteUrl: `https://themusicplease.com`,
     keywords: [

@@ -19,7 +19,6 @@ const useCloudinaryImage = (id: string) => {
   })
 
   if (!edge) return null
-  console.log(edge)
 
   return edge.node.secure_url
 }

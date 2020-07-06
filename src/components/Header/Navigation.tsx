@@ -1,18 +1,17 @@
-import { useLocation } from '@reach/router';
-import React, { FC } from 'react';
-import Socials from '../../components/Socials';
-import ROUTES from '../../config/routes';
-import { IHeaderMenuItem } from '../../types';
-import CONFIG from './config';
-import Styled from './Header.styles';
-import MenuItem from './MenuItem';
+import { useLocation } from "@reach/router"
+import React, { FC } from "react"
+import ROUTES from "../../config/routes"
+import { IHeaderMenuItem } from "../../types"
+import CONFIG from "./config"
+import Styled from "./Header.styles"
+import MenuItem from "./MenuItem"
 
 export const PureNavigation: FC<{}> = () => {
   const { pathname } = useLocation()
   return (
     <>
       <Styled.MenuItemUl variants={Styled.NAV_VARIANTS}>
-        {CONFIG.HOME_ITEMS.map((item: IHeaderMenuItem) => (
+        {CONFIG.NAV_ITEMS.map((item: IHeaderMenuItem) => (
           <MenuItem
             key={`menu_item_${item.title}`}
             item={item}
@@ -32,47 +31,6 @@ export const PureNavigation: FC<{}> = () => {
             }
           />
         ))}
-        {CONFIG.SHOP_ITEMS.map((item: IHeaderMenuItem) => (
-          <MenuItem
-            key={`menu_item_${item.title}`}
-            item={item}
-            className={`${
-              pathname === item.path + "/" ||
-              pathname === item.path ||
-              (pathname === ROUTES.root && item.path === "/")
-                ? "active"
-                : ""
-            }`}
-            title={
-              pathname === item.path + "/" ||
-              pathname === item.path ||
-              (pathname === ROUTES.root && item.path === "/")
-                ? `You're Here Now`
-                : item.path
-            }
-          />
-        ))}
-        {CONFIG.ART_ITEMS.map((item: IHeaderMenuItem) => (
-          <MenuItem
-            key={`menu_item_${item.title}`}
-            item={item}
-            className={`${
-              pathname === item.path + "/" ||
-              pathname === item.path ||
-              (pathname === ROUTES.root && item.path === "/")
-                ? "active"
-                : ""
-            }`}
-            title={
-              pathname === item.path + "/" ||
-              pathname === item.path ||
-              (pathname === ROUTES.root && item.path === "/")
-                ? `You're Here Now`
-                : item.path
-            }
-          />
-        ))}
-        <Socials />
       </Styled.MenuItemUl>
     </>
   )

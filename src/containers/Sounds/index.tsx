@@ -1,14 +1,14 @@
-import { motion } from 'framer-motion';
-import { OutboundLink } from 'gatsby-plugin-google-analytics';
-import React, { useState } from 'react';
-import { createBreakpoint } from 'react-use';
-import HeaderStyles from '../../components/Header/Header.styles';
-import Image from '../../components/Image';
-import Layout from '../../components/Layout';
-import ContextProvider from '../../provider/ContextProvider';
-import styled from '../../styled';
-import { SLIDE_IN_ANIMATION_OPTIONS } from '../../styles/constants';
-import { ItemImageVariants, MIXES, PLAYLISTS } from './config';
+import { motion } from "framer-motion"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
+import React, { useState } from "react"
+import { createBreakpoint } from "react-use"
+import HeaderStyles from "../../components/Header/Header.styles"
+import Image from "../../components/Image"
+import Layout from "../../components/Layout"
+import ContextProvider from "../../provider/ContextProvider"
+import styled from "../../styled"
+import { SLIDE_IN_ANIMATION_OPTIONS } from "../../styles/constants"
+import { ItemImageVariants, MIXES, PLAYLISTS } from "./config"
 
 const useBreakpoint = createBreakpoint()
 
@@ -151,17 +151,19 @@ const MixesLink = styled(OutboundLink)``
 
 const PAGE_TITLE = "SOUNDS"
 
+const PAGE_DESCRIPTION = "MUSIC PLEASE | SOUNDS"
+
 const Sounds = () => {
   const breakpoint = useBreakpoint()
   const [isHovered, setHovered] = useState({})
   const [isMixHovered, setMixHovered] = useState({})
   return (
     <ContextProvider>
-      <Layout title={PAGE_TITLE} hasCenteredLogo>
+      <Layout description={PAGE_DESCRIPTION} title={PAGE_TITLE} hasCenteredLogo>
         <SoundsContainer>
           <SoundsBody>
             <SoundsGroup>
-              <SoundsHeading>PLAYLISTS</SoundsHeading>
+              <SoundsHeading>[PLAYLISTS]</SoundsHeading>
               <PlaylistWrapper>
                 {PLAYLISTS.map((item, key) => (
                   <SoundItemWrapper
@@ -295,10 +297,11 @@ const Sounds = () => {
               </PlaylistWrapper>
             </SoundsGroup>
             <SoundsGroup>
-              <SoundsHeading>MIXES</SoundsHeading>
+              <SoundsHeading>[MIXES]</SoundsHeading>
               <PlaylistWrapper>
                 {MIXES.map((item, key) => (
                   <MixesItemWrapper
+                    key={item.title}
                     whileHover={{
                       scale: 1.2,
                       transition: { duration: 1 },
