@@ -24,6 +24,13 @@ const PLAYLISTS = [
 
 const MIXES = [
   {
+    title: "ROOM TEMPERATURE [STUDIO MIX]",
+    image: "https://i1.sndcdn.com/artworks-000077278968-kha54z-t500x500.jpg",
+    href: "https://soundcloud.com/themusicplease/room_temp",
+    description:
+      "Blended together with remixes, re-edits, covers & our detailed production - this mix brings to life our curatorial and technical reaches while keeping you afloat.",
+  },
+  {
     title: "BALCONY BOUNCE [STUDIO MIX]",
     image: `https://i1.sndcdn.com/artworks-000123296201-oi1v77-t500x500.jpg`,
     href: `https://soundcloud.com/themusicplease/balcony`,
@@ -36,13 +43,6 @@ const MIXES = [
     href: "https://soundcloud.com/themusicplease/rainy_daze",
     description:
       "Live radio set mixed by WATTZBEATZ (4/15/2014) via Music Please Radio: 90.3FM WRiU.",
-  },
-  {
-    title: "ROOM TEMPERATURE [STUDIO MIX]",
-    image: "https://i1.sndcdn.com/artworks-000077278968-kha54z-t500x500.jpg",
-    href: "https://soundcloud.com/themusicplease/room_temp",
-    description:
-      "Blended together with remixes, re-edits, covers & our detailed production - this mix brings to life our curatorial and technical reaches while keeping you afloat.",
   },
 ]
 
