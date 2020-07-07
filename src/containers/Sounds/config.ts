@@ -24,6 +24,14 @@ const PLAYLISTS = [
 
 const MIXES = [
   {
+    title: "SOUNDWAVES RADIO EP. 582 x Be! [Radio Set]",
+    image:
+      "https://i1.sndcdn.com/artworks-Reh9Wzid4OZacqbR-7T10dA-t500x500.jpg",
+    href: "https://soundcloud.com/themusicplease/soundwavesbybe",
+    description:
+      "This is a collection of music that travels through the valleys of raw emotion expressed across all eras. It is political, thoughtful and most importantly; Pro-Black.",
+  },
+  {
     title: "ROOM TEMPERATURE [STUDIO MIX]",
     image: "https://i1.sndcdn.com/artworks-000077278968-kha54z-t500x500.jpg",
     href: "https://soundcloud.com/themusicplease/room_temp",
