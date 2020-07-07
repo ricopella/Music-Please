@@ -31,8 +31,8 @@ const SocialContainer = styled(motion.div)`
 const SocialIcon = styled.div`
   width: 2.5rem;
 
-  &.sc {
-    width: 3.5rem;
+  @media (max-width: ${props => props.theme.media.s}) {
+    width: 1.3rem;
   }
 `
 
@@ -47,8 +47,7 @@ const SocialsWrapper = styled.div`
   grid-gap: 0 0.75rem;
 
   @media (max-width: ${props => props.theme.media.s}) {
-    grid-template-columns: repeat(3, max-content);
-    grid-gap: 1.5rem 2rem;
+    grid-gap: 0 1rem;
   }
 `
 

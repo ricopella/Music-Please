@@ -17,6 +17,8 @@ const SocialContainer = styled.div`
   display: grid;
   justify-items: center;
   width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 2.5rem;
 `
 
 const ContactHeading = styled.h1`
