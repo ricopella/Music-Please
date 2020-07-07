@@ -32,7 +32,7 @@ const SocialIcon = styled.div`
   width: 2.5rem;
 
   @media (max-width: ${props => props.theme.media.s}) {
-    width: 1.3rem;
+    width: 1rem;
   }
 `
 
