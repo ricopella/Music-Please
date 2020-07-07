@@ -3,11 +3,10 @@ import React from "react"
 import Layout from "../../components/Layout"
 import LiveNow from "../../components/LiveNow"
 import Ticker from "../../components/Ticker"
-import { PUBLIC_ID } from "../../config/cloudinaryIds"
-import useCloudinaryImage from "../../hooks/useCloudinaryImage"
 import useTwitchLiveStreams from "../../hooks/useTwitchLiveStream"
 import styled from "../../styled"
 import ROUTES from "../../config/routes"
+import MusicPleaseRotator from "../../components/MusicPleaseRotator"
 
 const HomeWrapper = styled.div`
   position: absolute;
@@ -34,10 +33,6 @@ const LogoContainer = styled(Link)`
   }
 `
 
-const Logo = styled.img`
-  margin: 0 auto;
-`
-
 const LiveNowWrapper = styled(Link)`
   margin: 0 auto;
 `
@@ -47,8 +42,7 @@ const PAGE_TITLE = "MUSIC PLEASE"
 const PAGE_DESCRIPTION = `CREATIVE CURATION | TECHNOLOGICAL DESIGN | DIGITAL DIRECTION`
 
 const Home = () => {
-  const [streams, error] = useTwitchLiveStreams()
-  const url = useCloudinaryImage(PUBLIC_ID.MP_GIF)
+  const [streams] = useTwitchLiveStreams()
   return (
     <Layout title={PAGE_TITLE} description={PAGE_DESCRIPTION}>
       <Ticker />
@@ -59,7 +53,7 @@ const Home = () => {
           </LiveNowWrapper>
         ) : null}
         <LogoContainer to={ROUTES.sounds}>
-          <Logo src={url} />
+          <MusicPleaseRotator />
         </LogoContainer>
       </HomeWrapper>
     </Layout>
