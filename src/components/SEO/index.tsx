@@ -1,9 +1,9 @@
-import favicon from '../../images/favicon/favicon.ico'
-import Helmet from 'react-helmet'
-import React, { FC } from 'react'
-import useImage from '../../hooks/useImage'
-import useSiteMetaData from '../../hooks/useSiteMetaData'
-import { useLocation } from '@reach/router'
+import favicon from "../../images/favicon/favicon.ico"
+import Helmet from "react-helmet"
+import React, { FC } from "react"
+import useImage from "../../hooks/useImage"
+import useSiteMetaData from "../../hooks/useSiteMetaData"
+import { useLocation } from "@reach/router"
 
 export interface SEOProps {
   description?: string
@@ -37,7 +37,7 @@ const SEO: FC<SEOProps> = ({ description, image, title }) => {
         lang,
       }}
       title={seo.title}
-      titleTemplate={`${title} | ${defaultTitle}`}
+      titleTemplate={title}
     >
       <link rel="icon" href={favicon} />
       <link rel="canonical" href={seo.url} />
