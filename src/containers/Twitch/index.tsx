@@ -40,7 +40,9 @@ const Twitch = () => {
               }}
             />
           ) : (
-            <Image fileName="offline.jpg" alt="WE'RE CURRENTLY OFFLINE" />
+            <ExternalLink href="https://www.twitch.tv/themusicplease">
+              <Image fileName="offline.jpg" alt="WE'RE CURRENTLY OFFLINE" />
+            </ExternalLink>
           )}
         </Styled.TwitchVideosWrapper>
         <Styled.ContactWrapper>
