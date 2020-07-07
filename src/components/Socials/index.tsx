@@ -47,7 +47,8 @@ const SocialsWrapper = styled.div`
   grid-gap: 0 0.75rem;
 
   @media (max-width: ${props => props.theme.media.s}) {
-    grid-gap: 0 1rem;
+    grid-gap: 0 0.5rem;
+    max-width: calc(100vw - 4rem);
   }
 `
 
