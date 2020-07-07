@@ -1,8 +1,7 @@
-import Image from '../../components/Image'
-import MP_GIF from '../../images/gif/MP_3dnar.gif'
-import React from 'react'
-import styled from '../../styled'
-import { Link } from 'gatsby'
+import { Link } from "gatsby"
+import React from "react"
+import styled from "../../styled"
+import MusicPleaseRotator from "../../components/MusicPleaseRotator"
 
 const LogoWrapper = styled(Link)`
   display: grid;
@@ -10,7 +9,7 @@ const LogoWrapper = styled(Link)`
   grid-template-rows: 1fr;
   height: auto;
   width: 11.75rem;
-  margin: 0 auto;
+  margin: 2rem auto;
 
   &:hover {
     cursor: pointer;
@@ -21,10 +20,12 @@ const LogoWrapper = styled(Link)`
   }
 `
 
-const HeadingCentered = () => (
-  <LogoWrapper to={"/"}>
-    <img src={MP_GIF} alt="MUSIC PLEASE LOGO" />
-  </LogoWrapper>
-)
+const HeadingCentered = () => {
+  return (
+    <LogoWrapper to={"/"}>
+      <MusicPleaseRotator />
+    </LogoWrapper>
+  )
+}
 
 export default HeadingCentered

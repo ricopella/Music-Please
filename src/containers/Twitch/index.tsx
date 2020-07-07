@@ -1,26 +1,25 @@
-import CashApp from '../../images/svg/cash-app.svg'
-import ExternalLink from '../../components/Link'
-import Header from '../../components/Header'
-import HeadingCentered from '../../components/Logo/HeadingCentered'
-import IframeResizer from 'iframe-resizer-react'
-import Image from '../../components/Image'
-import Layout from '../../components/Layout'
-import LiveNow from '../../components/LiveNow'
-import React from 'react'
-import Styled from './twitch.styles'
-import useTwitchLiveStreams from '../../hooks/useTwitchLiveStream'
-import Venmo from '../../images/svg/venmo-icon.svg'
+import CashApp from "../../images/svg/cash-app.svg"
+import ExternalLink from "../../components/Link"
+import HeadingCentered from "../../components/Logo/HeadingCentered"
+import IframeResizer from "iframe-resizer-react"
+import Layout from "../../components/Layout"
+import LiveNow from "../../components/LiveNow"
+import React from "react"
+import Styled from "./twitch.styles"
+import useTwitchLiveStreams from "../../hooks/useTwitchLiveStream"
+import Venmo from "../../images/svg/venmo-icon.svg"
+import { SLIDE_IN_ANIMATION_OPTIONS } from "../../styles/constants"
+import Image from "../../components/Image"
 
-const PAGE_META_DESCRIPTION = "MUSIC PLEASE BROADCAST NETWORK"
-const PAGE_TITLE = "LIVE BROADCAST"
+const PAGE_TITLE = "MUSIC PLEASE | LIVE"
 
 const Twitch = () => {
   const [streams, error] = useTwitchLiveStreams()
+  const isLive = (streams || []).length >= 1
   return (
-    <Layout bouncy description={PAGE_META_DESCRIPTION} title={PAGE_TITLE}>
-      <Header />
-      <Styled.TwitchPageContainer>
-        {(streams || []).length >= 1 ? (
+    <Layout title={PAGE_TITLE}>
+      <Styled.TwitchPageContainer {...SLIDE_IN_ANIMATION_OPTIONS}>
+        {isLive ? (
           <Styled.LiveNowWrapper>
             <LiveNow />
           </Styled.LiveNowWrapper>
@@ -28,17 +27,23 @@ const Twitch = () => {
           <HeadingCentered />
         )}
         <Styled.TwitchVideosWrapper>
-          <IframeResizer
-            log
-            src="https://player.twitch.tv/?channel=themusicplease&parent=themusicplease.com"
-            style={{
-              border: "none",
-              height: 1,
-              minHeight: "100%",
-              minWidth: "100%",
-              width: 1,
-            }}
-          />
+          {isLive ? (
+            <IframeResizer
+              log
+              src="https://player.twitch.tv/?channel=themusicplease&parent=themusicplease.com"
+              style={{
+                border: "none",
+                height: 1,
+                minHeight: "100%",
+                minWidth: "100%",
+                width: 1,
+              }}
+            />
+          ) : (
+            <ExternalLink href="https://www.twitch.tv/themusicplease">
+              <Image fileName="offline.jpg" alt="WE'RE CURRENTLY OFFLINE" />
+            </ExternalLink>
+          )}
         </Styled.TwitchVideosWrapper>
         <Styled.ContactWrapper>
           <Styled.LinksWrapper>

@@ -1,8 +1,7 @@
-import Header from '../../components/Header'
-import Layout from '../../components/Layout'
-import React from 'react'
-import SimpleSplash from '../../components/SimpleSplash'
-import styled from '@emotion/styled'
+import Layout from "../../components/Layout"
+import React from "react"
+import SimpleSplash from "../../components/SimpleSplash"
+import styled from "@emotion/styled"
 
 const ContactP = styled.p`
   text-align: center;
@@ -10,8 +9,7 @@ const ContactP = styled.p`
 
 const ContactSuccess = () => {
   return (
-    <Layout title={`CONTACT US - SUCCESS`} bouncy>
-      <Header />
+    <Layout title={`CONTACT US - SUCCESS`}>
       <SimpleSplash title={"CONTACT US"}>
         <ContactP>Thank you! We'll be in touch.</ContactP>
       </SimpleSplash>

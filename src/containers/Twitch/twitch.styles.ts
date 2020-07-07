@@ -1,7 +1,8 @@
 import styled from "@emotion/styled"
 import { MEDIA_BREAKPOINTS } from "../../styles/constants"
+import { motion } from "framer-motion"
 
-const TwitchPageContainer = styled.section`
+const TwitchPageContainer = styled(motion.section)`
   display: grid;
   grid-row-gap: 0.5rem;
   grid-template-columns: 1fr;

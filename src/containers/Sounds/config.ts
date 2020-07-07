@@ -24,10 +24,33 @@ const PLAYLISTS = [
 
 const MIXES = [
   {
-    title: "BALCONY BOUNCE",
+    title: "SOUNDWAVES RADIO EP. 582 x Be! [Radio Set]",
+    image:
+      "https://i1.sndcdn.com/artworks-Reh9Wzid4OZacqbR-7T10dA-t500x500.jpg",
+    href: "https://soundcloud.com/themusicplease/soundwavesbybe",
+    description:
+      "This is a collection of music that travels through the valleys of raw emotion expressed across all eras. It is political, thoughtful and most importantly; Pro-Black.",
+  },
+  {
+    title: "ROOM TEMPERATURE [STUDIO MIX]",
+    image: "https://i1.sndcdn.com/artworks-000077278968-kha54z-t500x500.jpg",
+    href: "https://soundcloud.com/themusicplease/room_temp",
+    description:
+      "Blended together with remixes, re-edits, covers & our detailed production - this mix brings to life our curatorial and technical reaches while keeping you afloat.",
+  },
+  {
+    title: "BALCONY BOUNCE [STUDIO MIX]",
     image: `https://i1.sndcdn.com/artworks-000123296201-oi1v77-t500x500.jpg`,
     href: `https://soundcloud.com/themusicplease/balcony`,
-    description: 'We brought just enough bounce without jumping off the ledge with this one.'
+    description:
+      "We brought just enough bounce without jumping off the ledge with this one.",
+  },
+  {
+    title: "RAINY DAZE [RADIO SET]",
+    image: "https://i1.sndcdn.com/artworks-000082038929-rz4bdo-t500x500.jpg",
+    href: "https://soundcloud.com/themusicplease/rainy_daze",
+    description:
+      "Live radio set mixed by WATTZBEATZ (4/15/2014) via Music Please Radio: 90.3FM WRiU.",
   },
 ]
 

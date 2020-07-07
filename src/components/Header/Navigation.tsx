@@ -1,19 +1,17 @@
-import MenuItem from './MenuItem'
-import React, { FC } from 'react'
-import ROUTES from '../../config/routes'
-import Socials from '../../components/Socials'
-import Styled from './Header.styles'
-import { IHeaderMenuItem } from '../../types'
-import { useLocation } from '@reach/router'
+import { useLocation } from "@reach/router"
+import React, { FC } from "react"
+import ROUTES from "../../config/routes"
+import { IHeaderMenuItem } from "../../types"
+import CONFIG from "./config"
+import Styled from "./Header.styles"
+import MenuItem from "./MenuItem"
 
-export const PureNavigation: FC<{ headerItems: IHeaderMenuItem[] }> = ({
-  headerItems = [],
-}) => {
+export const PureNavigation: FC<{}> = () => {
   const { pathname } = useLocation()
   return (
     <>
       <Styled.MenuItemUl variants={Styled.NAV_VARIANTS}>
-        {headerItems.map(item => (
+        {CONFIG.NAV_ITEMS.map((item: IHeaderMenuItem) => (
           <MenuItem
             key={`menu_item_${item.title}`}
             item={item}
@@ -39,27 +37,7 @@ export const PureNavigation: FC<{ headerItems: IHeaderMenuItem[] }> = ({
 }
 
 const Navigation: FC<{}> = () => {
-  return (
-    <PureNavigation
-      headerItems={[
-        { path: ROUTES.root, title: `home` },
-        { path: ROUTES.shop, title: `shop` },
-        { path: ROUTES.live, title: "live" },
-        { path: ROUTES.sounds, title: "sounds" },
-        { path: ROUTES.contact, title: `contact` },
-        {
-          path: `https://instagram.com/themusicplease`,
-          title: `instagram`,
-          external: true,
-        },
-        {
-          path: `https://twitter.com/themusicplease`,
-          title: `twitter`,
-          external: true,
-        },
-      ]}
-    />
-  )
+  return <PureNavigation />
 }
 
 export default Navigation
