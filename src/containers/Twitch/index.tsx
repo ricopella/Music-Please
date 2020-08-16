@@ -27,23 +27,17 @@ const Twitch = () => {
           <HeadingCentered />
         )}
         <Styled.TwitchVideosWrapper>
-          {isLive ? (
-            <IframeResizer
-              log
-              src="https://player.twitch.tv/?channel=themusicplease&parent=themusicplease.com"
-              style={{
-                border: "none",
-                height: 1,
-                minHeight: "100%",
-                minWidth: "100%",
-                width: 1,
-              }}
-            />
-          ) : (
-            <ExternalLink href="https://www.twitch.tv/themusicplease">
-              <Image fileName="offline.jpg" alt="WE'RE CURRENTLY OFFLINE" />
-            </ExternalLink>
-          )}
+          <IframeResizer
+            log
+            src={`https://player.twitch.tv/?channel=themusicplease&parent=themusicplease.com`}
+            style={{
+              border: "none",
+              height: 1,
+              minHeight: "100%",
+              minWidth: "100%",
+              width: 1,
+            }}
+          />
         </Styled.TwitchVideosWrapper>
         <Styled.ContactWrapper>
           <Styled.LinksWrapper>
@@ -64,3 +58,21 @@ const Twitch = () => {
 }
 
 export default Twitch
+
+// {isLive ? (
+//   <IframeResizer
+//     log
+//     src="https://player.twitch.tv/?channel=themusicplease&parent=themusicplease.com"
+//     style={{
+//       border: "none",
+//       height: 1,
+//       minHeight: "100%",
+//       minWidth: "100%",
+//       width: 1,
+//     }}
+//   />
+// ) : (
+//   <ExternalLink href="https://www.twitch.tv/themusicplease">
+//     <Image fileName="offline.jpg" alt="WE'RE CURRENTLY OFFLINE" />
+//   </ExternalLink>
+// )}
