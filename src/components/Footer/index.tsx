@@ -1,6 +1,6 @@
-import getYear from 'date-fns/getYear'
-import React from 'react'
-import styled from '../../styled'
+import getYear from "date-fns/getYear"
+import React from "react"
+import styled from "../../styled"
 
 const FooterContainer = styled.footer`
   display: grid;
@@ -19,7 +19,7 @@ const FooterContent = styled.div`
 const Footer = () => (
   <FooterContainer>
     <FooterContent>
-      &copy;{`${getYear(new Date())} MUSIC PLEASE CREATIVE PARTNERS`}
+      &copy;{`${getYear(new Date())} POLYHEDRON PROJECTS, LLC`}
     </FooterContent>
   </FooterContainer>
 )
