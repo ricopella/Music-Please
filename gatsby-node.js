@@ -13,8 +13,7 @@ exports.createPages = ({ graphql, actions }) => {
 
   createRedirect({
     fromPath: "/daywine",
-    toPath:
-      "https://www.eventbrite.com/e/daywine-tropical-dance-party-tickets-345566487667",
+    toPath: "https://www.eventbrite.com/e/daywine-tickets-390793743607",
     isPermanent: true,
     force: true,
   })
