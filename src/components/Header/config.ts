@@ -7,6 +7,7 @@ const NAV_ITEMS = [
   { path: ROUTES.shop, title: `shop`, external: true },
   { path: ROUTES.live, title: "live" },
   { path: ROUTES.contact, title: `contact` },
+  { path: ROUTES.daywine, title: `daywine`, external: true },
 ]
 
 export default {
