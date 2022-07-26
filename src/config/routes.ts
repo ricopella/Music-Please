@@ -5,4 +5,5 @@ export default {
   root: `/`,
   shop: `/shop`,
   sounds: `/sounds`,
+  daywine: "/daywine",
 }
