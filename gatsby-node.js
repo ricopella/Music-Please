@@ -11,7 +11,7 @@ exports.createPages = ({ actions }) => {
 
   createRedirect({
     fromPath: "/daywine",
-    toPath: "https://www.eventbrite.com/e/daywine-tickets-390793743607",
+    toPath: "https://www.eventbrite.com/e/daywine-tickets-440764126367",
     isPermanent: true,
     force: true,
   })
